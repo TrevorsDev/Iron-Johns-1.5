@@ -17,7 +17,7 @@ body {
 header {
   /* height: 40px; */
   position: sticky;
-  /* top: 0; */
+  top: 0;
   z-index: 100;
   transition: all 0.2s ease;
   /* width: 100%; */
@@ -129,6 +129,7 @@ ul.dropdown li a:hover {
   transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
 }
 
+/* consider modularizing some button class and properties so that some elements can be standarized to other buttons throughout the website. This provides consistency and ease of ability to update code. */
 #online-btn {
   border: 2px solid white;
   padding: 15px 25px 15px 25px;
@@ -150,7 +151,7 @@ ul.dropdown li a:hover {
   font-weight:500;
 }
 
-#rotating-pics {
+#rotating-pics-banner {
   background:
     linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.9)),
     /* Overlay */
@@ -164,7 +165,7 @@ ul.dropdown li a:hover {
   z-index: 1;
 }
 
-#rotating-pics h1 {
+#rotating-pics-banner h1 {
   position: absolute;
   /* Position relative to .rotating-pics */
   top: 60%;
@@ -204,4 +205,4 @@ ul.dropdown li a:hover {
   justify-content: center;
 }
 
-/* currently adding elements that I want to keep from previous iron johns mock up */
+/* Where I left off 10/23: Studying Culinary dropout web page and am practicing using their styling ideas and html semantic practices. Will begin tomorrow by finishing this menu section with pictures and empty links included */
