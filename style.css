@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
@@ -30,6 +31,177 @@ nav {
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   position: fixed;
+}
+
+.header-image {
+  max-height: 130px;
+  min-height: 50px;
+  transition: height 0.2s ease;
+  padding: 0;
+  margin: 15px 40px;
+  border: solid 1px white;
+  border-radius: 5px;
+}
+
+nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.888);
+  transition: background-color 0.8s ease, color 0.8s ease;
+  color: black;
+}
+
+ul {
+  display: flex;
+  margin-left: auto;
+  /* list-style-type: none; */
+  /* align-items: center; */
+  height: 100%;
+}
+
+li {
+  /* display flex and align items centers order online button vertically */
+  display: flex;
+  align-items: center;
+  /* Center items vertically */
+  height: 100%;
+  /* Ensure li elements fill the height of the nav */
+}
+
+li a {
+  display: flex;
+  font-family: Bronco;
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-decoration: none;
+  /* justify-content: space-between; */
+  align-items: center;
+  color: white;
+  height: 100%;
+  /* Ensure a elements fill the height of the li */
+  padding: 0 30px 0 30px;
+}
+
+ul.dropdown {
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  top: 70px;
+  visibility: hidden;
+  opacity: 0;
+  /* Initially invisible */
+  transform: translateY(-10px);
+  /* Start slightly above */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  /* Slow transition */
+}
+
+li:hover>ul.dropdown {
+  max-height: 45px;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  /* Fully visible */
+  transform: translateY(0);
+  /* Move to the final position */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  /* Transition for opacity and transform */
+}
+
+/* Style the dropdown items */
+ul.dropdown li a {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  border: transparent dashed 4px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+ul.dropdown li a:hover {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #F99D2C;
+  border-left: 4px solid #F99D2C;
+  transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
+}
+
+#online-btn {
+  border: 2px solid white;
+  padding: 15px 25px 15px 25px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-family: Bronco;
+  font-size: 18px;
+  margin: 0 20px 0 20px;
+  transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+#online-btn:hover {
+  box-sizing: border-box;
+  background-color: #F99D2C;
+  color: black;
+  border: 2px solid transparent;
+  font-weight:500;
+}
+
+#rotating-pics {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.9)),
+    /* Overlay */
+    url('./assets/images/RotatingImage1.jpg');
+  /* Background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+#rotating-pics h1 {
+  position: absolute;
+  /* Position relative to .rotating-pics */
+  top: 60%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Centering adjustment */
+  color: white;
+  /* Ensure text is readable */
+  font-size: 4.5rem;
+  /* Adjust as needed */
+  text-align: center;
+  /* Center text horizontally */
+  z-index: 100;
+  /* Ensure it's on top */
+  border-style: solid;
+  /* Sets the border style */
+  border-width: 2px 0;
+  /* Sets the top and bottom borders to 2px, and left and right to 0 */
+  width: 80%;
+
+}
+
+.location-title {
+  
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.main-title h1{
+  padding: 1em ;
+  font-size: 3em;
+  text-align: center;
+  justify-content: center;
 }
 
 /* currently adding elements that I want to keep from previous iron johns mock up */
