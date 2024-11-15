@@ -1,3 +1,5 @@
+
+/* General styling for entire site */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,7 @@ body {
   background-color: #232323;
 }
 
+/* HERO SECTION CSS */
 #rotating-pics-banner {
   background:
     linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.9)),
@@ -54,15 +57,52 @@ body {
   z-index: 0;
 }
 
-/* .wrapper {
-  margin: 0 auto;
-} */
+
+
+/* Welcome section with menu and picture */
+.menu-description, .main-title{
+  border: 1px solid #fff; 
+  width: 80%;
+  margin: 0 auto
+}
 
 .main-title h1 {
   padding: 1em ;
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
   justify-content: center;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-end;
+  padding: 3%;
+}
+
+.menu-card h1 {
+  font-size: 1.5em;
+  padding: 2%;
+  text-align: right;
+}
+
+.menu-card, .menu-images {
+  max-width: 50%;
+  height: auto;
+}
+
+.menu-images img {
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+  height: auto;
+}
+
 
 /* Where I left off 10/23: Studying Culinary dropout web page and am practicing using their styling ideas and html semantic practices. Will begin tomorrow by finishing this menu section with pictures and empty links included */
