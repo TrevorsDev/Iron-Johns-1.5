@@ -24,9 +24,11 @@ body {
     /* Overlay */
     url('/assets/images/RotatingImage1.jpg');
   /* Background image */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  background-size: contain; /* Make sure the entire image is visible */
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat;
+  height: 90vh;
+  max-height: 1200px;
   width: 100%;
   position: relative;
   
@@ -57,55 +59,58 @@ body {
   z-index: 0;
 }
 
-
-
 /* Welcome section with menu and picture */
-.menu-description, .main-title{
+.menu-description, .main-title {
+  display: flex;
+  flex-direction: row;
   border: 1px solid #fff; 
   width: 80%;
-  margin: 0 auto
+  margin: 0 auto;
+  padding: 2em;
 }
 
-.main-title h1 {
-  padding: 1em ;
-  font-size: 2.5em;
-  text-align: center;
+.main-title {
   justify-content: center;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction:row-reverse;
-  
+.main-title h1 {
+  font-size: 2.5em;
 }
 
 .menu-card {
   display: flex;
   flex-direction: column;
-  
-  align-items:flex-start;
-  padding: 3%;
+  align-items: flex-start;
 }
 
 .menu-card h1 {
   font-size: 1.5em;
   padding-bottom: 3%;
-  text-align: right;
 }
 
 .menu-card, .menu-images {
   max-width: 50%;
   height: auto;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid greenyellow;
 }
 
-.menu-images img {
-  display: flex;
-  justify-content: center;
-  max-width: 50%;
-  height: auto;
+.menu-images picture img {
+  width: 100%; /* Make the image fill the container's width */
+  height: 100%; /* Maintain proportionality based on container height */
+  object-fit: cover; /* Ensure the image covers the container without stretching */
 }
 
-.details-sections {
+.details-section {
+  align-items: space-between;
+}
+
+.details-sections li {
+  border: 1px solid #fff;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
