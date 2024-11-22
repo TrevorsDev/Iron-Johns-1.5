@@ -1,4 +1,3 @@
-
 /* General styling for entire site */
 * {
   margin: 0;
@@ -26,12 +25,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Ensures no content spills out */
+  overflow: hidden;
+  /* Ensures no content spills out */
 }
 
 /* Background Image Wrapper */
 .background-image-container {
-  position: absolute;
+  /* position: absolute; */
+  /*this property doesnt appear to make any real change that im yet noticing*/
   top: 0;
   left: 0;
   width: 100%;
@@ -56,15 +57,17 @@ body {
   right: 0;
   width: 100%;
   height: 350px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .background-image-container:before {
-  top: 0; /* Fade at the top of the image */
+  top: 0;
+  /* Fade at the top of the image */
 }
 
 .background-image-container:after {
-  bottom: 0; /* Fade at the bottom of the image */
+  bottom: 0;
+  /* Fade at the bottom of the image */
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
 }
 
@@ -93,11 +96,12 @@ body {
   z-index: 0;
 }
 
-/* Welcome section with menu and picture */
-.menu-description, .main-title {
+/* WELCOME SECTION WITH MENU AND PICUTRES */
+.menu-description,
+.main-title {
   display: flex;
   flex-direction: row;
-  border: 1px solid #fff; 
+  border: 1px solid #fff;
   width: 80%;
   margin: 0 auto;
   padding: 0 2em 0 2em;
@@ -110,7 +114,7 @@ body {
 
 .main-title h1 {
   font-size: 2.5em;
-  
+
 }
 
 .menu-card {
@@ -124,7 +128,8 @@ body {
   padding-bottom: 3%;
 }
 
-.menu-card, .menu-images {
+.menu-card,
+.menu-images {
   max-width: 50%;
   height: auto;
   overflow: hidden;
@@ -134,20 +139,18 @@ body {
 }
 
 .menu-images picture img {
-  width: 100%; /* Make the image fill the container's width */
-  height: 100%; /* Maintain proportionality based on container height */
-  object-fit: cover; /* Ensure the image covers the container without stretching */
-}
-
-.details-section {
-  align-items: space-between;
+  width: 100%;
+  /* Make the image fill the container's width */
+  height: 100%;
+  /* Maintain proportionality based on container height */
+  object-fit: cover;
+  /* Ensure the image covers the container without stretching */
 }
 
 .details-sections li {
   border: 1px solid #fff;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
 }
+
 /* Where I left off 10/23: Studying Culinary dropout web page and am practicing using their styling ideas and html semantic practices. Will begin tomorrow by finishing this menu section with pictures and empty links included */
