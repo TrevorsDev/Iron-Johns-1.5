@@ -11,15 +11,23 @@
 
 <body>
   <!-- (HERO SECTION) -->
-  <!-- Rotating-pics section includes nav, intro title, and rotating background pics -->
+  <!-- Includes nav, intro title, and rotating background pics -->
   <section id="rotating-pics-banner">
+    <div class="background-image-container">
+      <!-- Background image. Adding multiple pics for various screen sizes -->
+      <picture>
+        <source media="(min-width: 1920px)" srcset="/assets/images/largeBannerImg.jpg">
+        <source media="(min-width: 1280px)" srcset="/assets/images/mediumBannerImg.png">
+        <source media="(min-width: 640px)" srcset="/assets/images/smallBannerImg.png">
+        <img src="/assets/images/smallBannerImg.png" alt="Craft beer pouring from tap line into ice cold glass"/>
+      </picture>
+    </div>
 
-
-    <!-- navigation section -->
+    <!-- Navigation section -->
     <header>
       <div id="nav-placeholder"></div>
     </header>
-
+    <!-- Title section -->
     <h1>Craft Beer - Pizza - Burgers</h1>
   </section>
 
