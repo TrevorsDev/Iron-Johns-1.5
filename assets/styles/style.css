@@ -21,7 +21,7 @@ body {
   position: relative;
   height: 90vh;
   width: 100%;
-  display: flex;
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -31,15 +31,11 @@ body {
 
 /* Background Image Wrapper */
 .background-image-container {
-  /* position: absolute; */
-  /*this property doesnt appear to make any real change that im yet noticing*/
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  /* z-index: -1; */
   border: pink solid 1px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .background-image-container img {
@@ -53,22 +49,23 @@ body {
 .background-image-container:after {
   content: '';
   position: absolute;
-  left: 0;
+  /* Only one left or right position is needed bc the width is set to 100% and thus spans as far as the left or right property is defined */
   right: 0;
   width: 100%;
-  height: 350px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  height: 500px;
+  
 }
 
 .background-image-container:before {
   top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   /* Fade at the top of the image */
 }
 
 .background-image-container:after {
   bottom: 0;
   /* Fade at the bottom of the image */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 #rotating-pics-banner h1 {
