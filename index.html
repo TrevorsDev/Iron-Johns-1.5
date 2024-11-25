@@ -16,11 +16,12 @@
     <div class="background-image-container">
       <!-- Background image. Adding multiple pics for various screen sizes -->
       <picture>
-        <source media="(min-width: 1920px)" srcset="/assets/images/largeBannerImg.jpg">
-        <source media="(min-width: 1280px)" srcset="/assets/images/mediumBannerImg.png">
-        <source media="(min-width: 640px)" srcset="/assets/images/smallBannerImg.png">
-        <img src="/assets/images/smallBannerImg.png" alt="Craft beer pouring from tap line into ice cold glass"/>
+        <source srcset="/assets/images/largeBannerImg.jpg" media="(min-width: 1920px)">
+        <source srcset="/assets/images/mediumBannerImg.png" media="(min-width: 1280px) and (max-width: 1919px)">
+        <img src="/assets/images/smallBannerImg.png" alt="Fallback Image">
       </picture>
+      
+    
     </div>
 
     <!-- Navigation section -->

@@ -150,4 +150,21 @@ body {
   padding: 0;
 }
 
+@media (min-width: 1280px) {
+  body {
+    background-color: blue;
+  }
+}
+@media (max-width: 1279px) {
+  body {
+    background-color: green;
+  }
+}
+@media (min-width: 1920px) {
+  body {
+    background-color: red;
+  }
+}
+
+
 /* Where I left off 10/23: Studying Culinary dropout web page and am practicing using their styling ideas and html semantic practices. Will begin tomorrow by finishing this menu section with pictures and empty links included */
