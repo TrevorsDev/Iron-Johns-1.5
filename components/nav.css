@@ -115,20 +115,14 @@ ul.dropdown li a:hover {
 }
 
 /* consider modularizing some button class and properties so that some elements can be standarized to other buttons throughout the website. This provides consistency and ease of ability to update code. */
-#online-btn {
-  border: 2px solid white;
-  padding: 15px 25px 15px 25px;
+
+.order-btn {
   background-color: rgba(0, 0, 0, 0.9);
-  color: white;
-  font-family: Bronco;
-  font-size: 18px;
-  margin: 0 20px 0 20px;
-  transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
-  letter-spacing: 2px;
-  cursor: pointer;
+  margin-right: 10px;
+  padding: 15px 25px;
 }
 
-#online-btn:hover {
+.order-btn:hover {
   box-sizing: border-box;
   background-color: #F99D2C;
   color: black;
