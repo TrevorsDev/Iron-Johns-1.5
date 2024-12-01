@@ -125,7 +125,6 @@ ul.dropdown li a:hover {
 .order-btn {
   background-color: rgba(0, 0, 0, 0.9);
   padding: 15px 25px;
-  
 }
 
 .order-btn:hover {
@@ -133,5 +132,4 @@ ul.dropdown li a:hover {
   background-color: #F99D2C;
   color: black;
   border: 2px solid transparent;
-  font-weight:500;
 }
