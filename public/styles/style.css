@@ -21,7 +21,7 @@ body {
   position: relative;
   height: 90vh;
   width: 100%;
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@ body {
   right: 0;
   width: 100%;
   height: 500px;
-  
+
 }
 
 .background-image-container:before {
@@ -141,29 +141,31 @@ body {
   /* border: 1px dashed red; */
   display: flex;
   flex-wrap: wrap;
-  gap: 50px; /* Adds space between buttons */
+  gap: 4em;
+  /* Adds space between buttons */
   width: 100%;
 }
 
 .menu-btn-wrapper {
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
 .button {
-    border: 2px solid white;
-    padding: 5px 25px;
-    background-color: transparent;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    margin: 0px;
-    transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
-    letter-spacing: 2px;
-    cursor: pointer;
+  border: 2px solid white;
+  padding: 5px 25px;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin: 0px;
+  transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
 .menu-btn {
-  transition: background-color 0.5s ease, border-radius 0.5s ease; /* Smooth transition for both properties */
+  transition: background-color 0.5s ease, border-radius 0.5s ease;
+  /* Smooth transition for both properties */
 }
 
 .menu-btn:hover {
@@ -186,7 +188,7 @@ body {
 
 .details-sections a:hover {
   text-decoration: underline;
-  color: rgb(255, 118, 14); 
+  color: rgb(255, 118, 14);
 }
 
 .menu-card,
@@ -207,9 +209,45 @@ body {
 }
 
 .maps-parent {
-  display: flex;
+  position: relative;
   width: 80%;
+  height: 650px;
   margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.map-container iframe {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.operations-card {
+  position: relative;
+  z-index: 10;
+  height: 550px;
+  width: 600px;
+  margin-left: auto;
+  /* Push card to the rightmost side */
+  background-color: rgb(48, 4, 4);
+  border: yellow solid 1px;
+}
+
+.operations-card h1,
+.addressAndPhone,
+.ops-btns,
+.hours {
+  padding: 1.2em 0 0 1.2em;
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
+
+.ops-btns a {
+  margin-right: 1.2em;
+
 }
 
 
