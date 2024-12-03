@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/styles/style.css">
+  <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="components/nav.css">
   <title>Document</title>
 </head>
@@ -16,11 +16,11 @@
     <div class="background-image-container">
       <!-- Background image. Adding multiple pics for various screen sizes -->
       <picture>
-        <source media="(min-width: 1281px)" srcset="/assets/images/mediumBannerImg.png">
-        <img src="/assets/images/smallBannerImg.png" alt="Craft beer pouring from tap">
-    </picture>
-    
-    
+        <source media="(min-width: 1281px)" srcset="images/mediumBannerImg.png">
+        <img src="images/smallBannerImg.png" alt="Craft beer pouring from tap">
+      </picture>
+
+
     </div>
 
     <!-- Navigation section -->
@@ -66,17 +66,42 @@
         <!-- <picture>
             <source media="(min-width: 1200px)" srcset="assets/images/IronJohnsLogo.png">
             <source media="(min-width: 768px)" srcset="image-medium.jpg"> -->
-        <img src="assets/images/IJBC_18th_hangout.jpg" alt="Image description">
+        <img src="images/IJBC_18th_hangout.jpg" alt="Image description">
         <!-- </picture> -->
       </div>
     </section>
     <!--End of welcome section (HERO SECTION)-->
 
+    <!-- Map, Location, Hours, etc. Section -->
+    <section class="maps-parent">
+      <div  class="map-container">
+        <!-- Map -->
+      </div>
+      <div class="operations-card">
+        <h1>Tucson's Locations</h1>
+        <div class="address-&-phone">
+          <p>5350 E Broadway #128, Tucson, AZ 85711</p>
+          <p>Phone: (520) 514-9797</p>
+        </div>
+        <div class="ops-btns">
+          <a href="#" class="button ops-btn">Order Online</a>
+          <a href="#" class="button ops-btn">Reservations</a>
+        </div>
+        <div class="hours">
+          <h2>Dining Hours</h2>
+          <p>Monday - Thursday: 11:00 AM - 9:00 PM </p>
+          <p>Friday - Saturday: 11:00 AM - 10:00 PM</p>
+          <p>Sunday: 12 PM - 8 PM</p>
+        </div>
+      </div>
+
+    </section>
 
   </main>
 
 
-  <script src="assets/scripts/loadNav.js"></script>
+  <script src="scripts/loadNav.js"></script>
+  <script src="scripts/loadApi.js"></script>
 </body>
 
 
@@ -84,4 +109,4 @@
 </html>
 
 
-<!-- Next steps, 10/24 -> the next step I will practice is to separate the navigation section into a separate html file called nav.html. It will be linked to the css which I can clean up and modularize. Ill then be loading it using JavaScript for a freindly front-end approach that should be acceptable for smaller websites such as this one. However, if I wish to use a server-side method to load the navigation elements to all of my webpages, I can do that at a later time so long as I learn the technologies necessary. Ill add these notes here to a readme that ill begin after adding this nav section -->
+<!-- Dynamically embedded google maps into a new section of the homepage. Aka client-side integration. Requiring backend tech such as server.js and front end tech such as loadApi.js to communicate with the back end in order to fetch the Google maps API key. Restructured files, separated public files that will be used by the browser and server side files which store valuable information such as API keys. Changed file pathways for images and scripts in html -->
