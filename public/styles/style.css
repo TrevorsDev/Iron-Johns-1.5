@@ -236,26 +236,40 @@ body {
   border: yellow solid 1px;
 }
 
+
 .operations-card h1,
 .ops-btns,
 .hours {
-  padding: 1.2rem 0 0 1.2rem;
+  padding: 1.9rem 0 0 1.2rem;
   line-height: 1.5rem;
   font-size: 1.5rem;
 }
 
-.addressAndPhone {
+.operations-card h1 {
+  font-size: 3.5rem;
+}
+
+.addressAndPhone-wrap {
   display: flex;
   flex-direction: row;
-  padding: 1.2rem 0 0 1.2rem;
+  padding: 1.5rem 0 0 1.2rem;
   gap: 3rem;
   line-height: 1.4rem;
 }
 
 .ops-btns a {
   margin-right: 1.2rem;
-
 }
+
+.hours h2 {
+  font-size: 1.5rem;
+}
+
+.hours h2{
+  padding-bottom: .8rem;
+}
+
+
 
 
 
