@@ -216,6 +216,8 @@ body {
   overflow: hidden;
   display: flex;
   align-items: center;
+  margin-bottom: 3rem;
+  /* border: red solid 1px; */
 }
 
 .map-container iframe {
@@ -233,7 +235,7 @@ body {
   margin-left: auto;
   /* Push card to the rightmost side */
   background-color: rgb(48, 4, 4);
-  border: yellow solid 1px;
+  /* border: yellow solid 1px; */
 }
 
 
@@ -246,7 +248,7 @@ body {
 }
 
 .operations-card h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .addressAndPhone-wrap {
@@ -269,8 +271,57 @@ body {
   padding-bottom: .8rem;
 }
 
+.photo-collage {
+  width: 100%;
+  height: 675px;
+  margin-bottom: 3rem;
+  /* border: red solid 1px */
+}
 
+.collage-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* padding: 1rem; */
+  /* border: green solid 1px; */
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
+.column-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* border: green solid 1px; */
+  width: 300px;
+  height: 675px;
+  align-items: center;
+  overflow: hidden; /* Prevent content from spilling out */
+}
+
+.row-wrap {
+  display: flex;
+  width: 775px;
+  height: 80%;
+  overflow: hidden; /* Prevent content from spilling out */
+  /* border: green solid 1px;  */
+}
+
+.column-wrap picture,
+.row-wrap picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.column-wrap picture img,
+.row-wrap picture img {
+  width: 100%; /* Match the width of the container */
+  height: 100%; /* Match the height of the container */
+  object-fit: cover; /* Ensures no distortion while filling the container */
+  display: block; /* Removes inline-block default spacing for images */
+}
 
 
 
