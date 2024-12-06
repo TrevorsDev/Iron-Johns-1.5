@@ -329,7 +329,7 @@ body {
 /* LARGE PARTY SECTION*/
 /* add more semantic classes once you know what this seciton will showcase */
 
-.parent-wrapper {
+.large-party-section {
   display: flex;
   justify-content: center;
   position: relative;
@@ -338,14 +338,19 @@ body {
   height: 700px;
 }
 
-.party-wrap {
+.group-events-wrapper {
   display: flex;
+  justify-content: space-between;
   width: 85%;
-  margin: 0 auto;
   align-items: center;
 }
 
-.description {
+.group-events-description h2 {
+  font-size: 2rem;
+  padding-bottom: 1.2rem
+}
+
+.group-events-description {
   /* border: yellow solid 1px; */
   position: absolute;
   height: 400px;
@@ -356,28 +361,26 @@ body {
   font-size: 1.5rem;
 }
 
-.links ul {
+.links {
   margin: 1.5rem 0;
 }
 
 .links a {
   padding: 0;
   transition: color 0.5s ease, text-decoration 2s ease;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
 
 .links a:hover {
   text-decoration: underline;
   color: rgb(255, 118, 14);
-}
-
-.description h2 {
-  font-size: 2rem;
-  padding-bottom: 1.2rem
+  text-decoration: underline;
 }
 
 .photo {
   width: 55%;
-  margin-left: 45%;
+  /* margin-left: 45%; */
   /* Push card to the rightmost side */
 }
 
