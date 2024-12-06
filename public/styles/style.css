@@ -99,7 +99,7 @@ body {
 .main-title {
   display: flex;
   /* border: 1px solid #fff; */
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -208,10 +208,12 @@ body {
   /* Ensure the image covers the container without stretching */
 }
 
+/*MAPS AND HOURS SECTION*/
+
 .maps-parent {
   position: relative;
-  width: 80%;
-  height: 650px;
+  width: 85%;
+  height: 750px;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -230,7 +232,7 @@ body {
 .operations-card {
   position: relative;
   z-index: 10;
-  height: 550px;
+  height: 500px;
   width: 600px;
   margin-left: auto;
   /* Push card to the rightmost side */
@@ -238,23 +240,22 @@ body {
   /* border: yellow solid 1px; */
 }
 
-
 .operations-card h1,
 .ops-btns,
 .hours {
-  padding: 1.9rem 0 0 1.2rem;
+  padding: 1.9rem 0 0 1.9rem;
   line-height: 1.5rem;
   font-size: 1.5rem;
 }
 
 .operations-card h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .addressAndPhone-wrap {
   display: flex;
   flex-direction: row;
-  padding: 1.5rem 0 0 1.2rem;
+  padding: 1.5rem 0 0 1.9rem;
   gap: 3rem;
   line-height: 1.4rem;
 }
@@ -270,6 +271,8 @@ body {
 .hours h2{
   padding-bottom: .8rem;
 }
+
+/*PHOTO COLLAGE SECTION*/
 
 .photo-collage {
   width: 100%;
@@ -302,7 +305,7 @@ body {
 
 .row-wrap {
   display: flex;
-  width: 775px;
+  width: 820px;
   height: 80%;
   overflow: hidden; /* Prevent content from spilling out */
   /* border: green solid 1px;  */
@@ -323,7 +326,67 @@ body {
   display: block; /* Removes inline-block default spacing for images */
 }
 
+/* LARGE PARTY SECTION*/
+/* add more semantic classes once you know what this seciton will showcase */
 
+.parent-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 3rem;
+  height: 700px;
+}
+
+.party-wrap {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.description {
+  /* border: yellow solid 1px; */
+  position: absolute;
+  height: 400px;
+  width: 40%;
+  background-color: rgb(48, 4, 4);
+  padding: 1.6rem 1.6rem 0 1.6rem;
+  line-height: 1.6rem;
+  font-size: 1.5rem;
+}
+
+.links ul {
+  margin: 1.5rem 0;
+}
+
+.links a {
+  padding: 0;
+  transition: color 0.5s ease, text-decoration 2s ease;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: rgb(255, 118, 14);
+}
+
+.description h2 {
+  font-size: 2rem;
+  padding-bottom: 1.2rem
+}
+
+.photo {
+  width: 55%;
+  margin-left: 45%;
+  /* Push card to the rightmost side */
+}
+
+.photo picture img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  object-position: 25%; /* Shift the focus to the left side of the image */
+}
 
 
 /* Where I left off 10/23: Studying Culinary dropout web page and am practicing using their styling ideas and html semantic practices. Will begin tomorrow by finishing this menu section with pictures and empty links included */

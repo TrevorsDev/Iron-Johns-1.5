@@ -12,8 +12,8 @@ async function loadGoogleMaps() {
     const iframe = document.createElement('iframe');
     iframe.src = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=5350 E Broadway #128, Tucson, AZ 85711:ChIJN1t_tDeuEmsRU9sPDbDGBsD8`;
 
-    iframe.width = "800";
-    iframe.height = "650";
+    iframe.width = "875";
+    iframe.height = "750";
     iframe.style.border = "0";
     iframe.loading = "lazy";
     iframe.allowFullscreen = true;
