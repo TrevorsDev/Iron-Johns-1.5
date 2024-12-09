@@ -332,33 +332,40 @@ body {
 .large-party-section {
   display: flex;
   justify-content: center;
-  position: relative;
-  width: 100%;
+  align-items: center;
+  flex-basis: 100%;
   margin-bottom: 3rem;
-  height: 700px;
+  border: red solid 1px;
 }
 
 .group-events-wrapper {
   display: flex;
-  justify-content: space-between;
-  width: 85%;
+  justify-content: space-between; /* Ensures content aligns on opposite sides */
   align-items: center;
+  flex-basis: 85%; /* Makes the container 85% of the viewport width */
+  max-width: 1600px;
+  border: yellow solid 1px;
 }
 
 .group-events-description h2 {
   font-size: 2rem;
-  padding-bottom: 1.2rem
+  padding-bottom: 1.2rem;
 }
 
 .group-events-description {
-  /* border: yellow solid 1px; */
-  position: absolute;
-  height: 400px;
-  width: 40%;
+  flex-basis: 37.5vw;
+  flex-grow: 0;
+  flex-shrink: 1;
   background-color: rgb(48, 4, 4);
-  padding: 1.6rem 1.6rem 0 1.6rem;
+  padding: 1.6rem;
   line-height: 1.6rem;
   font-size: 1.5rem;
+  margin-right: -6%;
+  z-index: 1;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add some dimension */
+   /* or a specific percentage value */
+  border: green solid 1px;
+  height: 60vh;
 }
 
 .links {
@@ -379,16 +386,18 @@ body {
 }
 
 .photo {
-  width: 55%;
-  /* margin-left: 45%; */
-  /* Push card to the rightmost side */
+  display: flex;
+  flex-basis: 60vw;
+  flex-grow: 0;
+  flex-shrink: 1;
+  z-index: 0;
 }
 
-.photo picture img {
+.photo img {
   width: 100%;
-  height: 650px;
-  object-fit: cover;
-  object-position: 25%; /* Shift the focus to the left side of the image */
+  height: auto;
+  object-fit: cover; /* Crops and fills as needed */
+  object-position: left center; /* Shift the focus to the left side of the image */
 }
 
 
