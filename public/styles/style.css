@@ -403,73 +403,48 @@ body {
 /*OPEN WINDOW SECTION JUST BEFORE FOOTER*/
 .join-us-section {
   position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.5); /*Transparent background*/
-  overflow: hidden; 
+  height: 80vh; /*80 screen height*/
+  background-image: url(/public/images/largestBannerImg.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0; /*Starts with hidden image, when section is scolled upon, image comes into view*/
+  transition: opacity 1s ease-in-out; /*smooth fade-in*/
   border: red solid 1px;
+  margin-bottom: 3rem;
 }
 
 .content-container {
-  position: relative;
   display: flex;
-  width: 100%;
-  max-width: 1600px;
-  height: 74%;
+  position: relative;
+  height: 100%;
   align-items: center;
   justify-content: center;
-  animation: slideIn .5s ease-in-out forwards;
+  z-index: 2; /*Ensures the content stays above the background*/
   border: yellow solid 1px;
-}
-
-.food-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Crops and fills as needed */
-  opacity: 0.8; /*slightly transparent*/
-  animation: fadeIn .5s ease-in-out forwards;
 }
 
 .join-us-card {
   position: absolute;
-  background: #181717cf;
-  padding: 4rem 2rem;
+  background: #181717bd;
+  padding: 8.5rem 9rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transform: translateY(100%);
-  animation: cardSlideIn .5s ease-in-out .5s forwards; /* Delayed entrance */
+  transform: translateY(50px);
+  opacity: 0; /* Delayed entrance */
+  transition: transform 1s ease, opacity 1s ease; /*smooth animation for card*/
 }
 
-/* Animations */
-@keyframes slideIn {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+/* Fade-in effect for the section's background as user scrolls */
+.join-us-section.visible {
+  opacity: 1; /* Image fades in */
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.8;
-  }
+/* Animation for the Join Us card */
+.join-us-section.visible .join-us-card {
+transform: translateY(0);
+opacity: 1; /* Image fades in */
 }
-
-@keyframes cardSlideIn {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-
 
 /* Where I left off 10/23: Studying Culinary dropout web page and am practicing using their styling ideas and html semantic practices. Will begin tomorrow by finishing this menu section with pictures and empty links included */
