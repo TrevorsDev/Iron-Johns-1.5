@@ -431,7 +431,7 @@ body {
   padding: 8.5rem 9rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transform: translateY(50px);
+  transform: translateY(20px);
   opacity: 0; /* Delayed entrance */
   transition: transform 1s ease, opacity 1s ease; /*smooth animation for card*/
 }

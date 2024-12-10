@@ -6,6 +6,7 @@ function initScrollEffects() {
   const section = document.querySelector('.join-us-section');
   
   document.addEventListener('scroll', () => {
+      // Retrieves the position of the .join-us-section relative to the viewport.
     const rect = section.getBoundingClientRect();
 
     // Check if the section is in the viewport
