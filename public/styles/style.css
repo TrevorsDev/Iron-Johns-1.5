@@ -268,7 +268,7 @@ body {
   font-size: 1.5rem;
 }
 
-.hours h2{
+.hours h2 {
   padding-bottom: .8rem;
 }
 
@@ -300,14 +300,16 @@ body {
   width: 300px;
   height: 675px;
   align-items: center;
-  overflow: hidden; /* Prevent content from spilling out */
+  overflow: hidden;
+  /* Prevent content from spilling out */
 }
 
 .row-wrap {
   display: flex;
   width: 820px;
   height: 80%;
-  overflow: hidden; /* Prevent content from spilling out */
+  overflow: hidden;
+  /* Prevent content from spilling out */
   /* border: green solid 1px;  */
 }
 
@@ -320,10 +322,14 @@ body {
 
 .column-wrap picture img,
 .row-wrap picture img {
-  width: 100%; /* Match the width of the container */
-  height: 100%; /* Match the height of the container */
-  object-fit: cover; /* Ensures no distortion while filling the container */
-  display: block; /* Removes inline-block default spacing for images */
+  width: 100%;
+  /* Match the width of the container */
+  height: 100%;
+  /* Match the height of the container */
+  object-fit: cover;
+  /* Ensures no distortion while filling the container */
+  display: block;
+  /* Removes inline-block default spacing for images */
 }
 
 /* LARGE PARTY SECTION*/
@@ -340,9 +346,11 @@ body {
 
 .group-events-wrapper {
   display: flex;
-  justify-content: space-between; /* Ensures content aligns on opposite sides */
+  justify-content: space-between;
+  /* Ensures content aligns on opposite sides */
   align-items: center;
-  flex-basis: 85%; /* Makes the container 85% of the viewport width */
+  flex-basis: 85%;
+  /* Makes the container 85% of the viewport width */
   max-width: 1600px;
   border: yellow solid 1px;
 }
@@ -362,8 +370,9 @@ body {
   font-size: 1.5rem;
   margin-right: -6%;
   z-index: 1;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add some dimension */
-   /* or a specific percentage value */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  /* Add some dimension */
+  /* or a specific percentage value */
   border: green solid 1px;
   height: 60vh;
 }
@@ -396,21 +405,26 @@ body {
 .photo img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Crops and fills as needed */
-  object-position: left center; /* Shift the focus to the left side of the image */
+  object-fit: cover;
+  /* Crops and fills as needed */
+  object-position: left center;
+  /* Shift the focus to the left side of the image */
 }
 
 /*OPEN WINDOW SECTION JUST BEFORE FOOTER*/
 .join-us-section {
   position: relative;
-  height: 80vh; /*80 screen height*/
-  background-image: url(/public/images/largestBannerImg.png);
+  height: 80vh;
+  /*80 screen height*/
+  background-image: url(/images/largestBannerImg.png);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0; /*Starts with hidden image, when section is scolled upon, image comes into view*/
-  transition: opacity 1s ease-in-out; /*smooth fade-in*/
+  opacity: 0;
+  /*Starts with hidden image, when section is scolled upon, image comes into view*/
+  transition: opacity 1s ease-in-out;
+  /*smooth fade-in*/
   border: red solid 1px;
   margin-bottom: 3rem;
 }
@@ -421,7 +435,8 @@ body {
   height: 100%;
   align-items: center;
   justify-content: center;
-  z-index: 2; /*Ensures the content stays above the background*/
+  z-index: 2;
+  /*Ensures the content stays above the background*/
   border: yellow solid 1px;
 }
 
@@ -432,19 +447,23 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(20px);
-  opacity: 0; /* Delayed entrance */
-  transition: transform 1s ease, opacity 1s ease; /*smooth animation for card*/
+  opacity: 0;
+  /* Delayed entrance */
+  transition: transform 1s ease, opacity 1s ease;
+  /*smooth animation for card*/
 }
 
 /* Fade-in effect for the section's background as user scrolls */
 .join-us-section.visible {
-  opacity: 1; /* Image fades in */
+  opacity: 1;
+  /* Image fades in */
 }
 
 /* Animation for the Join Us card */
 .join-us-section.visible .join-us-card {
-transform: translateY(0);
-opacity: 1; /* Image fades in */
+  transform: translateY(0);
+  opacity: 1;
+  /* Image fades in */
 }
 
 /* Where I left off 10/23: Studying Culinary dropout web page and am practicing using their styling ideas and html semantic practices. Will begin tomorrow by finishing this menu section with pictures and empty links included */

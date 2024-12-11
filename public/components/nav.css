@@ -1,11 +1,10 @@
-
 header {
   /* height: 40px; */
   position: absolute;
   top: 0;
   z-index: 20;
   transition: all 0.2s ease;
-  width: 100%; 
+  width: 100%;
 }
 
 nav {
@@ -17,7 +16,7 @@ nav {
   width: 100%;
   position: fixed;
   z-index: 1;
-  
+
 }
 
 .header-image {
@@ -34,7 +33,7 @@ nav li a:hover {
   background-color: rgba(255, 255, 255, 0.888);
   transition: background-color 0.8s ease, color 0.8s ease;
   color: black;
-  
+
 }
 
 ul {
@@ -83,7 +82,7 @@ ul.dropdown {
   /* Start slightly above */
   transition: opacity 0.4s ease, transform 0.4s ease;
   /* Slow transition */
-  
+
 }
 
 li:hover>ul.dropdown {
@@ -122,6 +121,17 @@ ul.dropdown li a:hover {
 }
 
 /* consider modularizing some button class and properties so that some elements can be standarized to other buttons throughout the website. This provides consistency and ease of ability to update code. */
+
+a.order-btn {
+  display: inline-block;
+  /* Keeps it as an inline-block, so it behaves like a button */
+  text-decoration: none;
+  /* Remove underline from the link */
+  padding: 0;
+  /* Remove any extra padding from the <a> tag */
+  background-color: transparent;
+  /* Make sure the link itself has no background */
+}
 
 .order-btn {
   background-color: rgba(0, 0, 0, 0.9);

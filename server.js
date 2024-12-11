@@ -9,6 +9,10 @@ dotenv.config();
 // Serve static files (like your HTML, CSS, and JavaScript)
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Investigate this block of code. Break it down and understand.
+app.get('/debug', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/scripts/scrollEffects.js'));
+});
 
 // Endpoint to provide API key
 app.get('/api/key', (req, res) => {
