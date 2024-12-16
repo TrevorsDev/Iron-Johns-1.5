@@ -209,45 +209,41 @@ body {
 }
 
 /*DAILY SPECIALS BANNER*/
+
 .daily-specials-banner {
   display: flex;
-  width: 100%;
   justify-content: center;
-  border: red solid 1px;
+}
+
+.daily-specials-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(48, 4, 4);
+  padding: 1.5rem;
+  width: 85%;
 }
 
 .daily-specials-header {
   display: flex;
+  justify-content: center;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.731);
-  flex-direction: column;
-  align-items: center;
-  /* padding: 2rem; */
-  /* gap: 2rem; */
-  border: yellow solid 1px;
+  padding-bottom: 1.5rem;
 }
 
 .daily-specials-header h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .daily-specials-container {
   display: flex;
-  justify-content: space-between;
-  width: 85%;
-  border: green solid 1px;
-}
-
-.specials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  /* padding: 4rem; */
+  justify-content: space-between; /* Spread specials equally */
+  width: 85%; /* Matches h2's parent width */
 }
 
 .specials h3 {
-  font-size: 1.8rem
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
 }
 
 /*MAPS AND HOURS SECTION*/
