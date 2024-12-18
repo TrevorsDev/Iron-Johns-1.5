@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 20vh;
   background-color: black;
   border: red solid 1px;
 }
@@ -11,6 +12,7 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
+  height: 12vh;
   flex-shrink: 0;
   margin: 0;
   border: yellow solid 1px;
@@ -19,9 +21,25 @@
 .essentials {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
   border: green solid 1px;
   width: 100%;
+  height: auto;
+}
+
+.essentials ul {
+  display: flex;
+  /* Make the ul a flex container */
+  justify-content: center;
+  /* Center list items horizontally */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.essentials ul li {
+  margin: 0 2rem;
+  /* Optional: Add horizontal spacing between items */
 }
 
 .socials {
@@ -32,5 +50,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 8vh;
   border: blue solid 1px;
 }

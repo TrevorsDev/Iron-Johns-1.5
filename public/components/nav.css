@@ -9,9 +9,7 @@ header {
 
 .navigation {
   display: flex;
-  font-size: 17px;
-  font-weight: 500;
-  height: 70px;
+  height: 10vh;
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   position: fixed;
@@ -74,7 +72,7 @@ ul.dropdown {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  top: 70px;
+  top: 10vh;
   visibility: hidden;
   opacity: 0;
   /* Initially invisible */
@@ -138,9 +136,4 @@ a.order-btn {
   padding: 15px 25px;
 }
 
-.order-btn:hover {
-  box-sizing: border-box;
-  background-color: #F99D2C;
-  color: black;
-  border: 2px solid transparent;
-}
+/*what you need to fix now is the <a> thats styled as a button. Some of the applied class styling is being over ridden somewhere. And solving this issue will help you style the buttons correctly*/
