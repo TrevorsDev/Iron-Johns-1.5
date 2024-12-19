@@ -150,6 +150,16 @@ body {
   justify-content: flex-start;
 }
 
+.menu-btn {
+  transition: background-color 0.5s ease, border-radius 0.5s ease;
+  /* Smooth transition for both properties */
+}
+
+.menu-btn:hover {
+  background-color: rgb(255, 47, 0);
+  border-radius: 5px;
+}
+
 .button {
   border: 2px solid white;
   padding: 10px 25px;
@@ -164,20 +174,10 @@ body {
 }
 
 .order-btn:hover {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   background-color: #F99D2C;
   color: black;
   border: 2px solid transparent;
-}
-
-.menu-btn {
-  transition: background-color 0.5s ease, border-radius 0.5s ease;
-  /* Smooth transition for both properties */
-}
-
-.menu-btn:hover {
-  background-color: rgb(255, 47, 0);
-  border-radius: 5px;
 }
 
 .details-sections {
