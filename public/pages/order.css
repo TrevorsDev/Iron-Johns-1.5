@@ -1,12 +1,28 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  background-color: grey;
-}
 
 .main-style {
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  height: 80vh;
+  border: red 1px solid;
 }
+
+.order-header {
+  border: yellow 1px solid;
+}
+
+.order-header h1 {
+  padding: 2rem;
+  border: green 1px solid;
+}
+
+.restaurant-details {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  gap: 2rem;
+  border: blue 1px solid;
+}
+
