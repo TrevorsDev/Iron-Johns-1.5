@@ -4,7 +4,8 @@
   margin-top: 80px;
   display: flex;
   flex-direction: column;
-  width: 85vw;
+  max-width: 1200px;
+  width: 85%;
   height: 80vh;
   border: red 1px solid;
 }

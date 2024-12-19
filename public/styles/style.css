@@ -99,6 +99,7 @@ body {
 .main-title {
   display: flex;
   /* border: 1px solid #fff; */
+  max-width: 1200px;
   width: 85%;
   margin: 0 auto;
 }
