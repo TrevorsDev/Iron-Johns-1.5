@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="components/nav.css">
-  <title>Tasty Orders!</title>
+
+  <!-- <link rel="stylesheet" href="../styles/style.css"> -->
+  <link rel="stylesheet" href="../components/nav.css">
+  <link rel="stylesheet" href="../components/footer.css">
+  <link rel="stylesheet" href="./order.css">
+  
+  <title>Tasty Orders! - Iron John's Brewing</title>
 </head>
 
 <body>
@@ -13,15 +19,24 @@
     <div id="nav-placeholder"></div>
   </header>
 
-  <main>
-    <h1>Order Online</h1>
+  <!-- Main Content -->
+  <main class="main-style">
+    <section class="order-header">
+      <h1>Order Online</h1>
+      <p>Browse our menu and order your favorite food and drinks!</p>
+    </section>
+
+    <!-- Square Order Menu (iframe)-->
+     <section class="square-order">
+      <h2></h2>
+     </section>
   </main>
 
-  <footer>
-    <div id="footer-placeholder"></div>
-  </footer>
+  <footer id="footer-placeholder"></footer>
+
 
   <script src="../scripts/loadNav.js"></script>
+  <script src="../scripts/loadFooter.js"></script>
 </body>
 
 </html>
