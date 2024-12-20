@@ -461,6 +461,7 @@ body {
 .join-us-section {
   position: relative;
   height: 80vh;
+
   /*80 screen height*/
   background-image: url(/images/largestBannerImg.png);
   background-position: center;
@@ -479,6 +480,7 @@ body {
   display: flex;
   position: relative;
   height: 100%;
+  width: 100vw;
   align-items: center;
   justify-content: center;
   z-index: 2;

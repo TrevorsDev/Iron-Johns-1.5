@@ -66,7 +66,7 @@ ul.dropdown {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  top: 10vh;
+  top: 70px;
   visibility: hidden;
   opacity: 0;
   /* Initially invisible */
@@ -114,7 +114,7 @@ ul.dropdown li a:hover {
 
 .navigation .button {
   border: 2px solid white;
-  height: 8vh;
+  height: 50px;
   background-color: transparent;
   text-decoration: none;
   color: white;
