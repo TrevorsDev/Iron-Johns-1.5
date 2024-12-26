@@ -99,13 +99,13 @@ body {
 .main-title {
   display: flex;
   /* border: 1px solid #fff; */
-  max-width: 1200px;
+  max-width: 1600px;
   width: 85%;
   margin: 0 auto;
 }
 
 .menu-description {
-  height: 80vh;
+  min-height: 65vh;
   flex-direction: row;
   background-color: rgb(48, 4, 4);
   /* margin-bottom: 3rem; */
@@ -124,6 +124,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: 100%;
   padding: 30px;
   gap: 1.5rem;
   line-height: 2rem;
