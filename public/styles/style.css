@@ -183,7 +183,8 @@ h3 {
   cursor: pointer;
 }
 
-.order-btn:hover {
+.order-btn:hover,
+.order-btn:active {
   /* box-sizing: border-box; */
   background-color: #F99D2C;
   color: black;

@@ -62,11 +62,14 @@ document.querySelectorAll('.button').forEach(button => {
         </div>
         <div class="phone-num">
           <h3>Phone Us</h3>
-          <p>Phone: (520) 514-9797</p>
+          <a href="tel:15205149797" class="button phone-button">(520) 514-9797</a>
         </div>
       </div>
+      <div class="email">
         <p>Email: info@ironjohnsbrewing.com</p>
+        <p>Phone in or order right from this page! :)</p>
         <p>Online orders are for pickup only. We don't offer Door Dash or Grub Hub at this time.</p>
+      </div>
       `;
     }
   });

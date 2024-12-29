@@ -89,15 +89,16 @@ p {
 }
 
 .rest-details-header h2 {
-  padding: 2rem;
-  font-size: 2rem;
+  padding: 1rem;
+  /* font-size: 2rem; */
 }
 
 .hours-addy-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 1rem;
+  border-bottom: solid 1px white;
+  padding: 1rem;
 }
 
 .addy,
@@ -108,5 +109,22 @@ p {
   align-items: flex-start;
   margin: 0;
   padding: 0;
-  gap: 1rem;
+  gap: .5rem;
 }
+
+.phone-button {
+  border-radius: 3px;
+}
+
+.phone-button:hover,
+.phone-button:active {
+  border-color: #F99D2C;
+  color: #F99D2C;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
