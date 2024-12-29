@@ -20,6 +20,10 @@ h2 {
   font-size: 2rem;
 }
 
+h3 {
+  font-size: 1.25rem;
+}
+
 /* HERO SECTION CSS */
 #rotating-pics-banner {
   position: relative;
@@ -250,8 +254,10 @@ h2 {
 
 .daily-specials-container {
   display: flex;
-  justify-content: space-between; /* Spread specials equally */
-  width: 85%; /* Matches h2's parent width */
+  justify-content: space-between;
+  /* Spread specials equally */
+  width: 85%;
+  /* Matches h2's parent width */
 }
 
 .specials h3 {

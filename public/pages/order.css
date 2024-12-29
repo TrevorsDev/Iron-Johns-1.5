@@ -66,7 +66,7 @@ p {
   color: white;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
+  width: 100%;
   max-width: 500px;
   height: auto;
   max-height: 800px;
@@ -97,18 +97,16 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.addy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 1rem;
 }
 
+.addy,
+.addy p,
 .phone-num {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin: 0;
+  padding: 0;
   gap: 1rem;
 }

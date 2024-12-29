@@ -42,7 +42,7 @@ document.querySelectorAll('.button').forEach(button => {
         <h2>Map Location</h2>
       </div>  
         <p>We are located at the Williams Centre Shopping Mall.</p>
-      `; 
+      `;
 
       // Fetch the iframe and append it to the modal body
       getGoogleMapsIframe().then(iframe => {
@@ -57,7 +57,8 @@ document.querySelectorAll('.button').forEach(button => {
       <div class="hours-addy-container">
         <div class="addy">
           <h3>Address</h3>
-          <p>1234 Broadway Blvd, Tucson, AZ</p>
+          <p>1234 Broadway Blvd,</p>
+          <p>Tucson, AZ 85711</p>
         </div>
         <div class="phone-num">
           <h3>Phone Us</h3>

@@ -31,5 +31,10 @@ async function loadGoogleMaps() {
   }
 }
 
+// Event listener to load the map after the DOM content has loaded
+window.addEventListener('DOMContentLoaded', (event) => {
+  loadGoogleMaps();  // Dynamically inserts the Google Map when the page is fully loaded
+});
+
 /* API Key Fetching (loadApi.js): The function getApiKey() is separated and exported so order.js can call it without repeating the logic. */
 export { getApiKey, loadGoogleMaps };
