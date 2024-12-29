@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  
+
   <link rel="stylesheet" href="../components/nav.css">
   <link rel="stylesheet" href="../components/footer.css">
   <link rel="stylesheet" href="./order.css">
@@ -22,26 +22,47 @@
   <!-- Main Content -->
   <main class="main-style">
     <section class="order-header">
-      <h1>Iron John's Brewing - Broadway</h1>
+      <h1>Iron John's Brewing - On Broadway</h1>
+      <p>Located in the Williams Centre Shopping Mall</p>
       <!--Inside the Restaurant Details button Ill include Address, phone, email, and hours -->
       <div class="restaurant-details">
-        <a href="" class="button">Map Location</a>
-        <a href="" class="button">Restaurant Details</a>
+        <div class="details-button">
+          <button class="button">Map Location</button>
+          <button class="button">Restaurant Details</button>
+        </div>
+        <div class="hours">
+          <h2>Hours of Operation</h2>
+          <p>Monday-Thursday: 11am-9pm</p>
+          <p>Friday-Saturday: 11am-10pm</p>
+          <p>Sunday: 12pm-8pm</p>
+        </div>
       </div>
       <p>Browse our menu and order your favorite food and drinks!</p>
     </section>
 
     <!-- Square Order Menu (iframe)-->
-     <section class="square-order">
+    <section class="square-order">
       <h2></h2>
-     </section>
+    </section>
   </main>
+
+  <!-- Modal structure -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div id="modal-body">
+        <!-- Modal content will be dynamically added -->
+      </div>
+    </div>
+  </div>
 
   <footer id="footer-placeholder"></footer>
 
-
   <script src="../scripts/loadNav.js"></script>
+  <script type="module" src="../scripts/loadApi.js"></script>
+  <script type="module" src="../scripts/order.js"></script>
   <script src="../scripts/loadFooter.js"></script>
+
 </body>
 
 </html>

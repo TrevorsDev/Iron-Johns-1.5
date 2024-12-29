@@ -1,5 +1,3 @@
-
-
 .main-style {
   margin-top: 80px;
   display: flex;
@@ -7,23 +5,110 @@
   max-width: 1200px;
   width: 85%;
   height: 80vh;
-  border: red 1px solid;
+  /* border: red 1px solid; */
 }
 
 .order-header {
-  border: yellow 1px solid;
+  /* border: yellow 1px solid; */
+  padding: 2rem;
+  line-height: 1.6rem;
 }
 
 .order-header h1 {
-  padding: 2rem;
-  border: green 1px solid;
+  font-size: 2rem;
+}
+
+.order-header h1,
+p {
+  padding-bottom: 1rem;
+  /* border: green 1px solid; */
 }
 
 .restaurant-details {
   display: flex;
   flex-direction: row;
-  padding: 2rem;
-  gap: 2rem;
-  border: blue 1px solid;
+  align-items: center;
+  justify-content: space-between;
+  /* border: blue 1px solid; */
 }
 
+.details-button {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  /* border: orange 1px solid; */
+}
+
+.hours h2,
+p {
+  line-height: 1rem;
+  /* border: red 1px solid; */
+}
+
+/* CSS for modal  */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #232323;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  max-height: 800px;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+
+.close-button:hover {
+  font-weight: 700;
+  color: #F99D2C;
+}
+
+.rest-details-header h2 {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.hours-addy-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.phone-num {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}

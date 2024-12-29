@@ -16,6 +16,10 @@ body {
   background-color: #232323;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 /* HERO SECTION CSS */
 #rotating-pics-banner {
   position: relative;
@@ -291,7 +295,7 @@ body {
 .ops-btns,
 .hours {
   padding: 1.9rem 0 0 1.9rem;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
   font-size: 1.5rem;
 }
 
@@ -304,7 +308,7 @@ body {
   flex-direction: row;
   padding: 1.5rem 0 0 1.9rem;
   gap: 3rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
 }
 
 .ops-btns a {
