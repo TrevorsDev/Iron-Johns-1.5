@@ -165,8 +165,11 @@ h3 {
   /* Smooth transition for both properties */
 }
 
-.menu-btn:hover {
-  background-color: rgb(255, 47, 0);
+.menu-btn:hover,
+.menu-btn:active {
+  background-color: rgb(69, 6, 6);
+  border-color: black;
+  color: black;
   border-radius: 5px;
 }
 

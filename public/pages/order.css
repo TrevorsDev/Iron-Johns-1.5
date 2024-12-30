@@ -89,7 +89,7 @@ p {
 }
 
 .rest-details-header h2 {
-  padding: 1rem;
+  padding: .5rem;
   /* font-size: 2rem; */
 }
 
@@ -98,7 +98,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   border-bottom: solid 1px white;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .addy,
@@ -118,8 +118,9 @@ p {
 
 .phone-button:hover,
 .phone-button:active {
-  border-color: #F99D2C;
+  border-color: black;
   color: #F99D2C;
+  background-color: black;
 }
 
 .email {

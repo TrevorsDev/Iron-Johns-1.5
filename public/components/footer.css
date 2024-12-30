@@ -26,8 +26,7 @@
 }
 
 .essentials {
-  display: flex;
-  flex-direction: row;
+  display: flex; 
   justify-content: center;
   /* border: green solid 1px; */
   width: 100%;
@@ -44,7 +43,10 @@
   align-items: center;
 }
 
-
+.privacy {
+  display: flex;
+  flex-direction: column;
+}
 
 .socials {
   /* border: purple solid 1px; */
