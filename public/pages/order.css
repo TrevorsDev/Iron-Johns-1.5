@@ -1,12 +1,18 @@
 .order-sec {
   /* border: yellow 1px solid; */
-  
+  display: flex;
+  flex-direction: column;
+  width: 85%;
   line-height: 1.6rem;
 }
 
 .order-header h1 {
+  display: flex;
+  justify-content: center;
   padding: 2rem 0 2rem 0;
-  border: green 1px solid;
+  border-top: #F99D2C 3px solid;
+  border-bottom: #F99D2C 3px solid;
+  margin-bottom: 2rem;
 }
 
 .restaurant-details {

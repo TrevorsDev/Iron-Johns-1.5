@@ -1,0 +1,53 @@
+/* Style inspired by https://www.agavehousetucson.com/menus/ */
+
+.main-body {
+  /* border: solid red 1px; */
+}
+
+.banner-container {
+  border-bottom: dotted #F99D2C 1.5px;
+}
+
+.menu-banner {
+  width: 100%;
+  /* border-top: solid #F99D2C 2px; */
+  
+  letter-spacing: .8rem;
+}
+
+.menu-banner h1 {
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+}
+
+.location-phone {
+  display: flex;
+  
+  justify-content: space-between;
+}
+
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+  width: 85%;
+}
+
+.menu-button {
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  color: #F99D2C;
+  border: 1px solid #F99D2C;;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-button:hover,
+.menu-button:active {
+  background-color: #F99D2C;
+  color: white;
+  border: 1px solid transparent;
+}

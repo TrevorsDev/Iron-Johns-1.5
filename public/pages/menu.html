@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/components/nav.css">
+  <link rel="stylesheet" href="/components/footer.css">
+  <link rel="stylesheet" href="/pages/menu.css">
+  <link rel="stylesheet" href="../../styles/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header>
+    <!-- Navigation Bar-->
+    <div id="nav-placeholder"></div>
+  </header>
+
+  <main class="main-body main-style">
+
+    <div class="banner-container">
+
+      <div class="menu-banner">
+        <h1>Broadway Menu Selections</h1>
+      </div>
+
+      <div class="location-phone">
+        <p>5350 E Broadway Blvd #128, Tucson, AZ 85711</p>
+        <a href="tel:15205149797">(520) 514-9797</a>
+      </div>
+
+    </div>
+
+    <section class="menu-buttons">
+      <button class="menu-button" data-target="../menus/beer.html">Beer</button>
+      <button class="menu-button" data-target="../menus/cocktails.html">Drinks</button>
+      <button class="menu-button" data-target="../menus/shareables.html">Sharables</button>
+      <button class="menu-button" data-target="../menus/salads.html">Salads</button>
+      <button class="menu-button" data-target="../menus/pizza.html">Pizza</button>
+      <button class="menu-button" data-target="../menus/burger.html">Burgers</button>
+      <button class="menu-button" data-target="../menus/kids.html">Kids</button>
+      <button class="menu-button" data-target="../menus/merch.html">Merch</button>
+    </section>
+
+    <section class="menu-content-container">
+      <!-- Dynamic content will be loaded here -->
+    </section>
+    <script src="/scripts/loadMenus.js"></script>
+
+  </main>
+
+  <footer id="footer-placeholder"></footer>
+
+  <script type="module" src="../../scripts/loadNav.js"></script>
+  <script type="module" src="../../scripts/loadFooter.js"></script>
+
+</body>
+
+</html>
