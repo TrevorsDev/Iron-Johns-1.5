@@ -6,13 +6,19 @@
 
 .banner-container {
   border-bottom: dotted #F99D2C 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
+
 .menu-banner {
-  width: 100%;
-  /* border-top: solid #F99D2C 2px; */
-  
-  letter-spacing: .8rem;
+  /* border: yellow 1px solid; */
+}
+
+.menu-banner h1 {
+  letter-spacing: .5rem;
 }
 
 .menu-banner h1 {
@@ -22,8 +28,9 @@
 
 .location-phone {
   display: flex;
-  
   justify-content: space-between;
+  padding-bottom: 2rem;
+  /* border: blue solid 1px; */
 }
 
 .menu-buttons {
@@ -39,7 +46,8 @@
   padding: 0.5rem 1.5rem;
   background-color: transparent;
   color: #F99D2C;
-  border: 1px solid #F99D2C;;
+  border: 1px solid #F99D2C;
+  ;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -50,4 +58,14 @@
   background-color: #F99D2C;
   color: white;
   border: 1px solid transparent;
+}
+
+.menu-content-container {
+  border: #F99D2C solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  height: 100vh;
+  padding: 2rem;
 }

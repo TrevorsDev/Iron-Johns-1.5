@@ -7,6 +7,7 @@ document.querySelectorAll('.menu-button').forEach(button => {
         if (!response.ok) throw new Error('Network response was not ok');
         return response.text();
       })
+
       .then(data => {
         document.querySelector('.menu-content-container').innerHTML = data;
       })

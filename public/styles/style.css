@@ -187,9 +187,9 @@ h3 {
 
 .menu-btn:hover,
 .menu-btn:active {
-  background-color: rgb(69, 6, 6);
-  border-color: black;
-  color: black;
+  background-color: white;
+  border-color: transparent;
+  color: rgb(48, 4, 4);
   border-radius: 5px;
 }
 
@@ -201,7 +201,7 @@ h3 {
   color: white;
   font-size: 1.1rem;
   margin: 0px;
-  transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
+  transition: background-color .5s, color .5s, border-color .5s;
   letter-spacing: 2px;
   cursor: pointer;
 }
@@ -227,9 +227,9 @@ h3 {
   transition: color 0.5s ease, text-decoration 2s ease;
 }
 
-.details-sections a:hover {
+.details-sections a:hover,
+.details-sections a:active {
   text-decoration: underline;
-  color: rgb(255, 118, 14);
 }
 
 .menu-card,
