@@ -23,7 +23,8 @@ header {
   margin: 5px 40px;
 }
 
-.navigation li a:hover {
+.navigation li a:hover,
+.navigation li a:active {
   background-color: rgba(255, 255, 255, 0.888);
   transition: background-color 0.8s ease, color 0.8s ease;
   color: black;

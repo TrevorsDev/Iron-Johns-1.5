@@ -1,27 +1,12 @@
-.main-style {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-  width: 85%;
-  height: 80vh;
-  /* border: red 1px solid; */
-}
-
-.order-header {
+.order-sec {
   /* border: yellow 1px solid; */
-  padding: 2rem;
+  
   line-height: 1.6rem;
 }
 
 .order-header h1 {
-  font-size: 2rem;
-}
-
-.order-header h1,
-p {
-  padding-bottom: 1rem;
-  /* border: green 1px solid; */
+  padding: 2rem 0 2rem 0;
+  border: green 1px solid;
 }
 
 .restaurant-details {
@@ -36,13 +21,13 @@ p {
   display: flex;
   gap: 2rem;
   align-items: center;
-  /* border: orange 1px solid; */
+  border: orange 1px solid;
 }
 
-.hours h2,
-p {
-  line-height: 1rem;
+.hours {
+  /* line-height: 1rem; */
   /* border: red 1px solid; */
+  padding: 0;
 }
 
 /* CSS for modal  */
@@ -128,4 +113,3 @@ p {
   flex-direction: column;
   padding: 1rem;
 }
-
