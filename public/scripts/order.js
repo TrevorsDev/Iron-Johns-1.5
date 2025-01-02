@@ -69,6 +69,7 @@ document.querySelectorAll('.button').forEach(button => {
         <p>Email: info@ironjohnsbrewing.com</p>
         <p>Phone in or order right from this page! :)</p>
         <p>Online orders are for pickup only. We don't offer Door Dash or Grub Hub at this time.</p>
+        <p>There are no gluten free options at this time</p>
       </div>
       `;
     }
