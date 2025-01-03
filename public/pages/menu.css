@@ -55,7 +55,6 @@
   background-color: transparent;
   color: #F99D2C;
   border: 1px solid #F99D2C;
-  ;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -74,7 +73,7 @@
   flex-direction: column;
   align-items: center;
   width: 85%;
-  height: 100vh;
+  height: 100%;
   padding: 2rem;
 }
 
@@ -87,33 +86,95 @@
   border: yellow solid 1px;
 }
 
-.menu-section h2 {
-  padding-bottom: 1rem;
-}
+/* PAGE FOR EACH TOPIC ON THE MENU */
+/* Header Styling */
 
-.beer-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 99%;
-  padding: 2rem 0;
-  /* border: #F99D2C solid 1px; */
-}
-
-.beers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  /* border: blue solid 1px; */
-}
-
-.beers li {
+.main {
   display: flex;
   flex-direction: column;
-  border: red solid 1px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: green 1px solid;
 }
 
-.block {
-  padding-bottom: 1.5rem;
+.header {
+  display: flex;
+  text-align: center;
+  margin-bottom: 20px;
+  width: 50%;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.header-line {
+  flex-grow: 1;
+  border: 0;
+  height: 1px;
+  width: 70%;
+  background-color: #ddd;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #333;
+}
+
+/* Beer Menu Layout */
+
+.beer-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  border: orchid solid 1px;
+}
+
+.beer-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 100%;
+  border: blue solid 1px;
+}
+
+.beer-item {
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 2;
+  flex-wrap: wrap;
+  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: orangered solid 1px;
+}
+
+.beer-item h2 {
+  font-size: 1.5em;
+  margin: 0 0 5px;
+  color: #f9f9f9;
+}
+
+.beer-item p {
+  font-size: 1em;
+  color: #f9f9f9;
+}
+
+.transparent-wrap {
+  visibility: hidden;
+}
+
+.zero-proof {
+  border: yellow solid 2px;
+  border-radius: 2px;
+}

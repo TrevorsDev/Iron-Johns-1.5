@@ -2,8 +2,11 @@ document.querySelectorAll('.menu-button').forEach(button => {
   button.addEventListener('click', () => {
     const target = button.getAttribute('data-target');
 
+    button.disabled = true;
+
     fetch(target)
       .then(response => {
+        button.disabled = false;
         if (!response.ok) throw new Error('Network response was not ok');
         return response.text();
       })
