@@ -158,13 +158,8 @@ h3 {
   line-height: 2rem;
 }
 
-.menu-card h1 {
-  font-size: 1.5rem;
+.menu-card h2 {
   padding-bottom: 3%;
-}
-
-.menu-card p {
-  font-size: 1.15rem;
 }
 
 .menu-card div {
