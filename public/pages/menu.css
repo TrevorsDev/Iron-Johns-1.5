@@ -194,6 +194,33 @@
   color: #f9f9f9;
 }
 
+.price-row {
+  display: flex;
+  justify-content: space-between; /* Align size and price at opposite ends */
+  align-items: center; /* Vertically align content */
+  width: 100%; /* Full width of the parent container */
+  position: relative; /* For the dotted line */
+  padding: 5px 0; /* Add vertical spacing */
+}
+
+.price-row::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* Center the line vertically */
+  left: 0;
+  right: 0; /* Full width */
+  height: 1px;
+  background: repeating-linear-gradient(to right, #f9f9f9, #f9f9f9 2px, transparent 2px, transparent 4px);
+  z-index: 0; /* Place it behind the content */
+}
+
+.price-row p {
+  background: #1a1a1a; /* Match your page's background for overlay effect */
+  padding: 0 10px; /* Add padding to separate text from the dotted line */
+  z-index: 1; /* Ensure it appears above the line */
+}
+
+
 .transparent-wrap {
   visibility: hidden;
 }
