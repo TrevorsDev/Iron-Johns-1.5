@@ -2,8 +2,26 @@
   /* border: yellow 1px solid; */
   display: flex;
   flex-direction: column;
-  width: 85%;
+  align-items: center;
+  width: 100%;
   line-height: 1.6rem;
+  /* border: red 1px solid; */
+}
+
+.order-head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* border: green 1px solid; */
+}
+
+.order-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* border: yellow 1px solid; */
 }
 
 .order-header h1 {
@@ -12,7 +30,16 @@
   padding: 2rem 0 2rem 0;
   border-top: #F99D2C 3px solid;
   border-bottom: #F99D2C 3px solid;
+  width: 80%;
   margin-bottom: 2rem;
+}
+
+.order-online-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* border: green 1px solid; */
 }
 
 .restaurant-details {
@@ -20,19 +47,20 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* border: blue 1px solid; */
+  width: 85%;
+  /* border: yellow 1px solid; */
 }
 
 .details-button {
   display: flex;
   gap: 2rem;
   align-items: center;
-  border: orange 1px solid;
+  /* border: yellow 1px solid; */
 }
 
 .hours {
   /* line-height: 1rem; */
-  /* border: red 1px solid; */
+  /* border: blue 1px solid; */
   padding: 0;
 }
 
