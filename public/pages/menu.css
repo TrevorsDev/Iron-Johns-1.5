@@ -108,6 +108,10 @@
   padding-bottom: 1rem;
 }
 
+.header-wrap p {
+  line-height: 2rem;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -176,7 +180,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 4rem;
   width: 100%;
   /* border: blue solid 1px; */
 }
@@ -184,11 +188,11 @@
 .beer-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  flex: 2;
+  flex: 1;
   flex-wrap: wrap;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  min-width: 300px;
+  align-items: flex-start;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.203);
   padding: 2rem 1rem;
   gap: .5rem;
   /* Space between items */
@@ -218,7 +222,6 @@
   /* For the dotted line */
   padding: 5px 0;
   /* Add vertical spacing */
-  gap: 5rem;
   /* border: red solid 1px; */
 }
 
@@ -226,21 +229,29 @@
   content: "";
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   /* Center the line vertically */
-  left: 5rem;
-  right: 5rem;
+  /* Center the line vertically */
+  left: 0;
+  right: 0;
   /* specified width */
   height: 1px;
-  background: repeating-linear-gradient(to right, #f9f9f9, #f9f9f9 2px, transparent 2px, transparent 4px);
+  background: repeating-linear-gradient(to right,
+      #f9f9f9 0,
+      #f9f9f9 2px,
+      transparent 2px,
+      transparent 4px);
   z-index: 0;
   /* Place it behind the content */
 }
 
-.price-row p {
-  background: #f99d2c49;
+.price-row p,
+.price-row h3 {
+  align-items: center;
+  background: black;
   /* Match your page's background for overlay effect */
   border-radius: 2px;
-  padding: 0 10px;
+  padding: 5px 10px;
   /* Add padding to separate text from the dotted line */
   z-index: 1;
   /* Ensure it appears above the line */
@@ -251,7 +262,8 @@
   min-width: 50%;
 }
 
-.na-container {
+.na-container,
+.zero-proof {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -269,6 +281,10 @@
   gap: .5rem;
   padding: 1rem;
   /* border: red solid 1px; */
+}
+
+.na-row p {
+  line-height: 2rem;
 }
 
 .transparent-wrap {
