@@ -104,12 +104,17 @@
   width: 50%;
 }
 
+.header-wrap {
+  padding-bottom: 1rem;
+}
+
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 .header-line {
@@ -123,12 +128,14 @@
 .header h1 {
   margin: 0;
   font-size: 2em;
-  color: #333;
+  color: #F99D2C;
 }
 
 .picture-section {
-  display: flex; /* Flexbox layout */
-  justify-content: space-between; /* Add space between pictures */
+  display: flex;
+  /* Flexbox layout */
+  justify-content: space-between;
+  /* Add space between pictures */
   width: 90%;
   max-height: 350px;
   padding-bottom: 2rem;
@@ -143,8 +150,10 @@
 }
 
 .beer-picture img {
-  width: auto; /* Reduce width for better spacing */
-  height: 100%; /* Maintain aspect ratio */
+  width: auto;
+  /* Reduce width for better spacing */
+  height: 100%;
+  /* Maintain aspect ratio */
   /* border: 1px solid purple;  */
 }
 
@@ -157,7 +166,8 @@
   align-items: center;
   width: 90%;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
+  padding-top: 1rem;
   border-top: white solid 1px;
   /* border: orchid solid 1px; */
 }
@@ -172,14 +182,16 @@
 }
 
 .beer-item {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex: 2;
   flex-wrap: wrap;
-  padding: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding: 2rem 1rem;
+  gap: .5rem;
+  /* Space between items */
   /* border: orangered solid 1px; */
 }
 
@@ -196,37 +208,70 @@
 
 .price-row {
   display: flex;
-  justify-content: space-between; /* Align size and price at opposite ends */
-  align-items: center; /* Vertically align content */
-  width: 100%; /* Full width of the parent container */
-  position: relative; /* For the dotted line */
-  padding: 5px 0; /* Add vertical spacing */
+  justify-content: space-between;
+  /* Align size and price at opposite ends */
+  align-items: center;
+  /* Vertically align content */
+  width: 100%;
+  /* Full width of the parent container */
+  position: relative;
+  /* For the dotted line */
+  padding: 5px 0;
+  /* Add vertical spacing */
+  gap: 5rem;
+  /* border: red solid 1px; */
 }
 
 .price-row::before {
   content: "";
   position: absolute;
-  top: 50%; /* Center the line vertically */
-  left: 0;
-  right: 0; /* Full width */
+  top: 50%;
+  /* Center the line vertically */
+  left: 5rem;
+  right: 5rem;
+  /* specified width */
   height: 1px;
   background: repeating-linear-gradient(to right, #f9f9f9, #f9f9f9 2px, transparent 2px, transparent 4px);
-  z-index: 0; /* Place it behind the content */
+  z-index: 0;
+  /* Place it behind the content */
 }
 
 .price-row p {
-  background: #1a1a1a; /* Match your page's background for overlay effect */
-  padding: 0 10px; /* Add padding to separate text from the dotted line */
-  z-index: 1; /* Ensure it appears above the line */
+  background: #f99d2c49;
+  /* Match your page's background for overlay effect */
+  border-radius: 2px;
+  padding: 0 10px;
+  /* Add padding to separate text from the dotted line */
+  z-index: 1;
+  /* Ensure it appears above the line */
 }
 
+.na-wrapper {
+  flex: 1;
+  min-width: 50%;
+}
+
+.na-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: rgb(255, 200, 0) solid 2px;
+  border-radius: 2px;
+  min-width: 50%;
+}
+
+.na-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 100%;
+  gap: .5rem;
+  padding: 1rem;
+  /* border: red solid 1px; */
+}
 
 .transparent-wrap {
   visibility: hidden;
-}
-
-.zero-proof {
-  border: yellow solid 2px;
-  border-radius: 2px;
-  padding: 2rem;
+  min-width: 50%;
 }
