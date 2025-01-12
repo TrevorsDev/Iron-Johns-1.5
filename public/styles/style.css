@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-size: 16px;
   color: white;
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -20,6 +23,14 @@ main {
   flex: 1;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
 
 h1 {
   font-size: 3rem;
@@ -32,6 +43,15 @@ h2 {
 h3 {
   font-size: 1.25rem;
 }
+
+/* p,
+ol,
+li,
+a {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
 
 /* CLASS STYLING FOR MAIN CONTENT TAKING INTO ACCOUNT THE NAV BAR */
 .main-style {

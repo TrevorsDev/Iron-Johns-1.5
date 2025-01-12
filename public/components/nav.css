@@ -1,3 +1,9 @@
+* {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 header {
   position: absolute;
   top: 0;
@@ -50,7 +56,6 @@ li {
 
 li a {
   display: flex;
-  font-family: Bronco;
   letter-spacing: 2px;
   font-size: 18px;
   text-decoration: none;
