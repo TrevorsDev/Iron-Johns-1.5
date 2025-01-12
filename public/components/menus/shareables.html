@@ -1,91 +1,106 @@
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../components/nav.css">
-  <link rel="stylesheet" href="../components/footer.css">
-  <link rel="stylesheet" href="./menu.css">
-  <link rel="stylesheet" href="../../styles/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
-  <title>Document</title>
-</head>
-
 <body>
   <main class="main">
-
-
-    <section class="beer-menu container py-4 border-top border-white">
-      <div class="row gy-4">
-        <div class="col-md-6">
-          <article class="beer-item border shadow-sm p-3">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <h2 class="h5 mb-0">Negroni</h2>
-              <p class="mb-0">$10.00</p>
-            </div>
-            <p>Contratto bitter, sweet vermouth, house rosemary peppercorn syrup, Prosecco, orange peel.</p>
-          </article>
+    <section class="header">
+      <div class="header-wrap">
+        <div class="header-container">
+          <hr class="header-line">
+          <h1>Sharables Menu</h1>
+          <hr class="header-line">
         </div>
-        <div class="col-md-6">
-          <article class="beer-item border shadow-sm p-3">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <h2 class="h5 mb-0">Cappelletti Americano</h2>
-              <p class="mb-0">$10.00</p>
-            </div>
-            <p>Cappelletti apertivo, sweet vermouth, simple syrup, soda, dried blood orange.</p>
-          </article>
-        </div>
+        <p>All of our beers are brewed in house at our <a href="#">18th street location</a>. With <a href="#">Elise
+            Lauer</a> as the one, the only, Brew Master.</p>
+      </div>
+    </section>
+
+    <section class="picture-section">
+      <picture class="beer-picture">
+        <source srcset="../../images/16ozTapCollage.jpg" media="(max-width: 767px)">
+        <source srcset="../../images/16ozTapCollage.jpg" media="(max-width: 767px)">
+        <img src="../../images/blonde.jpg" alt="Beer menu">
+      </picture>
+      <picture class="beer-picture">
+        <source srcset="../../images/16ozTapCollage.jpg" media="(min-width: 768px)">
+        <source srcset="../../images/16ozTapCollage.jpg" media="(max-width: 767px)">
+        <img src="../../images/16ozTapCollage.jpg" alt="Beer menu">
+      </picture>
+      <picture class="beer-picture">
+        <source srcset="../../images/blonde.jpg" media="(min-width: 768px)">
+        <source srcset="../../images/16ozTapCollage.jpg" media="(max-width: 767px)">
+        <img src="../../images/blonde.jpg" alt="Beer menu">
+      </picture>
+    </section>
+
+    <section class="beer-menu">
+      <div class="beer-row">
+        <article class="beer-item">
+          <div class="price-row">
+            <h2>Classic Fries</h2>
+            <p>$4.00</p>
+          </div>
+          <p>Hand-cut in house & perfectly seasoned.</p>
+        </article>
+        <article class="beer-item">
+          <div class="price-row">
+            <h2>Fried Pickles</h2>
+            <p>$6.00</p>
+          </div>
+          <p>Sliced pickle chips fried and seasoned, with a side of house made ranch.</p>
+        </article>
       </div>
 
-      <div class="row gy-4">
-        <div class="col-md-6">
-          <article class="beer-item border shadow-sm p-3">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <h2 class="h5 mb-0">Clear View</h2>
-              <p class="mb-0">$10.00</p>
-            </div>
-            <p>Sweet vermouth, Prosecco, muddled basil, fresh lemon.</p>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <article class="beer-item border shadow-sm p-3">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <h2 class="h5 mb-0">Marquesa</h2>
-              <p class="mb-0">$10.00</p>
-            </div>
-            <p>Sweet vermouth, house orange mint syrup, soda.</p>
-          </article>
-        </div>
+      <div class="beer-row">
+        <article class="beer-item">
+          <div class="price-row">
+            <h2>Garlic Knots</h2>
+            <p>$7.00</p>
+          </div>
+          <p>Eight house-made knots with garlic butter and shaved parmesan and a side of marinara.</p>
+        </article>
+        <article class="beer-item">
+          <div class="price-row">
+            <h2>Loaded Sonoran Fries</h2>
+            <p>$9.00</p>
+          </div>
+          <p>House-made french fries, melted pepper jack and cheddar, diced green chili, diced bacon, green chili
+            remoulade.</p>
+        </article>
       </div>
 
-      <div class="row gy-4">
-        <div class="col-md-6">
-          <article class="beer-item border shadow-sm p-3">
-            <h2 class="h5 mb-3 text-center">Non-Alcoholic</h2>
+      <div class="beer-row">
+        <article class="beer-item">
+          <div class="price-row">
+            <h2>Chicken Tenders</h2>
+            <p>$12.00</p>
+          </div>
+          <p>Five breaded chicken tenders with a side of fries and ranch.</p>
+        </article>
+        <article class="beer-item transparent-wrap">
+        </article>
+      </div>
+
+      <div class="beer-row">
+        <article class="beer-item">
+          <div class="zero-proof">
+            <h2>Non-Alcoholic</h2>
             <div class="na-row">
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h6 mb-0">Sodas</h3>
-                <p class="mb-0">$3.00</p>
+              <div class="price-row">
+                <h3>Athletic - Hazy IPA</h3>
+                <p>$7.00</p>
               </div>
-              <p>Selection varies - Self-serve</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <h3 class="h6 mb-0">Maya Ice Tea</h3>
-                <p class="mb-0">$3.00</p>
+              <div class="price-row">
+                <h3>Athletic - Octoberfest</h3>
+                <p>$7.00</p>
               </div>
-              <p>Prickly pear tea</p>
-              <p>Black tea</p>
+              <p>Staying responsible? Training hard? Athletic will keep you carry those boats while offering the
+                delicious
+                flavor of your favorite craft beer.</p>
             </div>
-          </article>
-        </div>
-        <div class="col-md-6">
-          <!-- Empty column for spacing -->
-        </div>
+        </article>
+        <article class="beer-item transparent-wrap">
+        </article>
+      </div>
       </div>
     </section>
   </main>
+
 </body>
-
-
-</html>

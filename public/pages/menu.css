@@ -5,29 +5,52 @@
 }
 
 .banner-container {
-  border-bottom: dotted #F99D2C 1.5px;
+  /* border-bottom: dotted #F99D2C 1.5px; */
+  /* border: red solid 1px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
+.banner-auto-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: yellow solid 1px; */
+  width: 100%;
+}
+
 .menu-banner {
-  /* border: yellow 1px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* border: green 1px solid; */
 }
 
 .menu-banner h1 {
-  letter-spacing: .5rem;
-}
-
-.menu-banner h1 {
+  display: flex;
+  justify-content: center;
   padding: 1rem 0 1rem 0;
+  border-top: #F99D2C 3px solid;
+  border-bottom: #F99D2C 3px solid;
+  letter-spacing: .25rem;
+  width: 80%;
+  margin: 2rem;
 }
 
 .location-phone {
   display: flex;
   justify-content: space-between;
   padding-bottom: 2rem;
+  width: 85%;
+  /* border: orange solid 1px; */
+}
+
+.directions {
+  display: flex;
+  flex-direction: column;
   /* border: blue solid 1px; */
 }
 
@@ -74,6 +97,7 @@
   width: 85%;
   height: 100%;
   padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .menu-section {
@@ -237,8 +261,8 @@
   /* specified width */
   height: 1px;
   background: repeating-linear-gradient(to right,
-      #f9f9f9 0,
-      #f9f9f9 2px,
+      #F99D2C 0,
+      #F99D2C 2px,
       transparent 2px,
       transparent 4px);
   z-index: 0;
@@ -246,10 +270,12 @@
 }
 
 .price-row p,
+.price-row h2,
 .price-row h3 {
   align-items: center;
-  background: black;
+  background: #232323;
   /* Match your page's background for overlay effect */
+  color: white;
   border-radius: 2px;
   padding: 5px 10px;
   /* Add padding to separate text from the dotted line */

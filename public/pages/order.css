@@ -31,6 +31,11 @@
   border-top: #F99D2C 3px solid;
   border-bottom: #F99D2C 3px solid;
   width: 80%;
+  letter-spacing: .25rem;
+  margin: 2rem;
+}
+
+.order-header h2 {
   margin-bottom: 2rem;
 }
 
