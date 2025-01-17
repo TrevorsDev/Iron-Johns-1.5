@@ -123,17 +123,23 @@
 
 .header {
   display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
   margin-bottom: 20px;
-  width: 50%;
+  width: 100%;
+  /* border: red 1px solid; */
 }
 
 .header-wrap {
   padding-bottom: 1rem;
+  /* border: yellow 1px solid; */
+  width: 50%;
 }
 
 .header-wrap p {
   line-height: 2rem;
+  /* border: orange 1px solid; */
 }
 
 .header-container {
@@ -143,6 +149,7 @@
   gap: 10px;
   width: 100%;
   padding-bottom: 1rem;
+  /* border: blue 1px solid; */
 }
 
 .header-line {
@@ -186,7 +193,7 @@
 }
 
 
-/* Beer Menu Layout */
+/* Dynamically loaded Menu Layout */
 
 .beer-menu {
   display: flex;
@@ -296,7 +303,7 @@
   padding: 1rem;
   border: rgb(255, 200, 0) solid 2px;
   border-radius: 2px;
-  min-width: 50%;
+  min-width: 100%;
 }
 
 .na-row {
@@ -315,5 +322,6 @@
 
 .transparent-wrap {
   visibility: hidden;
-  min-width: 50%;
+  width: 50%;
+  /* border: greenyellow solid 1px; */
 }
