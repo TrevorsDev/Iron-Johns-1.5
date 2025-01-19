@@ -219,6 +219,7 @@
 .beer-item {
   display: flex;
   flex-direction: column;
+  
   flex: 1;
   flex-wrap: wrap;
   min-width: 300px;
@@ -290,6 +291,8 @@
   /* Ensure it appears above the line */
 }
 
+/*NA and Happy Hour containers*/
+
 .na-wrapper {
   flex: 1;
   min-width: 50%;
@@ -301,7 +304,7 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  border: rgb(255, 200, 0) solid 2px;
+  /* border: rgb(255, 200, 0) solid 2px; */
   border-radius: 2px;
   min-width: 100%;
 }
@@ -324,4 +327,24 @@
   visibility: hidden;
   width: 50%;
   /* border: greenyellow solid 1px; */
+}
+
+.happy-hour {
+  border: rgb(255, 200, 0) solid 2px;
+}
+
+/*Pizza menu*/
+.topping-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* padding: 1rem; */
+  line-height: 2rem;
+  /* border: #ddd dotted 1px; */
+}
+
+.topping-row {
+  width: 50%;
+  /* padding: 1rem; */
+  /* border: red dotted 1px; */
 }
