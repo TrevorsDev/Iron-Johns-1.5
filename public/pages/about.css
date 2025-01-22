@@ -1,28 +1,36 @@
-
+.about-main {
+  background-color: rgb(48, 4, 4);
+}
 
 .our-story-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   width: 100%;
+  height: auto;
   border: red solid 1px;
 }
 
 .our-story-wrapper {
   display: flex;
-  flex-wrap: wrap; /* Ensures responsiveness */
+  flex-wrap: wrap;
+  /* Ensures responsiveness */
   width: 100%;
-  max-width: 1600px; /* Centered width limit for content */
+  max-width: 1600px;
+  /* Centered width limit for content */
   border: yellow solid 1px;
 }
 
 .story-photo {
   flex: 1;
-  max-width: 50%; /* Limit width to half the container */
+  max-width: 50%;
+  /* Limit width to half the container */
   height: auto;
-  overflow: hidden; /* Prevent overflow of the image */
+  overflow: hidden;
+  /* Prevent overflow of the image */
   display: flex;
-  align-items: center; /* Vertically center the image */
+  align-items: center;
+  /* Vertically center the image */
   justify-content: center;
   padding: 2rem;
   border: blue solid 1px;
@@ -30,8 +38,9 @@
 
 .story-photo img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensures the image covers the container */
+  min-height: 800px;
+  object-fit: cover;
+  /* Ensures the image covers the container */
   border: green solid 1px;
 }
 
@@ -40,13 +49,26 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
-  max-width: 50%; /* Limit width to half the container */
-  padding: 5rem;
+  max-width: 50%;
+  /* Limit width to half the container */
+  padding: 5rem 10rem;
   text-align: justify;
-  background-color: white; 
+  background-color: #fffaf0;
   border: purple solid 1px;
+  font-size: 1.1rem;
+  /* Adjust font size for clarity */
 }
 
-.story-text h2, p {
+.story-text h2,
+p {
   color: black;
+}
+
+.story-text h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(48, 4, 4);
+  margin: 1.5rem auto;
 }
