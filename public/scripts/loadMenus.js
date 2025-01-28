@@ -33,7 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash; // Check hash (e.g., #shareables)
   const params = new URLSearchParams(window.location.search); // Check query parameters (e.g., ?section=shareables)
 
-  if (hash === '#shareables' ) {
+  if (hash === '#beer') {
+    loadMenuContent('../components/menus/beer.html')
+  } else if (hash === '#shareables' ) {
     loadMenuContent('../components/menus/shareables.html'); // Load shareables.html dynamically
   } else if (hash === '#pizza') {
     loadMenuContent('../components/menus/pizza.html');

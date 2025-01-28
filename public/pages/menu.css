@@ -35,7 +35,7 @@
   padding: 1rem;
   border-top: #F99D2C 3px solid;
   border-bottom: #F99D2C 3px solid;
-  letter-spacing:  .25rem;
+  
   width: 80%;
   margin: 2rem 0;
   text-align: center;
@@ -133,9 +133,17 @@
 }
 
 .header-wrap {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 1rem;
   /* border: yellow 1px solid; */
   width: 50%;
+}
+
+.header-wrap h2 {
+  margin: 0;
+  font-size: 2em;
+  color: #F99D2C;
 }
 
 .header-wrap p {
@@ -161,11 +169,11 @@
   background-color: #ddd;
 }
 
-.header h1 {
+/* .header h2 {
   margin: 0;
   font-size: 2em;
   color: #F99D2C;
-}
+} */
 
 .picture-section {
   display: flex;
@@ -232,8 +240,7 @@
   /* border: orangered solid 1px; */
 }
 
-.beer-item h2 {
-  font-size: 1.5em;
+.beer-item h3 {
   margin: 0 0 5px;
   color: #f9f9f9;
 }
