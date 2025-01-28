@@ -34,7 +34,7 @@ h3 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 
 h2 {
@@ -45,10 +45,12 @@ h3 {
   font-size: 1.25rem;
 }
 
-p, a{
+p,
+a {
   text-align: justify;
-  line-height: 1.8; /* Improve readability */
-} 
+  line-height: 1.8;
+  /* Improve readability */
+}
 
 /* CLASS STYLING FOR MAIN CONTENT TAKING INTO ACCOUNT THE NAV BAR */
 .main-style {
@@ -71,6 +73,30 @@ p, a{
   align-items: center;
   overflow: hidden;
   /* Ensures no content spills out */
+}
+
+#rotating-pics-banner h1 {
+  position: absolute;
+  /* Position relative to .rotating-pics */
+  top: 60%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Centering adjustment */
+  color: white;
+  /* Adjust as needed */
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  /* Center text horizontally */
+  z-index: 100;
+  /* Ensure it's on top */
+  border-style: solid;
+  /* Sets the border style */
+  border-width: 2px 0;
+  /* Sets the top and bottom borders to 2px, and left and right to 0 */
+  width: 80%;
+  z-index: 0;
 }
 
 /* Background Image Wrapper */
@@ -110,31 +136,6 @@ p, a{
   bottom: 0;
   /* Fade at the bottom of the image */
   background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-
-#rotating-pics-banner h1 {
-  position: absolute;
-  /* Position relative to .rotating-pics */
-  top: 60%;
-  /* Center vertically */
-  left: 50%;
-  /* Center horizontally */
-  transform: translate(-50%, -50%);
-  /* Centering adjustment */
-  color: white;
-  /* Ensure text is readable */
-  font-size: 4.5rem;
-  /* Adjust as needed */
-  text-align: center;
-  /* Center text horizontally */
-  z-index: 100;
-  /* Ensure it's on top */
-  border-style: solid;
-  /* Sets the border style */
-  border-width: 2px 0;
-  /* Sets the top and bottom borders to 2px, and left and right to 0 */
-  width: 80%;
-  z-index: 0;
 }
 
 /* WELCOME SECTION WITH MENU AND PICUTRES */
@@ -192,7 +193,7 @@ p, a{
 }
 
 .menu-btn {
-  
+
   /* Smooth transition for both properties */
 }
 
