@@ -113,6 +113,7 @@ a {
 .background-image-container img {
   width: 100%;
   height: 100%;
+  margin-top: 4.5rem;
   object-fit: cover;
 }
 
@@ -262,46 +263,6 @@ a {
   /* Ensure the image covers the container without stretching */
 }
 
-/*DAILY SPECIALS BANNER*/
-
-.daily-specials-banner {
-  display: flex;
-  justify-content: center;
-}
-
-.daily-specials-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: black;
-  padding: 1.5rem;
-  width: 85%;
-}
-
-.daily-specials-header {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 1.5rem;
-}
-
-.daily-specials-header h2 {
-  font-size: 1.5rem;
-}
-
-.daily-specials-container {
-  display: flex;
-  justify-content: space-between;
-  /* Spread specials equally */
-  width: 85%;
-  /* Matches h2's parent width */
-}
-
-.specials h3 {
-  font-size: 1.25rem;
-  padding-bottom: 1rem;
-}
-
 /*MAPS AND HOURS SECTION*/
 
 .maps-parent {
@@ -312,7 +273,7 @@ a {
   overflow: hidden;
   display: flex;
   align-items: center;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
   /* border: red solid 1px; */
 }
 
@@ -352,6 +313,11 @@ a {
   padding: 1.5rem 0 0 1.9rem;
   gap: 3rem;
   line-height: 1.6rem;
+}
+
+.address-and-phone p {
+font-size: 2rem;
+margin-right: 2rem;
 }
 
 .ops-btns a {

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../components/nav.css">
+  <link rel="stylesheet" href="../components/footer.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="./about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <title>Our Brewery - The Brewster</title>
+</head>
+
+<body>
+  <!-- Load navigation bar dynamically -->
+  <!-- (HERO SECTION) -->
+  <!-- Includes nav, intro title, and rotating background pics -->
+  <section id="rotating-pics-banner">
+    <div class="background-image-container">
+      <!-- Background image. Adding multiple pics for various screen sizes -->
+      <picture>
+        <source media="(min-width: 1281px)" srcset="../images/breweryHeroImg.jpg">
+        <img src="../images/breweryHeroImg.jpg" alt="Craft beer pouring from tap">
+      </picture>
+    </div>
+
+    <!-- Navigation section -->
+    <header>
+      <nav id="nav-placeholder"></nav>
+      <noscript>Your navigation bar cannot be displayed without JavaScript.</noscript>
+    </header>
+    <!-- Title section -->
+    <h1>Our Brewery</h1>
+  </section>
+
+  <main>
+    <section class="our-history">
+      <div class="history-container">
+        <div class="text-wrap">
+          <h2 class="history-title section-title">The Process</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui praesentium accusamus voluptates. Aut beatae
+            ipsam velit, accusantium incidunt reiciendis voluptatibus, facere voluptate praesentium, voluptatum soluta
+            numquam veritatis asperiores rerum itaque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Temporibus eveniet perspiciatis consectetur voluptatum aspernatur deleniti amet ullam itaque officiis
+            asperiores nesciunt nihil hic, quaerat iure dicta? Culpa porro tempore nobis. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Maiores, autem! Suscipit nihil labore assumenda obcaecati nostrum. Ab, vel?
+            At, tenetur! Neque eos pariatur modi, voluptates dolor nulla voluptate repellendus quisquam.</p>
+        </div>
+      </div>
+
+      <!-- This section will be layed out the way the CSS is described, however, the pictures will rotate either left or right -->
+      <div class="our-story-slide">
+        <div class="history-pictures">
+          <picture>
+            <source media="(min-width: 1281px)" srcset="../images/aboutUsGroupPic.jpg">
+            <img src="../images/aboutUsGroupPic.jpg" alt="The founders of Iron John's Brewing">
+          </picture>
+          <picture>
+            <source media="(min-width: 1281px)" srcset="../images/aboutUsGroupPic.jpg">
+            <img src="../images/aboutUsGroupPic.jpg" alt="The founders of Iron John's Brewing">
+          </picture>
+          <picture>
+            <source media="(min-width: 1281px)" srcset="../images/aboutUsGroupPic.jpg">
+            <img src="../images/aboutUsGroupPic.jpg" alt="The founders of Iron John's Brewing">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="column-wrap">
+        <div class="our-story-slide">
+          <h2 class="section-title">The Brewster</h2>
+          <div class="flex-wrap-pics">
+            <picture>
+              <source media="(min-width: 1281px)" srcset="../images/aboutUsGroupPic.jpg">
+              <img src="../images/aboutUsGroupPic.jpg" alt="The founders of Iron John's Brewing">
+            </picture>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam commodi dignissimos natus ut optio
+                dolorum
+                obcaecati dolores unde aspernatur sequi atque, praesentium ipsam dolor voluptates autem cumque tempore
+                voluptate! Quos? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolorum, quisquam
+                molestias deserunt soluta iste quo non corrupti consectetur esse tempora nemo atque omnis odio iusto eum
+                reprehenderit, ipsam minima! Lorem ipsum dolor sit amet consectetur adipisicing elit. Et placeat
+                inventore
+                minus dolor laborum, accusantium rerum unde temporibus doloribus ut dolorem beatae, similique hic quod?
+                Ab fugiat laboriosam magni iste! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptatem, modi, doloremque quos aliquam eum ipsum, aliquid repellendus sapiente temporibus harum corrupti ad laborum voluptatibus magnam quam dignissimos reiciendis. Minima?</p>
+            <picture>
+              <source media="(min-width: 1281px)" srcset="../images/aboutUsGroupPic.jpg">
+              <img src="../images/aboutUsGroupPic.jpg" alt="The founders of Iron John's Brewing">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Load footer dynamically -->
+  <footer id="footer-placeholder"></footer>
+
+  <script type="module" src="../scripts/loadNav.js"></script>
+  <script type="module" src="../scripts/loadFooter.js"></script>
+</body>
+
+</html>

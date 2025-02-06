@@ -14,7 +14,7 @@ header {
 
 .navigation {
   display: flex;
-  height: 70px;
+  height: 4.5rem;
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
   position: fixed;
@@ -72,7 +72,7 @@ ul.dropdown {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  top: 70px;
+  top: 4.5rem;
   visibility: hidden;
   opacity: 0;
   /* Initially invisible */

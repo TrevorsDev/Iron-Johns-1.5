@@ -1,13 +1,23 @@
+/*Styling for "Our Story" and "Mission" section. The styling is the same for both sections, aside from the fact that they are reversed in presentation.*/
+/* Shared styles for About and Brewery pages are in global.css */
+
 .about-main {
   margin-top: 0;
 }
 
-.our-story-container {
+.our-mission-container {
   display: flex;
-  flex-wrap:wrap-reverse;
-  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   background-color: black;
+}
+
+.our-story-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+  background-color: black;
+  /* border-top: rgb(255, 169, 20) solid 2px; */
 }
 
 .our-story-text {
@@ -23,11 +33,11 @@
   margin-top: 3rem;
 }
 
-.story-styling {
+.mission-styling {
   border-top: rgb(255, 169, 20) solid 2px;
 }
 
-.mission-styling {
+.story-styling {
   border-bottom: rgb(255, 169, 20) solid 2px;
 }
 
@@ -51,7 +61,6 @@
   flex: 1 1 50%;
   padding: 5%;
   background-color: rgb(255, 169, 20);
-
 }
 
 .our-story-img picture img {
@@ -60,11 +69,107 @@
   object-fit: cover;
 }
 
+.our-story-slide {
+  width: 100%;
+  background-color: black;
+}
+
 .responsive-item {
   width: 100%;
   aspect-ratio: 1 / 1; /* Aspect ratio for square images */
 }
 
+/*Styling for "Our History" section*/
+
+.our-history {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  object-fit: cover;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+}
+
+.text-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5% 5%;
+}
+
+.history-text p {
+  text-align: center;
+}
+
+.our-story-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: solid 2px rgb(255, 169, 20);
+}
+
+.history-pictures {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex: 1 1 33.3%;
+  background-color: black;
+  padding: 5%;
+}
+
+.history-pictures picture img{
+  display: flex;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/*Brewery Section styling*/
+
+.column-wrap {
+  width: 100%;
+  height: auto;
+  padding-top: 1.5rem;
+  background-color: black;
+}
+
+.flex-wrap-pics {
+  display: flex;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.flex-wrap-pics picture,
+.flex-wrap-pics p {
+  flex: 1; /* Each item takes up equal space */
+  max-width: 33.333%; /* Ensures uniform size */
+}
+
+.flex-wrap-pics picture {
+  background-color: rgb(255, 169, 20);
+  padding: 2.5%;
+}
+
+.flex-wrap-pics img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.flex-wrap-pics p {
+  padding: 0 5%;
+}
+
+/*RESPONSIVE STYLING*/
+/*Styling for "Our Story" and "Mission"*/
 @media (max-width: 768px) {
   .our-story-text,
   .our-story-img {
@@ -80,26 +185,21 @@
   }
 }
 
+/*Styling for "Our Brewery*/
+@media (max-width: 768px) {
+  .flex-wrap-pics {
+    flex-direction: column; /* Stacks images and text in a column */
+    align-items: center; /* Centers content */
+  }
 
+  .flex-wrap-pics picture,
+  .flex-wrap-pics p {
+    max-width: 100%; /* Allows full width in column layout */
+    text-align: center; /* Centers the text */
+  }
 
-/* .practice-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-evenly;
-  padding: 2rem;
-  width: 100%;
-  background-color: black; 
+  .flex-wrap-pics p {
+    padding: 5%;
+  }
 }
 
-.practice-div {
-  flex: 1 1 300px;
-  max-width: 500px;
-  aspect-ratio: 1 / 1;
-  background-color: #0077cc;
-  color: white;
-  font-size: 1.5rem;
-  display: flex;
-  border: solid 1px green;
-  
-} */

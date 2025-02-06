@@ -1,3 +1,5 @@
+/*Homepage ending image "Join Us" section*/
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log('Scroll effect is running')
   initScrollEffects();
@@ -18,3 +20,7 @@ function initScrollEffects() {
     }
   });
 }
+
+/* About Us page effects/interactivity*/
+/*"Our History" section*/
+
