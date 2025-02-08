@@ -1,0 +1,99 @@
+.outter-container {
+  border: purple solid 2px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Completely fills <body> container */
+  margin-top: 4.5rem;
+  /* Making sure that the main content minds the height of the navigation bar on desktop */
+  border: green solid 2px;
+  background-color: black;
+}
+
+/* If you want .contact-picture to always fill space but not overflow, use max-height instead of height.*/
+/* Im using background-image here instead of in the html because its purely decorative and is not content-related*/
+.contact-picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 90%;
+  min-height: 90%;
+  background-image: url(../images/IJBroadwayLoc.jpg);
+  background-size: cover;
+  border: yellow solid 2px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  max-width: 80%;
+  height: auto;
+  background-color: rgb(48, 4, 4);
+  border: rgb(80, 243, 80) solid 2px;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
+@media (min-width: 2560px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .contact-picture { 
+    margin-top: 3rem;
+    min-width: 60%;
+    min-height: 60%;
+  }
+  .form-wrapper {
+    min-width: 65%;
+    max-height: 80%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .form-wrapper {
+    min-width: 65%;
+    max-height: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-picture {
+    min-width: 100%;
+  }
+  .form-wrapper {
+    min-width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+    min-width: 90%;
+  }
+  .form-content h2 {
+    font-size: 1.5rem;
+  }
+  .form-content p {
+    font-size: 1.1rem;
+  }
+}

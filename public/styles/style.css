@@ -21,6 +21,7 @@ body {
 
 main {
   flex: 1;
+  width: 100%;
   /* border: rgb(115, 255, 0) solid 2px; */
 }
 
