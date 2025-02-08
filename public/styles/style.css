@@ -20,7 +20,7 @@ body {
 }
 
 main {
-  flex: 1;
+  flex: 1; /* Completely fills <body> container */
   width: 100%;
   /* border: rgb(115, 255, 0) solid 2px; */
 }
@@ -219,6 +219,7 @@ a {
   transition: background-color .5s, color .5s, border-color .5s;
   letter-spacing: 2px;
   cursor: pointer;
+  max-width: 15rem;
 }
 
 .order-btn:hover,

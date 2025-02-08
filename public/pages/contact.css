@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1; /* Completely fills <body> container */
   margin-top: 4.5rem;
   /* Making sure that the main content minds the height of the navigation bar on desktop */
   border: green solid 2px;
@@ -21,8 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  min-width: 90%;
+  width: 85%;
   min-height: 90%;
   background-image: url(../images/IJBroadwayLoc.jpg);
   background-size: cover;
@@ -33,9 +31,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  width: 100%;
   max-width: 80%;
-  height: auto;
+  box-sizing: border-box;
   background-color: rgb(48, 4, 4);
   border: rgb(80, 243, 80) solid 2px;
 }
@@ -45,12 +43,52 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  padding: 2.5rem;
 }
 
-textarea {
-  height: auto;
-  resize: vertical;
+.form-content h2, p {
+  
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+textarea,
+select,
+option,
+input {
+  width: 100%;
+  max-width: 100%;
+  margin-top:10px;
+  color: black;
+}
+
+.half {
+ display: flex;
+ flex-direction: row;
+ width: 100%;
+ gap: 3%;
+ border: none;
+ 
+}
+
+.half li {
+  border:solid 2px rgb(80, 243, 80);
+  width: 50%;
+}
+
+.half li input {
+  min-height: 10%;
+  
+  
+}
+
+.full {
+  display: flex;
+  width: 100%;
+  border: none;
 }
 
 @media (min-width: 2560px) {
@@ -66,16 +104,17 @@ textarea {
   }
   .form-wrapper {
     min-width: 65%;
-    max-height: 80%;
+    min-height: 80%;
   }
 }
 
 @media (max-width: 1440px) {
   .form-wrapper {
-    min-width: 65%;
+    max-width: 55%;
     max-height: 80%;
   }
 }
+  
 
 @media (max-width: 1024px) {
   .contact-picture {
@@ -87,13 +126,39 @@ textarea {
 }
 
 @media (max-width: 768px) {
+
+  .contact-picture {
+    margin: 3rem 0;
+    height: auto;
+  }
+
   .form-wrapper {
     min-width: 90%;
+    min-height: 90%;
   }
+
   .form-content h2 {
     font-size: 1.5rem;
   }
+
   .form-content p {
     font-size: 1.1rem;
+  }
+
+  .form-content {
+    padding: .5rem;
+  }
+
+  
+}
+
+@media (max-width: 425px) {
+  .half {
+    flex-wrap: wrap;
+    min-width: 100%;
+  }
+
+  .half li {
+    min-width: 100%;
   }
 }

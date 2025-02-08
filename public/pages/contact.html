@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../components/nav.css">
   <link rel="stylesheet" href="../components/footer.css">
   <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="./contact2.css">
+  <link rel="stylesheet" href="./contact.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -34,10 +34,26 @@
           <h2>Contact Iron John's Brewing</h2>
           <p>We want to know what it is you really, really want. Do you find yourself craving #thatfoodfeeling with something that's not on our menu? Want to listen to your favorite local band live at our restaurants? Or share a story about how a server made your dining experience feel just right? We're all ears. All is fair in food & drink.</p>
           <select name="category" id="category" required="required">
-            
+            <option value="story" disabled="disabled">STORY CATEGORY</option>
+            <option value="">Restaurant Experience</option>
+            <option value="">Media and PR</option>
+            <option value="">Group Dining</option>
+            <option value="">Donation Requests</option>
+            <option value="">Jobs</option>
           </select>
+          <fieldset class="half">
+            <li><input type="text" size="40" maxlength="400" value type="text" name="email">Email</li>
+            <li><input type="text" size="40" maxlength="400" value type="text" name="phone">Phone Number (optional)</li>
+          </fieldset>
+          <fieldset class="half">
+            <li><input type="text" size="40" maxlength="400" value type="text" name="checknumber">Check Number</li>
+            <li><input type="text" size="40" maxlength="400" value type="text" name="date">Date of Visit</li>
+          </fieldset>
+          <fieldset class="full">
+            <li><input type="text" size="40" maxlength="400" value type="text" name="location">Restaurant Location</li>
+          </fieldset>
           <textarea name="" id="" cols="60" rows="10" maxlength="2000">YOUR THOUGHTS</textarea>
-          <input type="submit" value="send">
+          <input  class="button menu-btn" type="submit" value="send">
         </form>
       </div>
     </section>
