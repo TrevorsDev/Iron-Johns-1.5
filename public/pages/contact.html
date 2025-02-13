@@ -33,27 +33,36 @@
         <form class="form-content" action="">
           <h2>Contact Iron John's Brewing</h2>
           <p>We want to know what it is you really, really want. Do you find yourself craving #thatfoodfeeling with something that's not on our menu? Want to listen to your favorite local band live at our restaurants? Or share a story about how a server made your dining experience feel just right? We're all ears. All is fair in food & drink.</p>
-          <select name="category" id="category" required="required">
-            <option value="story" disabled="disabled">STORY CATEGORY</option>
-            <option value="">Restaurant Experience</option>
-            <option value="">Media and PR</option>
-            <option value="">Group Dining</option>
-            <option value="">Donation Requests</option>
-            <option value="">Jobs</option>
+
+          <label for="category">Select a Category</label>
+          <select name="category" id="category" required>
+            <option value="story" disabled selected>Category Choice</option>
+            <option value="experience">Restaurant Experience</option>
+            <option value="media">Media and PR</option>
+            <option value="dining">Group Dining</option>
+            <option value="donations">Donation Requests</option>
+            <option value="jobs">Jobs</option>
           </select>
           <fieldset class="half">
-            <li><input type="text" size="40" maxlength="400" value type="text" name="email">Email</li>
-            <li><input type="text" size="40" maxlength="400" value type="text" name="phone">Phone Number (optional)</li>
+            <legend class="visually-hidden">Contact Information</legend>
+            <label><input type="text" size="40" maxlength="400" value name="email" placeholder="Email"></label>
+
+            <label><input type="text" size="40" maxlength="400" value name="phone" placeholder="Phone Number (optional)"></label>
           </fieldset>
+
           <fieldset class="half">
-            <li><input type="text" size="40" maxlength="400" value type="text" name="checknumber">Check Number</li>
-            <li><input type="text" size="40" maxlength="400" value type="text" name="date">Date of Visit</li>
+            <legend class="visually-hidden">Visit Details</legend>
+            <label><input type="text" size="40" maxlength="400" value  name="checknumber" placeholder="Check Number (optional)"></label>
+            
+            <label><input type="text" size="40" maxlength="400" value name="date" placeholder="Date of Visit"></label>
           </fieldset>
-          <fieldset class="full">
-            <li><input type="text" size="40" maxlength="400" value type="text" name="location">Restaurant Location</li>
-          </fieldset>
-          <textarea name="" id="" cols="60" rows="10" maxlength="2000">YOUR THOUGHTS</textarea>
-          <input  class="button menu-btn" type="submit" value="send">
+          <select name="category" id="category" required>
+            <option value="location" disabled selected>Dining Location</option>
+            <option value="broadway">Broadway</option>
+            <option value="18th">18th Street</option>
+            <option value="juniper">Juniper</option>
+          <textarea name="" id="" cols="60" rows="10" maxlength="2000" placeholder="Your Thoughts"></textarea>
+          <input  class="button menu-btn btn-margin" type="submit" value="send">
         </form>
       </div>
     </section>

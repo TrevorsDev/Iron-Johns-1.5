@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   width: 85%;
-  min-height: 90%;
+  height: 95%;
   background-image: url(../images/IJBroadwayLoc.jpg);
   background-size: cover;
   border: yellow solid 2px;
@@ -74,21 +74,37 @@ input {
  
 }
 
-.half li {
-  border:solid 2px rgb(80, 243, 80);
+.half label{
+  /* border:solid 2px rgb(80, 243, 80); */
   width: 50%;
 }
 
-.half li input {
-  min-height: 10%;
-  
-  
-}
-
 .full {
-  display: flex;
   width: 100%;
   border: none;
+}
+.full label input{
+  display: flex;
+  width: 100%;
+}
+
+select, input, textarea {
+  padding: .5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.btn-margin {
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 2560px) {
@@ -103,8 +119,8 @@ input {
     min-height: 60%;
   }
   .form-wrapper {
-    min-width: 65%;
-    min-height: 80%;
+    max-width: 50%;
+    min-height: 50%;
   }
 }
 
@@ -125,10 +141,11 @@ input {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
   .contact-picture {
     margin: 3rem 0;
+    padding: 3rem 0;
     height: auto;
   }
 
@@ -146,19 +163,22 @@ input {
   }
 
   .form-content {
-    padding: .5rem;
+    padding: 1.25rem 1rem;
   }
 
   
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
+  .form-content {
+    padding: 1.25rem .5rem;
+  }
   .half {
     flex-wrap: wrap;
     min-width: 100%;
   }
 
-  .half li {
-    min-width: 100%;
+  .half label{
+    width: 100%;
   }
 }
