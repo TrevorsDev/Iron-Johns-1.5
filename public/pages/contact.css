@@ -1,5 +1,5 @@
 .outter-container {
-  border: purple solid 2px;
+  /* border: purple solid 2px; */
 }
 
 .main-container {
@@ -7,10 +7,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
   margin-top: 4.5rem;
-  /* Making sure that the main content minds the height of the navigation bar on desktop */
-  border: green solid 2px;
-  background-color: black;
+  padding: 2rem 0; /* Making sure that the main content minds the height of the navigation bar on desktop */
+  /* border: green solid 2px; */
+  background-color: #232323;
+  
 }
 
 /* If you want .contact-picture to always fill space but not overflow, use max-height instead of height.*/
@@ -21,21 +23,21 @@
   align-items: center;
   justify-content: center;
   width: 85%;
-  height: 95%;
+  height: auto;
   background-image: url(../images/IJBroadwayLoc.jpg);
   background-size: cover;
-  border: yellow solid 2px;
+  /* border: yellow solid 2px; */
 }
 
 .form-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 80%;
+  max-width: 60%;
+  max-height: 85%;
   box-sizing: border-box;
   background-color: rgb(48, 4, 4);
-  border: rgb(80, 243, 80) solid 2px;
+  /* border: rgb(80, 243, 80) solid 2px; */
 }
 
 .form-content {
@@ -46,7 +48,7 @@
   width: 100%;
   max-width: 100%;
   min-height: 100%;
-  padding: 2.5rem;
+  padding: 4.5rem 2.5rem;
 }
 
 .form-content h2, p {
@@ -62,16 +64,22 @@ input {
   width: 100%;
   max-width: 100%;
   margin-top:10px;
+  padding: .5rem;
   color: black;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 200px;
+  height: auto;
 }
 
 .half {
  display: flex;
  flex-direction: row;
  width: 100%;
- gap: 3%;
+ gap: 1rem;
  border: none;
- 
 }
 
 .half label{
@@ -88,8 +96,10 @@ input {
   width: 100%;
 }
 
-select, input, textarea {
-  padding: .5rem;
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust as needed */
 }
 
 .visually-hidden {
@@ -116,18 +126,18 @@ select, input, textarea {
   .contact-picture { 
     margin-top: 3rem;
     min-width: 60%;
-    min-height: 60%;
+    min-height: 65%;
   }
   .form-wrapper {
     max-width: 50%;
-    min-height: 50%;
-  }
+    max-height: 50%;
+  }  
 }
 
 @media (max-width: 1440px) {
   .form-wrapper {
-    max-width: 55%;
-    max-height: 80%;
+    max-width: 65%;
+    max-height: 85%;
   }
 }
   
@@ -138,6 +148,7 @@ select, input, textarea {
   }
   .form-wrapper {
     min-width: 75%;
+    max-height: 90%;
   }
 }
 
@@ -165,13 +176,11 @@ select, input, textarea {
   .form-content {
     padding: 1.25rem 1rem;
   }
-
-  
 }
 
 @media (max-width: 426px) {
   .form-content {
-    padding: 1.25rem .5rem;
+    padding: 1.25rem .4rem;
   }
   .half {
     flex-wrap: wrap;

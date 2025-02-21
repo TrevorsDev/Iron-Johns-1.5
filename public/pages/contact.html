@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,56 +22,71 @@
 </head>
 
 <!--Ensuring the <header>, <main>, <footer> and <script> are within the <body> tags-->
+
 <body class="outter-container">
-  <!-- <header>
+  <header>
     <nav id="nav-placeholder"></nav>
     <noscript>Your navigation bar cannot be displayed without JavaScript.</noscript>
-  </header> -->
+  </header>
 
   <main class="main-container">
     <section class="contact-picture">
       <div class="form-wrapper">
         <form class="form-content" action="">
           <h2>Contact Iron John's Brewing</h2>
-          <p>We want to know what it is you really, really want. Do you find yourself craving #thatfoodfeeling with something that's not on our menu? Want to listen to your favorite local band live at our restaurants? Or share a story about how a server made your dining experience feel just right? We're all ears. All is fair in food & drink.</p>
+          <p>We want to know what it is you really, really want. Do you find yourself craving #thatfoodfeeling with
+            something that's not on our menu? Want to listen to your favorite local band live at our restaurants? Or
+            share a story about how a server made your dining experience feel just right? We're all ears. All is fair in
+            food & drink.</p>
 
           <label for="category">Select a Category</label>
-          <select name="category" id="category" required>
-            <option value="story" disabled selected>Category Choice</option>
+          <select name="category" class="category" required>
+            <option value="" disabled selected>Category Choice</option>
             <option value="experience">Restaurant Experience</option>
             <option value="media">Media and PR</option>
             <option value="dining">Group Dining</option>
             <option value="donations">Donation Requests</option>
             <option value="jobs">Jobs</option>
           </select>
+          
           <fieldset class="half">
             <legend class="visually-hidden">Contact Information</legend>
-            <label><input type="text" size="40" maxlength="400" value name="email" placeholder="Email"></label>
 
-            <label><input type="text" size="40" maxlength="400" value name="phone" placeholder="Phone Number (optional)"></label>
+            <label for="email" class="sr-only">Email</label><input type="text" size="40" maxlength="400" name="email" placeholder="Email" required>
+
+            <label for="phone" class="sr-only">Phone</label>
+            <input type="text" size="40" maxlength="400" name="phone"
+                placeholder="Phone Number (optional)">
           </fieldset>
 
           <fieldset class="half">
             <legend class="visually-hidden">Visit Details</legend>
-            <label><input type="text" size="40" maxlength="400" value  name="checknumber" placeholder="Check Number (optional)"></label>
-            
-            <label><input type="text" size="40" maxlength="400" value name="date" placeholder="Date of Visit"></label>
+
+            <label for="check" class="sr-only">Check Number</label>
+            <input type="text" size="40" maxlength="400" name="checknumber"
+                placeholder="Check Number (optional)">
+
+            <label for="date" class="sr-only">Date of Visit</label>
+            <input type="text" size="40" maxlength="400" name="date" placeholder="Date of Visit" required>
           </fieldset>
-          <select name="category" id="category" required>
+
+          <select name="category" class="category" required>
             <option value="location" disabled selected>Dining Location</option>
             <option value="broadway">Broadway</option>
             <option value="18th">18th Street</option>
             <option value="juniper">Juniper</option>
-          <textarea name="" id="" cols="60" rows="10" maxlength="2000" placeholder="Your Thoughts"></textarea>
-          <input  class="button menu-btn btn-margin" type="submit" value="send">
+          </select>
+          <textarea name="" id="" cols="60" rows="10" maxlength="2000" placeholder="Your Thoughts" required></textarea>
+          <input class="button menu-btn btn-margin" type="submit" value="send">
         </form>
       </div>
     </section>
   </main>
 
-  <!-- <footer id="footer-placeholder"></footer> -->
+  <footer id="footer-placeholder"></footer>
 
   <script src="../scripts/loadNav.js"></script>
   <script src="../scripts/loadFooter.js"></script>
 </body>
+
 </html>
