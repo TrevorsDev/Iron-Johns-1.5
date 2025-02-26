@@ -50,24 +50,21 @@
           </select>
           
           <fieldset class="half">
-            <legend class="visually-hidden">Contact Information</legend>
+            <legend id="contact-info" class="visually-hidden">Contact Information</legend>
 
-            <label for="email" class="sr-only">Email</label><input type="text" size="40" maxlength="400" name="email" placeholder="Email" required>
+            <input type="text" aria-label="Email" size="40" maxlength="400" name="email" placeholder="Email" required>
 
-            <label for="phone" class="sr-only">Phone</label>
-            <input type="text" size="40" maxlength="400" name="phone"
+            <input type="text" aria-label="Phone Number (optional)" size="40" maxlength="400" name="phone"
                 placeholder="Phone Number (optional)">
           </fieldset>
 
           <fieldset class="half">
             <legend class="visually-hidden">Visit Details</legend>
 
-            <label for="check" class="sr-only">Check Number</label>
-            <input type="text" size="40" maxlength="400" name="checknumber"
+            <input type="text" aria-label="Check Number (optional)" size="40" maxlength="400" name="checknumber"
                 placeholder="Check Number (optional)">
 
-            <label for="date" class="sr-only">Date of Visit</label>
-            <input type="text" size="40" maxlength="400" name="date" placeholder="Date of Visit" required>
+            <input type="text" aria-label="Date of Visit" size="40" maxlength="400" name="date" placeholder="Date of Visit" required>
           </fieldset>
 
           <select name="category" class="category" required>
@@ -77,7 +74,7 @@
             <option value="juniper">Juniper</option>
           </select>
           <textarea name="" id="" cols="60" rows="10" maxlength="2000" placeholder="Your Thoughts" required></textarea>
-          <input class="button menu-btn btn-margin" type="submit" value="send">
+          <input class="button menu-btn btn-margin" type="submit" value="Send">
         </form>
       </div>
     </section>

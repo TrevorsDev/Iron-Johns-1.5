@@ -7,12 +7,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   margin-top: 4.5rem;
-  padding: 2rem 0; /* Making sure that the main content minds the height of the navigation bar on desktop */
+  padding: 2rem 0;
+  /* Making sure that the main content minds the height of the navigation bar on desktop */
   /* border: green solid 2px; */
   background-color: #232323;
-  
+
 }
 
 /* If you want .contact-picture to always fill space but not overflow, use max-height instead of height.*/
@@ -51,8 +52,8 @@
   padding: 4.5rem 2.5rem;
 }
 
-.form-content h2, p {
-  
+.form-content h2,
+p {
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -63,9 +64,10 @@ option,
 input {
   width: 100%;
   max-width: 100%;
-  margin-top:10px;
+  margin-top: 10px;
   padding: .5rem;
   color: black;
+  font-family: "Oswald", serif
 }
 
 textarea {
@@ -74,15 +76,20 @@ textarea {
   height: auto;
 }
 
-.half {
- display: flex;
- flex-direction: row;
- width: 100%;
- gap: 1rem;
- border: none;
+.half input::placeholder {
+  color: green;
+  font-family: "Oswald", serif !important;
 }
 
-.half label{
+.half {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 1rem;
+  border: none;
+}
+
+.half label {
   /* border:solid 2px rgb(80, 243, 80); */
   width: 50%;
 }
@@ -91,7 +98,8 @@ textarea {
   width: 100%;
   border: none;
 }
-.full label input{
+
+.full label input {
   display: flex;
   width: 100%;
 }
@@ -99,7 +107,8 @@ textarea {
 .form-group {
   display: flex;
   align-items: center;
-  gap: 10px; /* Adjust as needed */
+  gap: 10px;
+  /* Adjust as needed */
 }
 
 .visually-hidden {
@@ -123,15 +132,18 @@ textarea {
     flex-direction: column;
     justify-content: flex-start;
   }
-  .contact-picture { 
+
+  .contact-picture {
     margin-top: 3rem;
-    min-width: 60%;
+    max-width: 60%;
     min-height: 65%;
   }
+
   .form-wrapper {
+    margin: 2rem;
     max-width: 50%;
-    max-height: 50%;
-  }  
+    max-height: 75%;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -140,12 +152,13 @@ textarea {
     max-height: 85%;
   }
 }
-  
+
 
 @media (max-width: 1024px) {
   .contact-picture {
     min-width: 100%;
   }
+
   .form-wrapper {
     min-width: 75%;
     max-height: 90%;
@@ -182,12 +195,13 @@ textarea {
   .form-content {
     padding: 1.25rem .4rem;
   }
+
   .half {
     flex-wrap: wrap;
     min-width: 100%;
   }
 
-  .half label{
+  .half label {
     width: 100%;
   }
 }
