@@ -1,0 +1,147 @@
+/* this is the original navigation */
+
+* {
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  height: 4.5rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+
+}
+
+.header-image {
+  height: 10vh;
+  transition: height 0.2s ease;
+  padding: 0;
+  margin: 5px 40px;
+}
+
+.navigation li a:hover,
+.navigation li a:active {
+  background-color: rgba(255, 255, 255, 0.888);
+  transition: background-color 0.8s ease, color 0.8s ease;
+  color: black;
+
+}
+
+ul {
+  display: flex;
+  margin-left: auto;
+  height: 100%;
+}
+
+
+li {
+  /* display flex and align items centers order online button vertically */
+  display: flex;
+  align-items: center;
+  /* Center items vertically */
+  height: 100%;
+  /* Ensure li elements fill the height of the nav */
+  margin-right: .5rem;
+}
+
+li a {
+  display: flex;
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-decoration: none;
+  /* justify-content: space-between; */
+  align-items: center;
+  color: white;
+  height: 100%;
+  /* Ensure a elements fill the height of the li */
+  padding: 0 30px 0 30px;
+}
+
+ul.dropdown-menu{
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  top: 4.5rem;
+  visibility: hidden;
+  opacity: 0;
+  /* Initially invisible */
+  transform: translateY(-10px);
+  /* Start slightly above */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  /* Slow transition */
+
+}
+
+li:hover>ul.dropdown-menu {
+  max-height: 45px;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  /* Fully visible */
+  transform: translateY(0);
+  /* Move to the final position */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  /* Transition for opacity and transform */
+}
+
+/* Style the dropdown items */
+ul.dropdown-menu li a {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  border: transparent dashed 4px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
+  text-decoration: none;
+  font-size: 15px;
+
+}
+
+ul.dropdown-menu li a:hover {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #F99D2C;
+  border-left: 4px solid #F99D2C;
+  transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
+}
+
+.navigation .button {
+  border: 2px solid white;
+  height: 50px;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  margin: 0px;
+  transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.navigation .order-btn:hover {
+  /* box-sizing: border-box; */
+  background-color: #F99D2C;
+  color: black;
+  border: 2px solid transparent;
+}
+
+/* consider modularizing some button class and properties so that some elements can be standarized to other buttons throughout the website. This provides consistency and ease of ability to update code. */
+
+
+
+/*what you need to fix now is the <a> thats styled as a button. Some of the applied class styling is being over ridden somewhere. And solving this issue will help you style the buttons correctly*/
