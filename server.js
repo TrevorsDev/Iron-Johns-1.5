@@ -3,6 +3,7 @@ const path = require('path');
 const dotenv = require('dotenv');
 const app = express();
 
+
 // Load environment variables from .env file
 dotenv.config();
 
@@ -24,6 +25,8 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+
 
 /*2. Clarifying app.get('/api/key') and Its Role
 The app.get('/api/key', ...) function in server.js does two things:
