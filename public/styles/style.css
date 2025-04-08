@@ -70,6 +70,7 @@ a {
   position: relative;
   height: 90vh;
   width: 100%;
+  /* top: 12vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,6 +210,8 @@ a {
 }
 
 .button {
+  display: flex;
+  justify-content: center;
   border: 2px solid white;
   padding: 10px 25px;
   background-color: transparent;

@@ -1,31 +1,41 @@
-<section role="navigation" class="navigation">
-    <a href="/index.html"><img class="header-image" src="/images/ironJohnsLogo.png" alt="Iron John's Logo"></a>
+  <section class="navbar">
+    <a href="/index.html" class="header-image"><img  src="../images/ironJohnsLogo.png" alt="Iron John's Logo"></a>
 
-    <!-- The start of the Nav links -->
     <ul class="nav-menu">
-        <li ><a href="/pages/menu.html" class="dropbtn">Menus</a></li>
-        <li class="dropdown"><a href="#" class="dropbtn">Locations</a>
-            <ul class="dropdown-menu">
-                <li><a href="../index.html">Broadway</a></li>
-                <li><a href="#">18th Street</a></li>
-                <li><a href="https://www.junipertucson.com/">Juniper</a></li>
-              </ul></li>
-        <li class="dropdown"><a href="#" class="dropbtn">About</a>
-            <ul class="dropdown-menu">
-                <li><a href="../pages/about.html">Our Story</a></li>
-                <li><a href="../pages/brewery.html">The Brewery</a></li>
-              </ul></li>
-        <li class="dropdown"><a href="#" class="dropbtn">Events</a></li>
-        <li class="dropdown"><a href="#" class="dropbtn">Contact</a>
-          <ul class="dropdown-menu">
-            <li><a href="../pages/contact.html">Direct</a></li>
-            <li><a href="#">Party Reservations</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Investors</a></li>
-          </ul>
-        <li class="order-list"><a href="/pages/order.html" class="button order-btn">Order Online</a>
-        </li>
+      <li class="dropdown"><a href="../pages/menu.html">Menus</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Locations</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Broadway</a></li>
+          <li class="dropdown-submenu"><a href="#" class="dropbtn2">18th Street</a></li>
+          <li><a href="#">Juniper</a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown">
+        <a href="#" class="dropbtn">About</a>
+        <ul class="dropdown-menu">
+          <li><a href="../pages/about.html">Our Story</a></li>
+          <li><a href="../pages/brewery.html">The Brewery</a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown"><a href="#">Events</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Contact</a>
+        <ul class="dropdown-menu">
+          <li><a href="../pages/contact.html">Direct</a></li>
+          <li><a href="#">Party Reservations</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Investors</a></li>
+        </ul>
+        <li class="order-list"><a href="/pages/order.html" class="order-active mobile-order order-btn button">Order Online</a>
+                </li> 
     </ul>
+
     <button class="menu-toggle">☰</button>
-    
-    </section>
+  </section>
+
+  <script src="./script.js"></script>
+
+</html>

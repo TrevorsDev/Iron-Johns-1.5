@@ -1,215 +1,287 @@
+/* Reset styles */
 * {
-    font-family: "Crimson Text", serif;
-    font-weight: 700;
-    font-size: 19px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+header {
+  /* position: absolute; */
+  top: 0;
+  z-index: 20;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+/* body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  border: orange solid 4px;
+} */
 
-  header {
-    position: relative;
-    top: 0;
-    z-index: 20;
-    transition: all 0.2s ease;
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Navbar styles */
-.navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding-right: 2.5em;
-    background: rgba(0, 0, 0, 0.9);
-    /* border: yellow solid 3px; */
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
 }
 
 /* Nav IJBC Logo Image */
 .header-image {
-    display: flex;
-    height: 12vh;
-    padding: 1em 2.5em;
-    border: orangered solid 1px;
-  }
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-height: 100%;
+  height: 12vh;
+  padding: .5em 1em;
+  /* border: orangered solid 1px; */
+}
+
+.header-image img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
 
 /* Main menu */
 .nav-menu {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding-right: 1em;
-    width: auto;
-    /* border: red solid 3px; */
-}
-
-.nav-menu li {
-    position: relative;
-    list-style: none;
-    height: 100%;
-    /* border: green solid 1px; */
+position: relative;
+  list-style: none;
+  display: flex;
+  width: 100%;
 }
 
 .nav-menu a {
-    text-decoration: none;
-    color: white;
-    padding: 2em 2em;
-    display: block;
-    height: 100%;
-    width: 100%;
-    /* padding: 1em 1.9em; */
-    /* border: blueviolet solid 1px; */
-}
-
-.nav-menu a,
-.dropdown .dropbtn {
-border: 4px  dashed transparent;
+  text-decoration: none;
+  color: white;
+  padding: 20px 30px;
+  display: block;
+  width: 100%;
 }
 
 a {
-    transition: all .4s ease-in-out;
-    border-left: 4px solid transparent;
+  transition: .4s ease;
 }
 
+/* Dropdown menu */
+
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    max-height: 0;
-    min-width: 100%;
-    opacity: 0;
-    background: rgba(0, 0, 0, 0.8);
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease, max-height 0.4s ease-in-out;
-    white-space: nowrap; /* Prevents wrapping */
-    /* border: orange 1px solid; */
+  position: absolute;
+  top: 100%;
+  max-height: 0;
+  min-width: 100%;
+  opacity: 0;
+  background: #333333f1;
+  transition: transform 0.4s ease, opacity 0.4s ease, max-height 0.4s ease;
+  white-space: nowrap;
+  /* Prevents wrapping */
+  /* border: orange 1px solid; */
 }
 
 .dropdown-menu li {
-    width: 100%;
-    list-style: none;
+  width: 100%;
+  list-style: none;
 }
 
 .dropdown-menu a {
-    display: block;
+  display: block;
 }
 
-/* Hover mode for menu desktop view  */
-@media (min-width: 769px) {
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+}
 
-    /* Show dropdown on hover (for desktop) */
-    .dropdown:hover .dropdown-menu {
-        top:100%;
-        max-height: 400px;
-        min-width: 100%;
-        opacity: 1;
-    }
+@media (min-width: 958px) {
+  /* Hover mode for menu desktop view  */
 
-        /* Hover styling for desktop*/
-    .nav-menu .dropbtn:hover {
-      background-color: rgba(255, 255, 255, 0.888);
-      transition: background-color 0.8s ease, color 0.8s ease;
-      color: black;
-    }
+  .navbar {
+    height: 12vh
+  }
 
-    .dropdown-menu a:hover  {
-      background-color: rgba(0, 0, 0, 0.8);
+  .nav-menu {
+    position: relative;
+    height: 100%;
+    width: auto;
+    align-items: center;
+    z-index: 99;
+  }
+
+  .nav-menu li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    /* border: red solid 1px; */
+  }
+
+  .dropdown a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2em;
+  }
+
+  .dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.888);
+    transition: background-color 0.8s ease, color 0.8s ease;
+    color: black; 
+  }
+
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 100%;
+    visibility: hidden;
+    z-index: 10;
+    /* border: yellow solid 2px; */
+    /*  Makes the dropdown menu invisible but still occupies space in the layout. */
+  }
+
+  /* Show dropdown on hover (for desktop) */
+  .dropdown:hover .dropdown-menu {
+      top: 100%;
+      max-height: 300px;
+      min-width: 100%;
+      opacity: 1;
+      visibility: visible;
+      /* Make it visible only when hovering */
+      transform: translateY(0);
+      /* Moves into place smoothly */
+  }
+
+  .dropdown-menu a {
+    border-width: 4px 0 4px 4px;
+    border-style: dashed;
+    border-color: transparent;
+    font-size: 1.1em;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
       color: #F99D2C;
       border-left: 4px solid #F99D2C;
-      border-top: 4px  solid transparent;
-      border-bottom: 4px solid transparent;
-    }
-}
-
-/* Order Online button styling */
-.navigation .button {
-    display: flex;
-    padding: 5px 10px;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid white;
-    height: 50px;
-    background-color: transparent;
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    margin: 0px;
-    /* transition: background-color 0.3s ease, color 0.8s ease, border-color 0.8s ease; */
-    letter-spacing: 2px;
-    cursor: pointer;
   }
 
   .order-list {
-    padding-left: 2em;
+    margin: 0 1em;
   }
-
-  .navigation .order-btn:hover {
-    /* box-sizing: border-box; */
-    background-color: #F99D2C;
-    color: black;
-    border: 2px solid transparent;
-  }
-
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    padding: 15px 20px;
 }
 
-  @media (max-width: 1009px) {
-    .navigation {
-      position: relative;
-      min-height: 7em;
-    }
+/* Responsive styling for mobile*/
+@media (max-width: 957px) {
 
-    .nav-menu {
+  .navbar {
+      position: relative;
+      height: 11vh;
+  }
+
+  .nav-menu {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      justify-content: center;
       position: absolute;
       top: 100%;
       width: 100%;
+      /* Ensure full width */
       max-height: 0;
       opacity: 0;
       overflow: hidden;
-      transition: max-height 1s ease-in-out, opacity .3s ease;
-      background: #333;
-    }
+      transition: max-height 1s ease-in-out, opacity 0.3s ease;
+      background: #444;
+  }
 
-    .nav-menu.show {
+  .nav-menu.show {
       max-height: 1500px;
+      /* Adjust as needed */
       opacity: 1;
-      overflow: visible;
-    }
+      overflow: visible
+  }
 
-    .nav-menu li {
-      width: 100%; /* Ensure full clickable width */
-      text-align: center; /* Align content inside */
-      padding: 5px 0; /* Adjust padding for better clickability */
-    }
+  .nav-menu li {
+      width: 100%;
+      /* Ensure full clickable width */
+      text-align: center;
+      /* Align the content inside */
+      /* padding: 5px 0; */
+      /* Adjust padding for better clickability */
+  }
 
-    .dropdown {
+  .dropdown {
       width: auto;
-      overflow: hidden; /* Adding this property ensures a smooth rollout of the dropdown-menu, as the .dropdwon is forced to "stay hidden" UNTIL the nav-menu finishes its animation */
-    }
+      overflow: hidden;
+      /* Adding this property ensures a smooth rollout of the dropdown-menu, as the .dropdwon is forced to "stay hidden" UNTIL the nav-menu finishes its animation */
+  }
 
-    .dropdown-menu {
+  .dropdown a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown a:active {
+    color:#F99D2C;
+    background: #333;
+  }
+
+  .dropdown.active .dropdown-menu {
+    max-height: 300px;
+    /* Adjust as needed */
+    opacity: 1;
+}
+
+  .dropdown-menu {
       width: 100%;
       text-align: center;
       position: static;
-      max-height: 0; /* Start hidden */
-      overflow: hidden; /* Adding this property ensures a smooth rollout of the submenu*/
-      transition: max-height .4s ease-in-out, opacity .4s ease-in-out;
-    }
-
-    .dropdown.active .dropdown-menu {
-      max-height: 400px;
-      opacity: 1;
-    }
-
-    .menu-toggle {
-      display: block;
-    }
+      max-height: 0;
+      /* Start hidden */
+      opacity: 0;
+      overflow: hidden;
+      /* Adding this property ensures a smooth rollout of the submenu*/
+      background: #333;
+      transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
   }
+
+  .dropdown-menu a:active {
+    background: #444;
+    color:#F99D2C
+  }
+
+  .order-list {
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px;
+  }
+
+  .order-list a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-menu .mobile-order {
+    background-color: #F99D2C;
+    color: #000000;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    max-width: 15rem;
+    min-width: 12rem;
+  }
+
+  .nav-menu .order-active:active {
+    background-color: #ffb65c;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
