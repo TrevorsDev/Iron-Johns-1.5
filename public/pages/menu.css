@@ -1,16 +1,6 @@
 /* Style inspired by https://www.agavehousetucson.com/menus/ */
 
-.main-body {
-  position: relative;
-  height: 90vh;
-  width: 100%;
-  /* top: 12vh; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+
 
 .banner-container {
   /* border-bottom: dotted #F99D2C 1.5px; */

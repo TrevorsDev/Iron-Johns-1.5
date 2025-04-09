@@ -6,19 +6,12 @@
 }
   
 header {
-  /* position: absolute; */
   top: 0;
-  z-index: 20;
-  transition: all 0.2s ease;
+  z-index: 20; /* Allows dropdown-menu to appear infront of hero-image */
   width: 100%;
 }
-/* body {
-  font-family: Arial, sans-serif;
-  height: 100vh;
-  border: orange solid 4px;
-} */
 
-/* Navbar styles */
+/* Styling and layout for parent navigation bar on desktop and mobile */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -43,9 +36,9 @@ header {
   object-fit: contain;
 }
 
-/* Main menu */
+/* Layout and styling for both desktop and mobile navigation links */
 .nav-menu {
-position: relative;
+  position: relative;
   list-style: none;
   display: flex;
   width: 100%;
@@ -63,23 +56,10 @@ a {
   transition: .4s ease;
 }
 
-/* Dropdown menu */
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  max-height: 0;
-  min-width: 100%;
-  opacity: 0;
-  background: #333333f1;
-  transition: transform 0.4s ease, opacity 0.4s ease, max-height 0.4s ease;
-  white-space: nowrap;
-  /* Prevents wrapping */
-  /* border: orange 1px solid; */
-}
+/* Styling for both desktop and mobile dropdown submenu and for ham menu icon */
 
 .dropdown-menu li {
-  width: 100%;
+  /* width: 100%; */
   list-style: none;
 }
 
@@ -95,6 +75,16 @@ a {
   color: white;
   cursor: pointer;
   padding: 10px 20px;
+}
+
+/* Order Online container */
+.order-list {
+  padding: 20px 30px;
+}
+
+/* text coloring inside button. needs to be defined here bc of ".nav-menu a { color: #fff; }" above on the page. */
+.nav-menu .mobile-order {
+  color: #000000;
 }
 
 @media (min-width: 958px) {
@@ -130,31 +120,32 @@ a {
 
   .dropdown a:hover {
     background-color: rgba(255, 255, 255, 0.888);
-    transition: background-color 0.8s ease, color 0.8s ease;
+    transition: background-color 0.4s ease, color 0.4s ease, border 0.4s ease; /* This property controls all of the hover transition styling on the desktop view */
     color: black; 
   }
 
   .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top: 100%;
+    position: absolute;
     visibility: hidden;
-    z-index: 10;
-    /* border: yellow solid 2px; */
     /*  Makes the dropdown menu invisible but still occupies space in the layout. */
+    top: 100%;
+    max-height: 0;
+    min-width: 100%;
+    opacity: 0;
+    background: #333333f1;
+    transition: transform 0.4s ease, opacity 0.4s ease, max-height 0.4s ease;
+    white-space: nowrap;
+    /* Prevents wrapping */
   }
 
   /* Show dropdown on hover (for desktop) */
   .dropdown:hover .dropdown-menu {
       top: 100%;
-      max-height: 300px;
+      max-height: 400px;
       min-width: 100%;
       opacity: 1;
       visibility: visible;
       /* Make it visible only when hovering */
-      transform: translateY(0);
-      /* Moves into place smoothly */
   }
 
   .dropdown-menu a {
@@ -166,12 +157,16 @@ a {
 
   .dropdown-menu a:hover {
     background-color: rgba(0, 0, 0, 0.8);
-      color: #F99D2C;
-      border-left: 4px solid #F99D2C;
+    color: #F99D2C;
+    border-left: 4px solid #F99D2C;
   }
 
-  .order-list {
-    margin: 0 1em;
+  /* Hover styling for Order Online button*/
+
+  .dropdown .order-btn:hover {
+    background-color: transparent;
+    border: #fff solid 2px;
+    color: #fff;
   }
 }
 
@@ -190,7 +185,6 @@ a {
       position: absolute;
       top: 100%;
       width: 100%;
-      /* Ensure full width */
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -210,8 +204,6 @@ a {
       /* Ensure full clickable width */
       text-align: center;
       /* Align the content inside */
-      /* padding: 5px 0; */
-      /* Adjust padding for better clickability */
   }
 
   .dropdown {
@@ -234,7 +226,7 @@ a {
     max-height: 300px;
     /* Adjust as needed */
     opacity: 1;
-}
+  }
 
   .dropdown-menu {
       width: 100%;
@@ -250,35 +242,14 @@ a {
   }
 
   .dropdown-menu a:active {
-    background: #444;
+    background: #222;
     color:#F99D2C
-  }
-
-  .order-list {
-    display: flex;
-    justify-content: center;
-    padding: 20px 30px;
-  }
-
-  .order-list a {
-    display: flex;
-    justify-content: center;
-  }
-
-  .nav-menu .mobile-order {
-    background-color: #F99D2C;
-    color: #000000;
-    padding: 10px 25px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    max-width: 15rem;
-    min-width: 12rem;
-  }
+  } 
 
   .nav-menu .order-active:active {
-    background-color: #ffb65c;
+    background: #ffb65c;
+    color: black;
+    border: #FFF solid 2px;
   }
 
   .menu-toggle {

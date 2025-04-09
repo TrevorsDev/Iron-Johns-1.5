@@ -192,13 +192,9 @@ a {
   width: 100%;
 }
 
+/* UNIVERSAL BUTTON STYLING */
 .menu-btn-wrapper {
   justify-content: flex-start;
-}
-
-.menu-btn {
-
-  /* Smooth transition for both properties */
 }
 
 .menu-btn:hover,
@@ -209,8 +205,10 @@ a {
   border-radius: 5px;
 }
 
+/* GENERAL BUTTON styling*/
 .button {
   display: flex;
+  align-items: center;
   justify-content: center;
   border: 2px solid white;
   padding: 10px 25px;
@@ -223,13 +221,26 @@ a {
   cursor: pointer;
   max-width: 15rem;
   min-width: 12rem;
+  margin: 0 auto;
 }
 
-.order-btn:hover,
-.order-btn:active {
+/* ORDER ONLINE BUTTON styling for both desktop and mobile view */
+.nav-menu .mobile-order {
+  display: flex;
+  justify-content: center;
   background-color: #F99D2C;
-  color: black;
-  border: 2px solid transparent;
+  border: transparent solid 2px;
+  color: #000000;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  height: auto; /* Specifies that I want the height of THIS container to fit exactly around its defined padding. Instead of being defined by a more general selector such as ".nav-menu a {...}" */
+  max-width: 15rem;
+  min-width: 12rem;
+  margin: 0 auto;
+  /* transition: background-color .1s, color .1s, border .1s; */
 }
 
 .details-sections {
