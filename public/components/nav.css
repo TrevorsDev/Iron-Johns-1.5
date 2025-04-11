@@ -52,10 +52,6 @@ header {
   width: 100%;
 }
 
-a {
-  transition: .4s ease;
-}
-
 /* Styling for both desktop and mobile dropdown submenu and for ham menu icon */
 
 .dropdown-menu li {
@@ -109,6 +105,10 @@ a {
     height: 100%;
     z-index: 1;
     /* border: red solid 1px; */
+  }
+
+  a {
+    transition: .4s ease;
   }
 
   .dropdown a {
@@ -246,6 +246,7 @@ a {
     color:#F99D2C
   } 
 
+  /* active pseudo class styles order online button like this */
   .nav-menu .order-active:active {
     background: #ffb65c;
     color: black;

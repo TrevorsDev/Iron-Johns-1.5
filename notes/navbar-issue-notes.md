@@ -1,8 +1,8 @@
-/*
-Project Notes: Navbar Rendering Issue (Mobile View)
+
+# Project Notes: Navbar Rendering Issue (Mobile View)
 
 ## Description:
-While building the responsive navbar for this project, I encountered a rendering issue specific to mobile view. When the hamburger icon was clicked to toggle the .nav-menu, one of the <li> elements (the "Order Online" button) was not displaying with the rest of the list. Instead, it rendered halfway up into the navbar, while the other <li> elements displayed below as intended.
+While building the responsive navbar for this project, I encountered a rendering issue specific to mobile view. When the hamburger icon was clicked to toggle the .nav-menu, one of the <li> elements (the "Order Online" button) was not displaying with the rest of the list. Instead, it rendered halfway up into the navbar, before then dropping down below the navbar in the fashion that the other <li> elements intended to do.
 
 ## Debugging Process:
 - I systematically eliminated causes like padding, z-index, and overflow properties.
@@ -28,3 +28,15 @@ Applying `display: flex` to the <li> caused that item to break out of the normal
 
 ## Modularization Issues
 One issue that I have a difficult time resolving on my own, is to know what files I should place certain styling classes. For example, while creating the navbar, I used a combination of button styling that are used elsewhere in the project, in addition to the styling that I designed specifically for the "Order Online" button. If I were to define the styling in a universal file like style.css, vs my nav.css, I would struggle to target 
+
+# Learning Journies
+
+## Mobile Vs Desktop
+
+One of the great things about creating a responsive navbar from scratch — completely separate from my website’s original navbar — was that it gave me another chance to dive into how modular components are structured to provide an optimal user experience.
+
+Specifically, I realized how essential CSS media queries are in defining both desktop and mobile navbar behavior — and how JavaScript should interact with the design. When I first started, I didn’t fully understand how to transition between desktop and mobile views, or how to apply JavaScript to help toggle CSS animations. My last post marked my first successful go at solving this. In this post, I was able to refactor both my CSS and JS into something cleaner and easier to follow, successfully transferring the improved version into the navbar I’ll be using for the final site build.
+
+I focused on reducing “global” layout styles and instead organized them inside their respective media queries. Doing so improved readability and helped me better understand how each section contributes to the overall user experience.
+
+Even seemingly small projects like this one are opportunities to explore best practices — both through my own trial and error and by studying professional practices. While the process sometimes seems never ending, I realize that these builds, experiments, self studies and tireless disciplines are how Ill keep leveling up as a self starting, passionate developer.
