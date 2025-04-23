@@ -1,19 +1,13 @@
-.outter-container {
-  /* border: purple solid 2px; */
-}
 
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   margin-top: 4.5rem;
   padding: 2rem 0;
   /* Making sure that the main content minds the height of the navigation bar on desktop */
-  /* border: green solid 2px; */
   background-color: #232323;
-
 }
 
 /* If you want .contact-picture to always fill space but not overflow, use max-height instead of height.*/

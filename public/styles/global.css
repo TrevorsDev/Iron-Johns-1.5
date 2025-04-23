@@ -8,4 +8,15 @@
     --background-color-medium-dark: #333;
     --background-color-medium: #444;
     --color-black: #000;
+    /* Font Sizing */
+    --small-font-size: .2rem;
+    --medium-font-size: 1.1rem;
 }
+
+.small-font-size {
+    font-size: var(--small-font-size);
+  }
+
+  .medium-font-size {
+    font-size: var(--medium-font-size);
+  }

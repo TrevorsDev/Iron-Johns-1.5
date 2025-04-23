@@ -3,12 +3,6 @@ Here Im practicing styling the mobile first. that means using media queries for 
 
 
 /* ===============================
-   2. Variables (optional if using root variables)
-================================*/
-:root {
-   
-  }
-  
 /* ===============================
    3. Layout / Structure
 ================================*/
@@ -43,7 +37,6 @@ footer {
 
 .full-size {
     width: 100%;
-    /* height: 100%; */
 }
 
 .element-margin {
@@ -102,13 +95,7 @@ label {
     text-decoration: none;
   }
 
-  .small-text {
-    font-size: .9rem;
-  }
-
-  .medium-size-text {
-    font-size: 1.15rem;
-  }
+  
 
   /* Hover effects over links */
 
