@@ -1,67 +1,326 @@
- footer {
+/* The styling for this page will be different from the rest of the site.
+Here Im practicing styling the mobile first. that means using media queries for the desktop size not the mobile. */
+
+
+/* ===============================
+   2. Variables (optional if using root variables)
+================================*/
+:root {
+    --primary-color: orange;
+    --text-color-light: #ffffffea;
+    --text-color-dark: #111;
+    --background-color-dark: #111;
+    --background-color-medium-dark: #333;
+    --background-color-medium: #444;
+    --color-black: #000;
+    --font-heading: 'Syne', sans-serif;
+    --spacing-unit: 1rem;
+  }
+  
+/* ===============================
+   3. Layout / Structure
+================================*/
+/* handles containers, grid, flex wrappers, main page structure */
+
+footer {
   width: 100%;
- }
- 
-.column {
-  background-color: black;
 }
 
- .footer-container {
-  display: flex;
-  flex-direction: column;
-  align-self: stretch;
-  /* width: 100%; */
+.align-text {
+  text-align: center;
+}
+
+.centered-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: purple solid 3px; */
+}
+
+.always-row {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+} 
+
+.content {
+    flex: 1;
+    height: 100vh;
+    /* border: red solid 2px; */
+}
+
+.full-size {
+    width: 100%;
+    /* height: 100%; */
+}
+
+.element-margin {
+  margin: .8em 0;
+}
+
+.section-divider {
+  border: none;
+  background: orange;
+  height: 1.5px;
+  width: 90%;
+  max-width: 375px;
+}
+
+label {
+  /* Keeps the label in the DOM for screen readers but removes it from visual layout */
+  position: absolute;    
+  left: -9999px;
+}
+
+.container-padding-1em {
+  padding: 1em;
+}
+
+.gap-1em { 
+  gap: .8em; 
   /* border: red solid 1px; */
 }
 
-.rows {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 12%;
-  flex-shrink: 0;
-  margin: 0;
-  /* border: yellow solid 1px; */
-  padding-top: 20px;
+/* =========================
+   4. Coloring/Visual/Presentation
+========================= */
+
+.background-color-dark {
+  background-color: var(--background-color-dark);
 }
 
-.rows a {
+.light-text {
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+
+/* Belongs to the container for email input */
+  .input-box,
+  .email-signup-button {
+    font-weight: 700;
+  }
+
+  .email-signup-button {
+    color: var(--text-color-dark);
+    background: orange;
+  }
+
+  .remove-style-type {
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  .small-text {
+    font-size: .9rem;
+  }
+
+  .medium-size-text {
+    font-size: 1.15rem;
+  }
+
+  /* Hover effects over links */
+
+  .hover-orange:hover, 
+  .hover-white:hover, 
+  .fab:hover {
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .hover-orange:hover {
+    color: var(--primary-color);
+  }
+
+  .hover-white:hover {
+    color: var(--text-color-light);
+  }
+
+  /* Focus-visible styles for enhanced accessibility */
+  .hover-orange:focus,
+  .hover-orange:focus-visible {
+    color: var(--primary-color);
+    outline: 2px solid var(--primary-color); /* Optional: Add an outline for better visibility */
+  }
+
+  .hover-white:focus,
+  .hover-white:focus-visible {
+    color: var(--text-color-light);
+    outline: 2px solid var(--text-color-light); /* Optional: Add an outline for better visibility */ 
+  }
+ 
+  .fab:focus-visible {
+    color: var(--text-color-light);
+    border: 2px solid var(--text-color-light); /* Optional: Add an outline for better visibility */
+  }
   
-}
+/* =========================
+   5. Components
+========================= */
 
-.essentials {
-  display: flex; 
-  justify-content: center;
-  /* border: green solid 1px; */
+.footer {
   width: 100%;
-  height: auto;
+  background: #000;
 }
 
-.essentials ul {
-  display: flex;
-  /* Make the ul a flex container */
-  justify-content: center;
-  /* Center list items horizontally */
-  margin: 0;
-  padding: 0;
-  align-items: center;
-}
-
-.privacy {
+.centered-column {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  /* border: purple solid 3px; */
 }
 
-.socials {
-  /* border: purple solid 1px; */
-}
-
-.developer-details {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  /* height: 8vh; */
-  /* border: blue solid 1px; */
+  width: 100%;
+  gap: 4em;
 }
+
+  /* Specific styling for image container */
+  .image-container {
+    width: auto;
+    height: 7em;
+  }
+
+  .image-container img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .email-form {
+    gap: 1em;
+    min-width:100%;
+    justify-content: center;
+  }
+
+  .form-head {
+    text-align: center;
+  }
+
+  .input-button {
+    display: flex;
+    /* align-items: center; */
+    border-radius: 50px;
+    min-width: 270px;
+     /* fallback for small screens */
+  }
+
+  .input-box {
+    flex: 1;
+    width: 100%;
+    padding: .5em 1em;
+    color: orange;
+    background: transparent;
+    border: orange solid 1.5px;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+    transition: all .3s
+  }
+
+  .input-box:focus,
+  .input-box:focus-visible {
+    outline:none;
+    box-shadow:none;
+    color: var(--text-color-light);
+    border: var(--text-color-light) 1.5px solid;
+    border-right: none;
+  }
+
+  .input-box::placeholder {
+    color: orange;
+    transition: all .3s;
+  }
+
+  .input-box:focus::placeholder {
+    color: var(--text-color-light);
+  }
+
+  .email-signup-button {
+    padding: .8em .8em;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    transition: all .3s;
+  }
+
+  .email-signup-button:hover,
+  .email-signup-button:focus,
+  .email-signup-button:focus-visible {
+    background: var(--text-color-light);
+    color: var(--background-color-dark);
+  }
+
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem 0;
+    /* border: red solid 1px; */
+  }
+  
+  .fab {
+    color: var(--primary-color); /* or whatever your footer color scheme is */
+    font-size: 1.5rem;
+  }
+
+  .copyright {
+  text-align: center;
+}
+
+.legal {
+  display: flex;
+  gap: 1em;
+}
+
+.legal p {
+  text-align: center;
+}
+
+.divider {
+  color: var(--text-color-light); /* or any appropriate color */
+  padding: 0 0.5em;
+}
+
+  /* MEDIA STYLING */
+@media (width >= 768px) {
+  .legal {
+    flex-direction: row;
+    justify-content:space-between;
+    min-width: 85%;
+    align-items: center;
+  }
+
+  .switch-to-row {
+    flex-direction: row;
+    justify-content: center; /* Optional */
+  }
+  
+
+  @media (width >= 1024px) {
+    .space-btwn {
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    } 
+
+    .image-container {
+      height: 8em;
+    }
+
+    .email-form {
+      min-width: auto;
+    }
+
+    .content {
+      padding: 0 2em;
+    }
+  }
+}
+
+
+/* Create a separate landiung page with locations that combines all locations together when "Locatinos" is clicked on */
