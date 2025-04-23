@@ -6,15 +6,7 @@ Here Im practicing styling the mobile first. that means using media queries for 
    2. Variables (optional if using root variables)
 ================================*/
 :root {
-    --primary-color: orange;
-    --text-color-light: #ffffffea;
-    --text-color-dark: #111;
-    --background-color-dark: #111;
-    --background-color-medium-dark: #333;
-    --background-color-medium: #444;
-    --color-black: #000;
-    --font-heading: 'Syne', sans-serif;
-    --spacing-unit: 1rem;
+   
   }
   
 /* ===============================
@@ -60,7 +52,7 @@ footer {
 
 .section-divider {
   border: none;
-  background: orange;
+  background-color: var(--primary-color);
   height: 1.5px;
   width: 90%;
   max-width: 375px;
@@ -102,7 +94,7 @@ label {
 
   .email-signup-button {
     color: var(--text-color-dark);
-    background: orange;
+    background-color: var(--primary-color);
   }
 
   .remove-style-type {
@@ -212,9 +204,9 @@ label {
     flex: 1;
     width: 100%;
     padding: .5em 1em;
-    color: orange;
+    color: var(--primary-color);
     background: transparent;
-    border: orange solid 1.5px;
+    border: var(--primary-color) solid 1.5px;
     border-right: none;
     border-radius: 50px 0 0 50px;
     transition: all .3s
@@ -230,7 +222,7 @@ label {
   }
 
   .input-box::placeholder {
-    color: orange;
+    color: var(--primary-color);
     transition: all .3s;
   }
 
