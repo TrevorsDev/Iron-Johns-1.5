@@ -16,13 +16,6 @@ footer {
   text-align: center;
 }
 
-.centered-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border: purple solid 3px; */
-}
-
 .always-row {
   display:flex;
   flex-direction: row;
@@ -95,7 +88,6 @@ label {
     text-decoration: none;
   }
 
-  
 
   /* Hover effects over links */
 

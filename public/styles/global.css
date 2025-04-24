@@ -13,6 +13,9 @@
     --medium-font-size: 1.1rem;
 }
 
+/* ==========================
+FONT SIZING
+============================= */
 .small-font-size {
     font-size: var(--small-font-size);
   }
@@ -20,3 +23,13 @@
   .medium-font-size {
     font-size: var(--medium-font-size);
   }
+
+ /* =========================
+   4. Coloring/Visual/Presentation
+========================= */
+
+.centered-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
