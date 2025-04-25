@@ -3,7 +3,6 @@ Here Im practicing styling the mobile first. that means using media queries for 
 
 
 /* ===============================
-/* ===============================
    3. Layout / Structure
 ================================*/
 /* handles containers, grid, flex wrappers, main page structure */
@@ -12,8 +11,11 @@ footer {
   width: 100%;
 }
 
-.align-text {
-  text-align: center;
+.centered-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: purple solid 3px; */
 }
 
 .always-row {
@@ -30,6 +32,7 @@ footer {
 
 .full-size {
     width: 100%;
+    /* height: 100%; */
 }
 
 .element-margin {
@@ -38,7 +41,6 @@ footer {
 
 .section-divider {
   border: none;
-  background-color: var(--primary-color);
   height: 1.5px;
   width: 90%;
   max-width: 375px;
@@ -48,6 +50,14 @@ label {
   /* Keeps the label in the DOM for screen readers but removes it from visual layout */
   position: absolute;    
   left: -9999px;
+  background: orangered
+}
+
+.company-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: orange 1px solid; */
 }
 
 .container-padding-1em {
@@ -63,67 +73,28 @@ label {
    4. Coloring/Visual/Presentation
 ========================= */
 
-.background-color-dark {
-  background-color: var(--background-color-dark);
-}
-
-.light-text {
-    color: var(--text-color-light);
-    text-decoration: none;
-}
-
 /* Belongs to the container for email input */
   .input-box,
-  .email-signup-button {
+  .button {
     font-weight: 700;
   }
 
-  .email-signup-button {
-    color: var(--text-color-dark);
-    background-color: var(--primary-color);
-  }
-
-  .remove-style-type {
+  .company-links ul li {
     list-style-type: none;
-    text-decoration: none;
   }
 
+  .small-text {
+    font-size: .8rem;
+  }
 
   /* Hover effects over links */
-
-  .hover-orange:hover, 
-  .hover-white:hover, 
-  .fab:hover {
+  .hover-orange:hover,
+  .hover-orange:focus {
+    color: var(--primary-color);
     transition: color 0.3s ease;
     cursor: pointer;
   }
 
-  .hover-orange:hover {
-    color: var(--primary-color);
-  }
-
-  .hover-white:hover {
-    color: var(--text-color-light);
-  }
-
-  /* Focus-visible styles for enhanced accessibility */
-  .hover-orange:focus,
-  .hover-orange:focus-visible {
-    color: var(--primary-color);
-    outline: 2px solid var(--primary-color); /* Optional: Add an outline for better visibility */
-  }
-
-  .hover-white:focus,
-  .hover-white:focus-visible {
-    color: var(--text-color-light);
-    outline: 2px solid var(--text-color-light); /* Optional: Add an outline for better visibility */ 
-  }
- 
-  .fab:focus-visible {
-    color: var(--text-color-light);
-    border: 2px solid var(--text-color-light); /* Optional: Add an outline for better visibility */
-  }
-  
 /* =========================
    5. Components
 ========================= */
@@ -131,13 +102,6 @@ label {
 .footer {
   width: 100%;
   background: #000;
-}
-
-.centered-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* border: purple solid 3px; */
 }
 
 .content {
@@ -149,12 +113,12 @@ label {
 }
 
   /* Specific styling for image container */
-  .image-container {
+  .logo-container {
     width: auto;
-    height: 7em;
+    height: 6em;
   }
 
-  .image-container img{
+  .logo-container img{
     width: auto;
     height: 100%;
     object-fit: cover;
@@ -182,21 +146,20 @@ label {
   .input-box {
     flex: 1;
     width: 100%;
-    padding: .5em 1em;
-    color: var(--primary-color);
+    padding: .8em 1em;
     background: transparent;
     border: var(--primary-color) solid 1.5px;
     border-right: none;
     border-radius: 50px 0 0 50px;
-    transition: all .3s
+    transition: all .3s;
   }
 
   .input-box:focus,
   .input-box:focus-visible {
     outline:none;
     box-shadow:none;
-    color: var(--text-color-light);
-    border: var(--text-color-light) 1.5px solid;
+    color: var(--color-light);
+    border: var(--color-light) 1.5px solid;
     border-right: none;
   }
 
@@ -206,10 +169,10 @@ label {
   }
 
   .input-box:focus::placeholder {
-    color: var(--text-color-light);
+    color: var(--color-light);
   }
 
-  .email-signup-button {
+  .sign-up-btn {
     padding: .8em .8em;
     border: none;
     border-radius: 0 50px 50px 0;
@@ -217,11 +180,11 @@ label {
     transition: all .3s;
   }
 
-  .email-signup-button:hover,
-  .email-signup-button:focus,
-  .email-signup-button:focus-visible {
-    background: var(--text-color-light);
-    color: var(--background-color-dark);
+  .sign-up-btn:hover,
+  .sign-up-btn:focus,
+  .sign-up-btn:focus-visible {
+    background-color: var(--color-light);
+    color: var(--color-black)
   }
 
 
@@ -233,12 +196,18 @@ label {
     /* border: red solid 1px; */
   }
   
-  .fab {
+  .social-icons i {
     color: var(--primary-color); /* or whatever your footer color scheme is */
     font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons i:hover,
+  .social-icons i:focus {
+    color: var(--color-light); 
   }
 
-  .copyright {
+.copyright {
   text-align: center;
 }
 
@@ -252,7 +221,7 @@ label {
 }
 
 .divider {
-  color: var(--text-color-light); /* or any appropriate color */
+  color: var(--color-light); /* or any appropriate color */
   padding: 0 0.5em;
 }
 

@@ -1,16 +1,39 @@
-
-
 :root {
     --primary-color: #F99D2C;
-    --text-color-light: #ffffffea;
+    --color-light: #ffffffea;
     --text-color-dark: #111;
     --background-color-dark: #111;
-    --background-color-medium-dark: #333;
+    --background-color-medium-dark: #222;
     --background-color-medium: #444;
     --color-black: #000;
     /* Font Sizing */
     --small-font-size: .2rem;
     --medium-font-size: 1.1rem;
+}
+
+/* ===============================
+   2. Layout / Structure
+================================*/
+
+
+.align-text {
+  text-align: center;
+}
+
+.always-row {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+} 
+
+/* .centered-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.full-size {
+  width: 100%;
 }
 
 /* ==========================
@@ -27,9 +50,28 @@ FONT SIZING
  /* =========================
    4. Coloring/Visual/Presentation
 ========================= */
-
-.centered-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.primary-text-color {
+  color: var(--primary-color);
 }
+
+.primary-background-color {
+  background-color: var(--primary-color);
+}
+
+.light-text {
+  color: var(--text-color-light);
+  text-decoration: none;
+}
+
+.background-color-dark {
+  background-color: var(--background-color-dark);
+}
+
+.background-color-medium-dark {
+  background-color: var(--background-color-medium-dark);
+}
+
+.background-color-medium {
+  background-color: var(--background-color-medium);
+}
+
