@@ -1,259 +1,267 @@
-/* Reset styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-  
+/* ================================================
+   NAVBAR — BEM Component
+   Block:    .navbar
+   Elements: .navbar__logo
+             .navbar__menu
+             .navbar__item
+             .navbar__link
+             .navbar__toggle
+             .navbar__toggle-bar
+   Modifiers: .navbar__link--cta
+   States:    .navbar__menu.is-open
+              .navbar__toggle.is-active
+   ================================================ */
+
+/* ── Header wrapper ── */
 header {
+  position: sticky;
   top: 0;
-  z-index: 20; /* Allows dropdown-menu to appear infront of hero-image */
+  z-index: 100;
   width: 100%;
 }
 
-/* Styling and layout for parent navigation bar on desktop and mobile */
+/* ── Block ── */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-height: 12vh;
-  background: #000000;
+  padding: 0 2rem;
+  height: 70px;
+  background: rgba(28, 28, 28, 0.97);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
 }
 
-/* Nav IJBC Logo Image */
-.header-image {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  max-height: 100%;
-  height: 10vh;
-  padding: .5em 1em;
-  /* border: orangered solid 1px; */
+/* ── Logo
+   Note: display/flex/align handled by .always-row utility in HTML
+   ── */
+.navbar__logo {
+  height: 46px;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-.header-image img {
+.navbar__logo img {
   height: 100%;
   width: auto;
   object-fit: contain;
 }
 
-/* Layout and styling for both desktop and mobile navigation links */
-.nav-menu {
-  position: relative;
-  list-style: none;
+/* ── Menu ── */
+.navbar__menu {
   display: flex;
-  width: 100%;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: white;
-  padding: 20px 30px;
-  display: block;
-  width: 100%;
-}
-
-/* Styling for both desktop and mobile dropdown submenu and for ham menu icon */
-
-.dropdown-menu li {
-  /* width: 100%; */
+  align-items: center;
   list-style: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.dropdown-menu a {
-  display: block;
+/* ── Item ── */
+.navbar__item {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-.menu-toggle {
+/* ── Link ── */
+.navbar__link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.25rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Amber underline draws in from left on hover */
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.25rem;
+  right: 1.25rem;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: var(--color-accent);
+}
+
+.navbar__link:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar__link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -4px;
+  color: var(--color-accent);
+}
+
+/* Active page indicator */
+.navbar__link[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+.navbar__link[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+/* ── CTA element: Order Online
+   Standalone element — does not inherit .navbar__link hover styles
+   Layout (flex/align) handled by .always-row utility in HTML
+   ── */
+.navbar__cta {
+  margin-left: 0.75rem;
+  padding: 0.55rem 1.25rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.navbar__cta:hover {
+  background: var(--color-accent-hover);
+  color: var(--color-bg);
+}
+
+.navbar__cta:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+/* ── Hamburger toggle — hidden on desktop ── */
+.navbar__toggle {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
   background: none;
   border: none;
-  font-size: 40px;
-  color: white;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 8px;
 }
 
-/* Order Online container */
-.order-list {
-  padding: 20px 30px;
+.navbar__toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* text coloring inside button. needs to be defined here bc of ".nav-menu a { color: #fff; }" above on the page. */
-.nav-menu .mobile-order {
-  color: #000000;
+.navbar__toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
-@media (min-width: 958px) {
-  /* Hover mode for menu desktop view  */
+/* Animates to X when menu is open */
+.navbar__toggle.is-active .navbar__toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
 
+.navbar__toggle.is-active .navbar__toggle-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.navbar__toggle.is-active .navbar__toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ================================================
+   MOBILE (≤ 768px)
+   ================================================ */
+@media (max-width: 768px) {
   .navbar {
-    height: 12vh
+    padding: 0 1.25rem;
   }
 
-  .nav-menu {
-    position: relative;
-    height: 100%;
-    width: auto;
-    align-items: center;
-    z-index: 99;
-  }
-
-  .nav-menu li {
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 100%;
-    z-index: 1;
-    /* border: red solid 1px; */
-  }
-
-  a {
-    transition: .4s ease;
-  }
-
-  .dropdown a {
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-
-  .dropdown a:hover {
-    background-color: rgba(255, 255, 255, 0.888);
-    transition: background-color 0.4s ease, color 0.4s ease, border 0.4s ease; /* This property controls all of the hover transition styling on the desktop view */
-    color: black; 
-  }
-
-  .dropdown-menu {
+  /* Menu slides down from below the navbar */
+  .navbar__menu {
     position: absolute;
-    visibility: hidden;
-    /*  Makes the dropdown menu invisible but still occupies space in the layout. */
-    top: 100%;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    background: rgba(28, 28, 28, 0.98);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid var(--color-border);
     max-height: 0;
-    min-width: 100%;
+    overflow: hidden;
     opacity: 0;
-    background: #333333f1;
-    transition: transform 0.4s ease, opacity 0.4s ease, max-height 0.4s ease;
-    white-space: nowrap;
-    /* Prevents wrapping */
+    transition: max-height 0.4s ease, opacity 0.3s ease;
   }
 
-  /* Show dropdown on hover (for desktop) */
-  .dropdown:hover .dropdown-menu {
-      top: 100%;
-      max-height: 400px;
-      min-width: 100%;
-      opacity: 1;
-      visibility: visible;
-      /* Make it visible only when hovering */
-  }
-
-  .dropdown-menu a {
-    border-width: 4px 0 4px 4px;
-    border-style: dashed;
-    border-color: transparent;
-    font-size: var(--medium-font-size);
-  }
-
-  .dropdown-menu a:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: var(--primary-color);
-    border-left: 4px solid var(--primary-color);
-  }
-
-  /* Hover styling for Order Online button*/
-
-  .dropdown .order-btn:hover {
-    background-color: transparent;
-    border: #fff solid 2px;
-    color: #fff;
-  }
-}
-
-/* Responsive styling for mobile*/
-@media (max-width: 957px) {
-
-  .navbar {
-      position: relative;
-      height: 11vh;
-  }
-
-  .nav-menu {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: absolute;
-      top: 100%;
-      width: 100%;
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: max-height 1s ease-in-out, opacity 0.3s ease;
-      background: #444;
-  }
-
-  .nav-menu.show {
-      max-height: 1500px;
-      /* Adjust as needed */
-      opacity: 1;
-      overflow: visible
-  }
-
-  .nav-menu li {
-      width: 100%;
-      /* Ensure full clickable width */
-      text-align: center;
-      /* Align the content inside */
-  }
-
-  .dropdown {
-      width: auto;
-      overflow: hidden;
-      /* Adding this property ensures a smooth rollout of the dropdown-menu, as the .dropdwon is forced to "stay hidden" UNTIL the nav-menu finishes its animation */
-  }
-
-  .dropdown a {
-    display: flex;
-    justify-content: center;
-  }
-
-  .dropdown a:active {
-    color:var(--primary-color);
-    background: #333;
-  }
-
-  .dropdown.active .dropdown-menu {
-    max-height: 300px;
-    /* Adjust as needed */
+  .navbar__menu.is-open {
+    max-height: 400px;
     opacity: 1;
   }
 
-  .dropdown-menu {
-      width: 100%;
-      text-align: center;
-      position: static;
-      max-height: 0;
-      /* Start hidden */
-      opacity: 0;
-      overflow: hidden;
-      /* Adding this property ensures a smooth rollout of the submenu*/
-      background: #333;
-      transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  .navbar__item {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid var(--color-border);
   }
 
-  .dropdown-menu a:active {
-    background: #222;
-    color: var(--primary-color);
-  } 
-
-  /* active pseudo class styles order online button like this */
-  .nav-menu .order-active:active {
-    background-color: var(--primary-color);
-    color: black;
-    border: #FFF solid 2px;
+  .navbar__item:last-child {
+    border-bottom: none;
+    padding: 0.75rem 1.25rem;
   }
 
-  .menu-toggle {
-      display: block;
+  .navbar__link {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: 1rem 1.25rem;
+  }
+
+  /* Underline effect removed on mobile — tap targets are full-width */
+  .navbar__link::after {
+    display: none;
+  }
+
+  .navbar__link:hover {
+    background: rgba(196, 122, 42, 0.08);
+    /* color: var(--color-accent-hover); */
+  }
+
+  .navbar__link--cta {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+  }
+
+  /* CTA full-width on mobile */
+  .navbar__cta {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    padding: 0.75rem 1.25rem;
+  }
+
+  /* Show hamburger on mobile */
+  .navbar__toggle {
+    display: flex;
   }
 }

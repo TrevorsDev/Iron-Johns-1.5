@@ -2,47 +2,38 @@ function loadNav() {
   fetch('/components/nav.html')
     .then(response => response.text())
     .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
+      document.getElementById('nav-placeholder').innerHTML = data;
 
-      // ✅ DOM elements are now available — safe to query and bind
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navMenu = document.querySelector(".nav-menu");
-      const dropdown = document.querySelectorAll(".dropdown");
-
-      // Mobile menu toggle
-      menuToggle.addEventListener("click", function () {
-        console.log("Menu button clicked!");
-        navMenu.classList.toggle("show");
-
-        if (!navMenu.classList.contains("show")) {
-          dropdown.forEach(drop => drop.classList.remove("active"));
+      // Mark the active page link for screen readers and styling
+      const currentPath = window.location.pathname;
+      document.querySelectorAll('.navbar__link').forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+        if (linkPath === currentPath || (currentPath === '/' && linkPath === '/index.html')) {
+          link.setAttribute('aria-current', 'page');
         }
       });
 
-      // Dropdown toggle
-      dropdown.forEach(currentDrop => {
-        currentDrop.addEventListener("click", function (event) {
-          event.stopPropagation();
+      const toggle = document.querySelector('.navbar__toggle');
+      const menu   = document.querySelector('.navbar__menu');
 
-          dropdown.forEach(otherDrop => {
-            if (otherDrop !== currentDrop) {
-              otherDrop.classList.remove("active");
-            }
-          });
-
-          currentDrop.classList.toggle("active");
-        });
+      // Mobile: toggle menu open/closed
+      toggle.addEventListener('click', function () {
+        const isOpen = menu.classList.toggle('is-open');
+        toggle.classList.toggle('is-active');
+        toggle.setAttribute('aria-expanded', isOpen);
       });
 
-      // Close menus when clicking outside
-      document.addEventListener("click", function (event) {
-        if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-          navMenu.classList.remove("show");
-          dropdown.forEach(drop => drop.classList.remove("active"));
+      // Close menu when clicking outside the navbar
+      document.addEventListener('click', function (event) {
+        const navbar = document.querySelector('.navbar');
+        if (!navbar.contains(event.target)) {
+          menu.classList.remove('is-open');
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
         }
       });
     })
-    .catch(error => console.error('Error loading navigation bar', error));
+    .catch(error => console.error('Error loading navigation:', error));
 }
 
-document.addEventListener("DOMContentLoaded", loadNav);
+document.addEventListener('DOMContentLoaded', loadNav);

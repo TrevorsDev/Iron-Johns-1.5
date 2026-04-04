@@ -1,14 +1,20 @@
 :root {
-    --primary-color: #F99D2C;
-    --color-light: #ffffffea;
-    --text-color-dark: #111;
-    --background-color-dark: #111;
-    --background-color-medium-dark: #222;
-    --background-color-medium: #444;
-    --color-black: #000;
-    /* Font Sizing */
-    --small-font-size: .2rem;
-    --medium-font-size: 1.1rem;
+  /* ── Brand Colors ── */
+  --color-bg:           #1C1C1C;
+  --color-surface:      #2A1F1A;
+  --color-accent:       #C47A2A;
+  --color-accent-hover: #E8960E;
+  --color-text:         #F0EBE3;
+  --color-text-muted:   #A89C8E;
+  --color-border:       #3D3228;
+
+  /* ── Typography ── */
+  --font-display: "Playfair Display", serif;
+  --font-body:    "Crimson Text", serif;
+
+  /* ── Font Sizing ── */
+  --small-font-size:  .8rem;
+  --medium-font-size: 1.2rem;
 }
 
 /* ===============================
@@ -26,11 +32,11 @@
   align-items: center;
 } 
 
-/* .centered-column {
+.centered-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
-} */
+}
 
 .full-size {
   width: 100%;
@@ -47,31 +53,4 @@ FONT SIZING
     font-size: var(--medium-font-size);
   }
 
- /* =========================
-   4. Coloring/Visual/Presentation
-========================= */
-.primary-text-color {
-  color: var(--primary-color);
-}
-
-.primary-background-color {
-  background-color: var(--primary-color);
-}
-
-.light-text {
-  color: var(--text-color-light);
-  text-decoration: none;
-}
-
-.background-color-dark {
-  background-color: var(--background-color-dark);
-}
-
-.background-color-medium-dark {
-  background-color: var(--background-color-medium-dark);
-}
-
-.background-color-medium {
-  background-color: var(--background-color-medium);
-}
 

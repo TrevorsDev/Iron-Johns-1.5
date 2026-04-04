@@ -28,7 +28,7 @@ main {
 h1,
 h2,
 h3 {
-  font-family: "Oswald", serif;
+  font-family: var(--font-display);
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
