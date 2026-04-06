@@ -4,7 +4,7 @@
 /*Fetching the api key from the server. Lines 6-10*/
 async function getApiKey() {
   try {
-    const response = await fetch('/api/key');
+    const response = await fetch('/.netlify/functions/key');
     const data = await response.json();
     return data.apiKey; //Return the API key
   } catch (error) {
@@ -32,7 +32,7 @@ async function loadGoogleMaps() {
 }
 
 // Event listener to load the map after the DOM content has loaded
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
   loadGoogleMaps();  // Dynamically inserts the Google Map when the page is fully loaded
 });
 
