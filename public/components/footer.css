@@ -59,6 +59,7 @@ label {
   /* border: orange 1px solid; */
 }
 
+
 .container-padding-1em {
   padding: 1em;
 }
@@ -88,8 +89,10 @@ label {
 
   /* Hover effects over links */
   .hover-orange:hover,
-  .hover-orange:focus {
-    color: var(--primary-color);
+  .hover-orange:focus,
+  .hover-orange:hover a,
+  .hover-orange:focus a {
+    color: var(--color-accent);
     transition: color 0.3s ease;
     cursor: pointer;
   }
@@ -142,7 +145,7 @@ label {
     width: 100%;
     padding: .8em 1em;
     background: transparent;
-    border: var(--primary-color) solid 1.5px;
+    border: var(--color-accent) solid 1.5px;
     border-right: none;
     border-radius: 50px 0 0 50px;
     transition: all .3s;
@@ -152,18 +155,18 @@ label {
   .input-box:focus-visible {
     outline:none;
     box-shadow:none;
-    color: var(--color-light);
-    border: var(--color-light) 1.5px solid;
+    color: var(--color-text);
+    border: var(--color-text) 1.5px solid;
     border-right: none;
   }
 
   .input-box::placeholder {
-    color: var(--primary-color);
+    color: var(--color-accent);
     transition: all .3s;
   }
 
   .input-box:focus::placeholder {
-    color: var(--color-light);
+    color: var(--color-text);
   }
 
   .sign-up-btn {
@@ -177,8 +180,8 @@ label {
   .sign-up-btn:hover,
   .sign-up-btn:focus,
   .sign-up-btn:focus-visible {
-    background-color: var(--color-light);
-    color: var(--color-black)
+    background-color: var(--color-text);
+    color: var(--color-bg)
   }
 
 
@@ -191,14 +194,14 @@ label {
   }
   
   .social-icons i {
-    color: var(--primary-color); /* or whatever your footer color scheme is */
+    color: var(--color-accent);
     font-size: 1.5rem;
     transition: color 0.3s ease;
   }
   
   .social-icons i:hover,
   .social-icons i:focus {
-    color: var(--color-light); 
+    color: var(--color-text);
   }
 
 .copyright {
