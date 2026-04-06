@@ -184,6 +184,12 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  animation: hero-pan 10s ease-in-out alternate infinite;
+}
+
+@keyframes hero-pan {
+  from { transform: scale(1.12) translateX(0); }
+  to   { transform: scale(1.12) translateX(-6%); }
 }
 
 /* Gradient overlay — keeps title text legible over any photo */
@@ -218,29 +224,28 @@ a {
 .column-wrap {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 300px;
-  height: 675px;
-  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  height: 100%;
   overflow: hidden;
 }
 
 .row-wrap {
   display: flex;
-  width: 820px;
-  height: 80%;
+  flex: 2.5;
+  height: 100%;
   overflow: hidden;
 }
 
-.column-wrap picture,
-.row-wrap picture {
+.column-wrap img {
+  flex: 1;
   width: 100%;
-  height: 100%;
+  min-height: 0;
+  object-fit: cover;
   display: block;
 }
 
-.column-wrap picture img,
-.row-wrap picture img {
+.row-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;

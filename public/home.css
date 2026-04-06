@@ -159,11 +159,10 @@
 
 .collage-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-wrap: nowrap;
+  gap: 1rem;
   height: 100%;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
 }
 
 
@@ -243,7 +242,7 @@
 .join-us-section {
   position: relative;
   height: 70vh;
-  background-image: url(/images/largestBannerImg.png);
+  background-image: url(/images/iron-johns-booth-seating.jpg);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -281,4 +280,177 @@
 .join-us-section.visible .join-us-card {
   transform: translateY(0);
   opacity: 1;
+}
+
+
+/* ─────────────────────────────────────────
+   Mobile Responsiveness — max-width: 768px
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Location heading */
+  .main-title {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .main-title h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Menu section — stack text over image */
+  .menu-description {
+    flex-direction: column;
+    min-height: auto;
+    width: 100%;
+  }
+
+  .menu-card,
+  .menu-images {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .menu-images {
+    height: 260px;
+  }
+
+  .menu-card div {
+    gap: 1rem;
+  }
+
+  /* Maps section — stack info card above map */
+  .maps-parent {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .operations-card {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .operations-card h1,
+  .ops-btns,
+  .hours {
+    padding: 1.2rem 0 0 1.2rem;
+  }
+
+  .operations-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .addressAndPhone-wrap {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 0 0 1.2rem;
+  }
+
+  .address-and-phone p {
+    font-size: 1rem;
+    margin-right: 0;
+  }
+
+  /* Buttons stack vertically on narrow screens */
+  .ops-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: 1.2rem;
+  }
+
+  .ops-btns a {
+    margin-right: 0;
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+  }
+
+  /* Map fills full width below the info card */
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+  }
+
+  .map-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  /* Photo collage — stacked: column / row / column */
+  .photo-collage {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .collage-wrapper {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .column-wrap {
+    flex-direction: row; /* 2 images side by side within each column-wrap */
+    flex: none;
+    width: 100%;
+    height: 180px;
+  }
+
+  .row-wrap {
+    flex: none;
+    width: 100%;
+    height: 260px;
+    order: 0;
+  }
+
+  /* Group events — stack description over photo */
+  .large-party-section {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .group-events-wrapper {
+    flex-direction: column;
+    flex-basis: 100%;
+    width: 100%;
+    gap: 0;
+  }
+
+  .group-events-description {
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    font-size: 1rem;
+  }
+
+  .photo {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .photo img {
+    max-height: 260px;
+  }
+
+  /* Join Us — fix iOS parallax bug, reduce padding */
+  .join-us-section {
+    background-attachment: scroll;
+    height: 50vh;
+  }
+
+  .join-us-card {
+    padding: 3rem 2rem;
+    width: 85%;
+  }
 }
