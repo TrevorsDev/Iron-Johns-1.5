@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="components/nav.css">
   <link rel="stylesheet" href="components/footer.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="./pages/menu.css">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,20 +32,10 @@
 
   <!-- (HERO SECTION) -->
   <!-- Includes nav, intro title, and rotating background pics -->
-  <section id="rotating-pics-banner">
-    <div class="background-image-container">
-      <!-- Background image. Adding multiple pics for various screen sizes -->
-      <picture>
-        <source media="(min-width: 1281px)" srcset="images/mediumBannerImg.png">
-        <img src="images/smallBannerImg.png" alt="Craft beer pouring from tap">
-      </picture>
-
-
-    </div>
-
-
-    <!-- Title section -->
-    <h1>Craft Beer - Pizza - Burgers</h1>
+  <section class="page-hero">
+    <img class="page-hero__image" src="images/tap-room-beer.png" alt="Iron John's Brewing tap room" loading="eager">
+    <div class="page-hero__overlay"></div>
+    <h1 class="page-hero__title">Craft Beer<br>Pizza &amp; Burgers</h1>
   </section>
 
 
@@ -54,7 +44,7 @@
     <!--This section includes img related to the welcome header, text and interactive menus-->
     <section class="welcome-head">
       <div class="main-title">
-        <h1>Welcome to Iron Johns on Broadway</h1>
+        <h2>Welcome to Iron Johns on Broadway</h2>
       </div>
     </section>
 

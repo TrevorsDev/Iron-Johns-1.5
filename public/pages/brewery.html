@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="../components/nav.css">
   <link rel="stylesheet" href="../components/footer.css">
-  <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="./about.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,17 +25,10 @@
   <!-- Load navigation bar dynamically -->
   <!-- (HERO SECTION) -->
   <!-- Includes nav, intro title, and rotating background pics -->
-  <section id="rotating-pics-banner">
-    <div class="background-image-container">
-      <!-- Background image. Adding multiple pics for various screen sizes -->
-      <picture>
-        <source media="(min-width: 1281px)" srcset="../images/breweryHeroImg.jpg">
-        <img src="../images/breweryHeroImg.jpg" alt="Craft beer pouring from tap">
-      </picture>
-    </div>
-
-    <!-- Title section -->
-    <h1>Our Brewery</h1>
+  <section class="page-hero">
+    <img class="page-hero__image" src="../images/breweryHeroImg.jpg" alt="The Iron John's brewery floor" loading="eager">
+    <div class="page-hero__overlay"></div>
+    <h1 class="page-hero__title">Our Brewery</h1>
   </section>
 
   <main>

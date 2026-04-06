@@ -1,56 +1,248 @@
+/* ==========================================
+   GLOBAL CSS
+   Order: Tokens → Reset → Utilities → Shared Components → Shared Page Patterns
+   ========================================== */
+
+
+/* ─────────────────────────────────────────
+   1. Design Tokens
+   ───────────────────────────────────────── */
 :root {
-  /* ── Brand Colors ── */
-  --color-bg:           #1C1C1C;
-  --color-surface:      #2A1F1A;
-  --color-accent:       #C47A2A;
+  /* Brand Colors */
+  --color-bg: #1C1C1C;
+  --color-surface: #2A1F1A;
+  --color-accent: #C47A2A;
   --color-accent-hover: #E8960E;
-  --color-text:         #F0EBE3;
-  --color-text-muted:   #A89C8E;
-  --color-border:       #3D3228;
+  --color-text: #F0EBE3;
+  --color-text-muted: #A89C8E;
+  --color-border: #3D3228;
 
-  /* ── Typography ── */
+  /* Typography */
   --font-display: "Playfair Display", serif;
-  --font-body:    "Crimson Text", serif;
+  --font-body: "Crimson Text", serif;
 
-  /* ── Font Sizing ── */
-  --small-font-size:  .8rem;
+  /* Font Sizing */
+  --small-font-size: .8rem;
   --medium-font-size: 1.2rem;
+
+
 }
 
-/* ===============================
-   2. Layout / Structure
-================================*/
+
+/* ─────────────────────────────────────────
+   2. Base Reset
+   ───────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: .25rem;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: .125rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p,
+a {
+  text-align: justify;
+  line-height: 1.8;
+}
 
 
+/* ─────────────────────────────────────────
+   3. Layout Utilities
+   Unconditional, generic layout patterns only.
+   Applied directly on HTML elements.
+   ───────────────────────────────────────── */
 .align-text {
   text-align: center;
 }
 
 .always-row {
-  display:flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
-} 
+}
 
+/* Centers children horizontally within a column */
 .centered-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 .full-size {
   width: 100%;
 }
 
-/* ==========================
-FONT SIZING
-============================= */
-.small-font-size {
-    font-size: var(--small-font-size);
+
+/* ─────────────────────────────────────────
+   4. Shared Components
+   Used across multiple pages.
+   ───────────────────────────────────────── */
+
+/* Offsets page content below the fixed navbar */
+.main-style {
+  margin-top: 70px;
+  width: 100%;
+  max-width: 1600px;
+}
+
+/* Base button */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-text);
+  padding: 10px 25px;
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  transition: background-color .5s, color .5s, border-color .5s;
+  letter-spacing: 2px;
+  cursor: pointer;
+  max-width: 15rem;
+  min-width: 12rem;
+  margin: 0 auto;
+}
+
+.menu-btn-wrapper {
+  justify-content: flex-start;
+}
+
+.menu-btn:hover,
+.menu-btn:active {
+  background-color: var(--color-text);
+  border-color: transparent;
+  color: var(--color-bg);
+  border-radius: 5px;
+}
+
+
+/* ─────────────────────────────────────────
+   5. Shared Page Patterns
+   Used on more than one page — not generic
+   enough for utilities, too shared for a
+   single page CSS file.
+   ───────────────────────────────────────── */
+
+/* ── Hero (home, about, brewery) ── */
+.page-hero {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* The photo — fills the entire hero container */
+.page-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Gradient overlay — keeps title text legible over any photo */
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    height: 70vh;
   }
+}
 
-  .medium-font-size {
-    font-size: var(--medium-font-size);
-  }
+/* Page title displayed over the hero photo */
+.page-hero__title {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  border-style: solid;
+  border-width: 2px 0;
+  border-color: var(--color-text);
+  padding: 0.5rem 0;
+  width: 80%;
+}
 
+/* ── Photo column/row layout (home, brewery) ── */
+.column-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 300px;
+  height: 675px;
+  align-items: center;
+  overflow: hidden;
+}
 
+.row-wrap {
+  display: flex;
+  width: 820px;
+  height: 80%;
+  overflow: hidden;
+}
+
+.column-wrap picture,
+.row-wrap picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.column-wrap picture img,
+.row-wrap picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
