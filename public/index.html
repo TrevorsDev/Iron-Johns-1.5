@@ -46,21 +46,21 @@
     <!--This section includes img related to the welcome header, text and interactive menus-->
     <section class="welcome-head">
       <div class="main-title">
-        <h2>Iron Johns on Broadway</h2>
+        <h2 class="section-heading">Iron Johns on Broadway</h2>
       </div>
     </section>
 
     <!--The classes here should be benificial and target what you want to do in a modular way. They should also be very semantic-->
     <section class="menu-description view-ease">
       <div class="menu-card">
-        <h2>Explore our menus</h2>
+        <h3 class="card-heading">Explore our menus</h3>
         <p>At our core, we aim to create a welcoming space where guests can enjoy the perfect balance of amazing food,
           and exceptional craft beer while standing out from the rest. Indulge in our favorite pizza creations, savor
           our
           imaginative culinary offerings, and wash it down with our standout selection of craft brews.</p>
-        <div class="menu-btn-wrapper">
-          <a class="button menu-btn" href="./pages/menu.html#fullMenu">Full Menu</a>
-          <a href="./pages/menu.html#beer" class="button menu-btn">Beer & Cocktails</a>
+        <div class="btn-group">
+          <a class="button button--primary" href="./pages/menu.html#fullMenu">Full Menu</a>
+          <a class="button button--secondary" href="./pages/menu.html#beer">Beer & Cocktails</a>
         </div>
         <div class="menu-sections-wrapper">
           <ul class="details-sections">
@@ -83,28 +83,38 @@
       <div class="map-container">
         <!-- Map -->
       </div>
-      <div class="operations-card">
-        <h1>Locations</h1>
+      <div class="operations-card content-card">
+        <h3 class="card-heading">Locations</h3>
         <div class="addressAndPhone-wrap">
-          <div class="address-and-phone">
-            <div class="address">
+          <div class="address-and-phone always-column">
+            <div class="address always-row">
+              <i class="fas fa-house"></i>
               <a href="https://www.google.com/maps/dir/?api=1&destination=Iron+John%E2%80%99s+Brewing+Company+(Broadway)&destination_place_id=0x73343dff4097435d"
-                target="_blank">5350 E Broadway
-                Blvd #128, <br>Tucson, AZ 85711</a>
+                target="_blank">5350 E Broadway Blvd #128,<br>Tucson, AZ 85711</a>
             </div>
-            <p>&#9990;<a class="phone" href="tel:15205149797">(520) 514-9797</a></p>
+            <p class="always-row">
+              <i class="fas fa-phone"></i>
+              <a class="phone" href="tel:15205149797">(520) 514-9797</a>
+            </p>
           </div>
-          <div>
-            <p>555 E 18th St, Tucson, AZ 85701</p>
-            <p>&#9990;<a class="phone" href="tel:15202322080">(520) 232-2080</a></p>
+          <hr class="location-divider">
+          <div class="address-and-phone always-column">
+            <div class="address always-row">
+              <i class="fas fa-house"></i>
+              <span>555 E 18th St,<br>Tucson, AZ 85701</span>
+            </div>
+            <p class="always-row">
+              <i class="fas fa-phone"></i>
+              <a class="phone" href="tel:15202322080">(520) 232-2080</a>
+            </p>
           </div>
         </div>
-        <div class="ops-btns">
-          <a href="./pages/order.html" class="button menu-btn">Order Online</a>
-          <a href="#" class="button menu-btn">Reservations</a>
+        <div class="btn-group">
+          <a href="./pages/order.html" class="button button--primary">Order Online</a>
+          <a href="#" class="button button--secondary">Reservations</a>
         </div>
         <div class="hours">
-          <h2>Dining Hours</h2>
+          <h3 class="card-heading">Dining Hours</h3>
           <p>Monday - Thursday: 11:00 AM - 9:00 PM </p>
           <p>Friday - Saturday: 11:00 AM - 10:00 PM</p>
           <p>Sunday: 12 PM - 8 PM</p>
@@ -133,7 +143,7 @@
     <section class="large-party-section">
       <div class="group-events-wrapper">
         <div class="group-events-description">
-          <h2>Group Parties and Events</h2>
+          <h3 class="card-heading">Group Parties and Events</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veritatis quae hic nulla temporibus
             voluptatibus incidunt sint! Architecto officia, ab, unde dignissimos aliquam perspiciatis vero quos eius
             adipisci cumque eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum quod labore non
@@ -152,7 +162,7 @@
     <section class="join-us-section">
       <div class="content-container">
         <div class="join-us-card">
-          <h2>Join Us</h2>
+          <h3 class="card-heading">Join Us</h3>
           <p>Be part of our community and enjoy great food!</p>
         </div>
       </div>

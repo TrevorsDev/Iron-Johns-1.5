@@ -32,15 +32,16 @@
 /* ─────────────────────────────────────────
    2. Base Reset
    ───────────────────────────────────────── */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
   font-size: 16px;
-  color: var(--color-text);
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-style: normal;
 }
 
 body {
@@ -50,6 +51,10 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-style: normal;
 }
 
 main {
@@ -66,28 +71,36 @@ h3 {
   font-style: normal;
 }
 
+/* Primary page heading — always distinctly larger than h2 */
 h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
   letter-spacing: .25rem;
 }
 
+/* Section heading — clearly subordinate to h1 at every screen size */
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
   letter-spacing: .125rem;
 }
 
+/* Card / sub-section heading */
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  letter-spacing: .05rem;
 }
 
-p,
-a {
-  text-align: justify;
+p {
   line-height: 1.8;
 }
 
 a {
+  color: inherit;
   text-decoration: none;
+  line-height: 1.8;
+}
+
+li {
+  list-style-type: none;
 }
 
 
@@ -130,35 +143,119 @@ a {
   max-width: 1600px;
 }
 
-/* Base button */
+/* Section heading — decorative underline accent */
+.section-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-accent);
+  margin: .5rem 0 1.5rem;
+}
+
+.card-heading {
+  margin-bottom: 1.25rem;
+}
+
+/* Surface-colored content card — shared structural base */
+.content-card {
+  background-color: var(--color-surface);
+  padding: 2.5rem;
+  width: 100%;
+}
+
+/* Mobile: text can wrap, so switch to a short centered bar */
+@media (max-width: 768px) {
+  .section-heading {
+    display: block;
+    text-align: center;
+  }
+
+  .section-heading::after {
+    width: clamp(4rem, 20vw, 10rem);
+    margin: .75rem auto 1.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .content-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ─── Buttons ─── */
+
+/* Base — shared structure across all button variants */
 .button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--color-text);
-  padding: 10px 25px;
-  background-color: transparent;
-  text-decoration: none;
-  color: var(--color-text);
-  font-size: 1.1rem;
-  transition: background-color .5s, color .5s, border-color .5s;
-  letter-spacing: 2px;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border: 2px solid transparent;
   cursor: pointer;
-  max-width: 15rem;
-  min-width: 12rem;
-  margin: 0 auto;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.menu-btn-wrapper {
-  justify-content: flex-start;
-}
-
-.menu-btn:hover,
-.menu-btn:active {
-  background-color: var(--color-text);
-  border-color: transparent;
+/* Primary — filled accent, used for the main CTA */
+.button--primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
   color: var(--color-bg);
-  border-radius: 5px;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Secondary — outlined accent, used for supporting actions */
+.button--secondary {
+  background-color: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Button group — row with equal-width buttons, column on smallest screens */
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 1.5rem 0 1.5rem 0;
+  width: 100%;
+}
+
+.btn-group .button {
+  flex: 1;
+}
+
+@media (max-width: 455px) {
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group .button {
+    flex: none;
+    width: 100%;
+  }
 }
 
 
@@ -192,8 +289,13 @@ a {
 }
 
 @keyframes hero-pan {
-  from { transform: scale(1.12) translateX(0); }
-  to   { transform: scale(1.12) translateX(-6%); }
+  from {
+    transform: scale(1.12) translateX(0);
+  }
+
+  to {
+    transform: scale(1.12) translateX(-6%);
+  }
 }
 
 /* Gradient overlay — keeps title text legible over any photo */

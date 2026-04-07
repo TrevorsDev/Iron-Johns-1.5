@@ -26,11 +26,6 @@
   padding: 2rem;
 }
 
-.main-title h2 {
-  font-size: 2.5rem;
-  text-align: center;
-}
-
 .menu-card {
   display: flex;
   flex-direction: column;
@@ -41,11 +36,7 @@
   line-height: 2rem;
 }
 
-.menu-card h2 {
-  padding-bottom: 3%;
-}
-
-.menu-card div {
+.menu-sections-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
@@ -110,42 +101,42 @@
   height: 500px;
   width: 600px;
   margin-left: auto;
-  background-color: var(--color-surface);
-}
-
-.operations-card h1,
-.ops-btns,
-.hours {
-  padding: 1.9rem 0 0 1.9rem;
-  line-height: 1.6rem;
-  font-size: 1.5rem;
-}
-
-.operations-card h1 {
-  font-size: 2.5rem;
 }
 
 .addressAndPhone-wrap {
   display: flex;
-  flex-direction: row;
-  padding: 1.5rem 0 0 1.9rem;
-  gap: 3rem;
+  flex-direction: column;
+  gap: 1rem;
   line-height: 1.6rem;
 }
 
-.address-and-phone p {
-  font-size: 2rem;
-  margin-right: 2rem;
+.location-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--color-border);
+  width: 100%;
+  margin: 0.5rem 0;
 }
 
-.ops-btns a {
-  margin-right: 1.2rem;
+.address-and-phone {
+  width: 100%;
+  gap: 0.4rem;
 }
 
-.hours h2 {
-  font-size: 1.5rem;
-  padding-bottom: .8rem;
+.address-and-phone .always-row {
+  gap: 0.5rem;
+  align-items: flex-start;
 }
+
+.address-and-phone .always-row i {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+  .hours {
+    width: 100%;
+  }
+
 
 
 /* ─────────────────────────────────────────
@@ -199,10 +190,6 @@
   height: 60vh;
 }
 
-.group-events-description h2 {
-  font-size: 2rem;
-  padding-bottom: 1.2rem;
-}
 
 .links {
   margin: 1.5rem 0;
@@ -288,21 +275,29 @@
    ───────────────────────────────────────── */
 @media (max-width: 768px) {
 
+  /* Consistent section spacing on mobile */
+  .menu-description,
+  .maps-parent,
+  .photo-collage,
+  .large-party-section,
+  .join-us-section {
+    margin-bottom: 3rem;
+  }
+
   /* Location heading */
   .main-title {
     width: 100%;
-    padding: 1.5rem 1rem;
-  }
-
-  .main-title h2 {
-    font-size: 1.5rem;
+    padding: 1.5rem 1.25rem;
+    justify-content: center;
   }
 
   /* Menu section — stack text over image */
   .menu-description {
     flex-direction: column;
     min-height: auto;
-    width: 100%;
+    width: calc(100% - 2.5rem);
+    border-radius: 6px;
+    overflow: hidden;
   }
 
   .menu-card,
@@ -315,59 +310,40 @@
     height: 260px;
   }
 
-  .menu-card div {
+  .menu-card {
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .menu-sections-wrapper {
     gap: 1rem;
+    justify-content: center;
+  }
+
+  .details-sections {
+    justify-content: center;
   }
 
   /* Maps section — stack info card above map */
   .maps-parent {
     flex-direction: column;
     height: auto;
-    width: 100%;
-    margin: 2rem 0;
+    width: calc(100% - 2.5rem);
+    margin: 2rem auto;
+    border-radius: 6px;
+    overflow: hidden;
   }
 
   .operations-card {
     width: 100%;
     height: auto;
     margin-left: 0;
-    padding-bottom: 1.5rem;
-  }
-
-  .operations-card h1,
-  .ops-btns,
-  .hours {
-    padding: 1.2rem 0 0 1.2rem;
-  }
-
-  .operations-card h1 {
-    font-size: 1.8rem;
-  }
-
-  .addressAndPhone-wrap {
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1rem 0 0 1.2rem;
-  }
-
-  .address-and-phone p {
-    font-size: 1rem;
-    margin-right: 0;
-  }
-
-  /* Buttons stack vertically on narrow screens */
-  .ops-btns {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    padding-right: 1.2rem;
-  }
-
-  .ops-btns a {
-    margin-right: 0;
-    max-width: 100%;
-    min-width: unset;
-    width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
   /* Map fills full width below the info card */
@@ -400,7 +376,8 @@
   }
 
   .column-wrap {
-    flex-direction: row; /* 2 images side by side within each column-wrap */
+    flex-direction: row;
+    /* 2 images side by side within each column-wrap */
     flex: none;
     width: 100%;
     height: 180px;
@@ -421,9 +398,12 @@
 
   .group-events-wrapper {
     flex-direction: column;
-    flex-basis: 100%;
-    width: 100%;
+    flex-basis: calc(100% - 2.5rem);
+    width: calc(100% - 2.5rem);
+    margin: 0 auto;
     gap: 0;
+    border-radius: 6px;
+    overflow: hidden;
   }
 
   .group-events-description {
@@ -432,6 +412,10 @@
     height: auto;
     margin-right: 0;
     font-size: 1rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .photo {
@@ -441,6 +425,8 @@
 
   .photo img {
     max-height: 260px;
+    width: 100%;
+    object-fit: cover;
   }
 
   /* Join Us — fix iOS parallax bug, reduce padding */
