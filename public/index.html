@@ -51,13 +51,18 @@
     </section>
 
     <!--The classes here should be benificial and target what you want to do in a modular way. They should also be very semantic-->
-    <section class="menu-description view-ease">
-      <div class="menu-card">
+    <section class="menu-description overlay-container">
+      <div class="menu-images overlay-background">
+        <img src="images/IJBroadway-Lounge-Seating.jpg" alt="18th Ave Tap Room">
+      </div>
+      <div class="menu-card content-card overlay-foreground">
         <h3 class="card-heading">Explore our menus</h3>
-        <p>At our core, we aim to create a welcoming space where guests can enjoy the perfect balance of amazing food,
-          and exceptional craft beer while standing out from the rest. Indulge in our favorite pizza creations, savor
-          our
-          imaginative culinary offerings, and wash it down with our standout selection of craft brews.</p>
+        <p>Iron John's is where wood-fired pizza and delicious chargrilled burgers meet locally crafted beer. Our menu
+          is built around bold flavors — from freshly rolled baked dough topped with cinnamon sugar or freshly shaved
+          parmesan and garlic, to hand-stretched pies, smash burgers, and rotating craft brews crafted by our very own
+          head brewer, Elise Laure. Our lounge space was designed and built with passion by the hands of the owners, who
+          wished to create a lively, industrial space unlike anything else in Tucson. Whether you're stopping in for
+          happy hour or settling in for the evening, there's always something worth coming back for.</p>
         <div class="btn-group">
           <a class="button button--primary" href="./pages/menu.html#fullMenu">Full Menu</a>
           <a class="button button--secondary" href="./pages/menu.html#beer">Beer & Cocktails</a>
@@ -72,25 +77,25 @@
           </ul>
         </div>
       </div>
-      <div class="menu-images">
-        <img src="images/IJBC_18th_hangout.jpg" alt="18th Ave Tap Room">
-      </div>
+
     </section>
     <!--End of welcome section (HERO SECTION)-->
 
     <!-- Map, Location, Hours, etc. Section -->
-    <section class="maps-parent">
-      <div class="map-container">
+    <section class="maps-parent overlay-container">
+      <div class="map-container overlay-background">
         <!-- Map -->
       </div>
-      <div class="operations-card content-card">
+
+      <div class="operations-card content-card overlay-foreground">
         <h3 class="card-heading">Locations</h3>
         <div class="addressAndPhone-wrap">
           <div class="address-and-phone always-column">
             <div class="address always-row">
               <i class="fas fa-house"></i>
               <a href="https://www.google.com/maps/dir/?api=1&destination=Iron+John%E2%80%99s+Brewing+Company+(Broadway)&destination_place_id=0x73343dff4097435d"
-                target="_blank">5350 E Broadway Blvd #128,<br>Tucson, AZ 85711</a>
+                target="_blank">5350 E Broadway Blvd #128,<br>Tucson, AZ 85711
+              </a>
             </div>
             <p class="always-row">
               <i class="fas fa-phone"></i>
@@ -133,7 +138,7 @@
         </div>
         <div class="column-wrap">
           <img src="./images/ginSpritzCollage.jpg" alt="Gin spritz cocktail">
-          <img src="./images/pizzaOven.jpg" alt="Pizza coming out of the oven">
+          <img src="images/Pizza-of-the-Month.jpg" alt="Pizza coming out of the oven">
         </div>
       </div>
     </section>
@@ -141,19 +146,24 @@
     <!-- LARGE PARTY SECTION-->
 
     <section class="large-party-section">
-      <div class="group-events-wrapper">
-        <div class="group-events-description">
+      <div class="group-events-wrapper overlay-container">
+        <div class="group-events-description overlay-foreground">
           <h3 class="card-heading">Group Parties and Events</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione veritatis quae hic nulla temporibus
-            voluptatibus incidunt sint! Architecto officia, ab, unde dignissimos aliquam perspiciatis vero quos eius
-            adipisci cumque eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum quod labore non
-            voluptate possimus ut animi fuga voluptatum minima consequatur nostrum molestiae, quas ad blanditiis ullam
-            nobis explicabo dolores.</p>
+          <p>From birthday dinners to corporate happy hours, Iron John's has the space and the spread to make your next
+            event memorable. Our Broadway and 18th Street locations accommodate groups of all sizes — with a full bar,
+            dedicated event space, and a kitchen ready to feed a crowd. Reach out to reserve your spot.</p>
+          <ul class="feature-list always-column">
+            <li>Private event space at both locations</li>
+            <li>Full bar with rotating craft beer on tap</li>
+            <li>Group-friendly menu — pizza, burgers, and shareables</li>
+            <li>Accommodates up to 80 people</li>
+            <li>Custom menu options available</li>
+          </ul>
+          <a href="./pages/contact.html" class="button button--primary">Book Your Event</a>
         </div>
-        <div class="photo">
-          <img class="" src="./images/large-flight-of-draught-beer.jpg" alt="flight of large draght beers on bar"
+        <div class="photo overlay-background">
+          <img class="" src="images/Mom-with-Her-Daugher.jpg" alt="flight of large draght beers on bar"
             loading="eager">
-
         </div>
       </div>
     </section>
@@ -162,8 +172,12 @@
     <section class="join-us-section">
       <div class="content-container">
         <div class="join-us-card">
-          <h3 class="card-heading">Join Us</h3>
-          <p>Be part of our community and enjoy great food!</p>
+          <h3 class="card-heading">Good Beer. Great Food.</h3>
+          <p>Two Tucson locations. One community. Come as you are.</p>
+          <div class="btn-group">
+            <a href="./pages/order.html" class="button button--primary">Order Online</a>
+            <a href="#" class="button button--secondary">Find Us</a>
+          </div>
         </div>
       </div>
     </section>
