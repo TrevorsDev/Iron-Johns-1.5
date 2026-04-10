@@ -3,10 +3,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log('Scroll effect is running')
   initScrollEffects();
+  initBeerBanner();
 });
 
 function initScrollEffects() {
-  const section = document.querySelector('.join-us-section');
+  const section = document.querySelector('.join-us');
   
   document.addEventListener('scroll', () => {
       // Retrieves the position of the .join-us-section relative to the viewport.
@@ -20,6 +21,30 @@ function initScrollEffects() {
     }
   });
 }
+
+/* Beer Banner — scroll-driven marquee */
+
+function initBeerBanner() {
+  const track1 = document.querySelector('.beer-banner__track:not(.beer-banner__track--reverse)');
+  const track2 = document.querySelector('.beer-banner__track--reverse');
+  if (!track1 || !track2) return;
+
+  const halfWidth = track1.scrollWidth / 2;
+  let pos = 0;
+  let lastY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const delta = window.scrollY - lastY;
+    lastY = window.scrollY;
+
+    // Keep pos in range [0, halfWidth) so the loop is seamless
+    pos = ((pos + delta * 0.5) % halfWidth + halfWidth) % halfWidth;
+
+    track1.style.transform = `translateX(-${pos}px)`;           // scrolls left on scroll-down
+    track2.style.transform = `translateX(${pos - halfWidth}px)`; // scrolls right on scroll-down
+  }, { passive: true });
+}
+
 
 /* About Us page effects/interactivity*/
 /*"Our History" section*/

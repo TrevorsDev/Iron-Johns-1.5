@@ -1,105 +1,159 @@
 /* ==========================================
-   HOME PAGE CSS
-   Styles specific to index.html only.
+   HOME PAGE CSS — MOBILE FIRST
+   Naming: BEM (Block__Element--Modifier)
+   Utilities (overlay-*, content-card, btn-group) live in global.css
+   Base styles = mobile. Desktop added after mobile is confirmed.
    ========================================== */
 
 
 /* ─────────────────────────────────────────
-   Section Heading
+   Page Intro
    ───────────────────────────────────────── */
-.main-title {
+.page-intro__title {
   display: flex;
-  max-width: 1200px;
-  width: 85%;
-  margin: 0 auto;
+  width: 100%;
   justify-content: center;
-  padding: 2rem;
+  padding: 1.5rem 1.25rem;
+}
+
+
+/* ─────────────────────────────────────────
+   Beer Banner
+   ───────────────────────────────────────── */
+.beer-banner {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+}
+
+.beer-banner__track {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.beer-banner__track span {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201, 137, 30, 0.5);
+  letter-spacing: 0.05em;
 }
 
 
 /* ─────────────────────────────────────────
    Menu Section
+   Image stacks on top, content card below.
    ───────────────────────────────────────── */
-.menu-description {
+.menu-section {
   display: flex;
-  align-items: center;
-  width: 100%;
-  height: 750px;
-  margin-bottom: 3rem;
-}
-
-.menu-card {
-  min-height: 500px;
-  width: 600px;
-  margin-left: 7.5%;
+  flex-direction: column;
+  width: calc(100% - 2.5rem);
+  margin: 0 auto;
   border-radius: 6px;
 }
 
-.menu-images img {
+.menu-section__bg {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 260px;
+}
+
+.menu-section__bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.menu-sections-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
+.menu-section__card {
   width: 100%;
+  padding: 2.5rem 1.5rem;
 }
 
-.details-sections {
+.menu-section__card .card-heading,
+.locations-section__card .card-heading,
+.events-section__card .card-heading {
+  text-align: center;
+}
+
+.menu-section__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.menu-section__links {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
   gap: 0 1.5rem;
+  justify-content: center;
 }
 
-.details-sections a {
+.menu-section__links a {
   transition: color 0.5s ease, text-decoration 2s ease;
 }
 
-.details-sections a:hover,
-.details-sections a:active {
+.menu-section__links a:hover,
+.menu-section__links a:active {
   text-decoration: underline;
 }
 
 
 /* ─────────────────────────────────────────
-   Maps and Hours Section
+   Locations Section
+   Map stacks on top, content card below.
    ───────────────────────────────────────── */
-.maps-parent {
-  width: 85%;
-  max-width: 1200px;
-  height: 750px;
+.locations-section {
   display: flex;
-  align-items: center;
-  margin: 3rem auto;
+  flex-direction: column;
+  width: calc(100% - 2.5rem);
+  margin: 0 auto;
+  border-radius: 6px;
 }
 
-.map-container iframe {
+.locations-section__map {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 350px;
+}
+
+.locations-section__map iframe {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 6px;
+  width: 100%;
+  height: 100%;
 }
 
-.operations-card {
-  min-height: 600px;
-  width: 600px;
-  margin-left: auto;
-  border-radius: 6px;
-}
-
-.addressAndPhone-wrap {
+.locations-section__card {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  line-height: 1.6rem;
+  align-items: center;
+  text-align: center;
 }
 
-.location-divider {
+.locations-section__list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  line-height: 1.6rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.locations-section__divider {
   border: none;
   height: 1px;
   background-color: var(--color-border);
@@ -107,74 +161,117 @@
   margin: 0.5rem 0;
 }
 
-.address-and-phone {
+.locations-section__location {
   width: 100%;
   gap: 0.4rem;
   text-align: left;
 }
 
-.address-and-phone .always-row {
+.locations-section__location .always-row {
   gap: 1rem;
   align-items: flex-start;
 }
 
-.address-and-phone .always-row i {
+.locations-section__location .always-row i {
   margin-top: 0.5rem;
   flex-shrink: 0;
 }
 
-.address {
+.locations-section__address {
   padding-bottom: 0.5rem;
 }
 
-.hours {
+.locations-section__hours {
   width: 100%;
+}
+
+.locations-section__schedule {
+  width: 100%;
+  max-width: 360px;
+  text-align: left;
 }
 
 
 /* ─────────────────────────────────────────
-   Photo Collage Section
+   Photo Collage
    ───────────────────────────────────────── */
 .photo-collage {
   width: 100%;
-  height: 675px;
-  margin-bottom: 3rem;
+  height: auto;
 }
 
-.collage-wrapper {
+.photo-collage__grid {
   display: flex;
-  gap: 1rem;
-  height: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
   align-items: stretch;
+}
+
+/* Two images side by side on mobile */
+.photo-collage__pair {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+  height: 225px;
+}
+
+.photo-collage__pair img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Single wide image */
+.photo-collage__feature {
+  width: 100%;
+  height: 260px;
+}
+
+.photo-collage__feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 
 /* ─────────────────────────────────────────
-   Group Events Section
+   Events Section
+   Content card stacks on top, image below.
+   DOM order handles stacking — no order property needed.
    ───────────────────────────────────────── */
-.large-party-section {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.group-events-wrapper {
-  width: 85%;
-  max-width: 1200px;
-  height: 60vh;
+.events-section {
+  width: calc(100% - 2.5rem);
   margin: 0 auto;
+  border-radius: 6px;
 }
 
-.group-events-description {
-  width: 45%;
-  height: 100%;
-  background-color: var(--color-surface);
+.events-section__card {
+  width: 100%;
+  font-size: 1rem;
   padding: 1.6rem;
   line-height: 1.6rem;
-  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 
-.photo img {
+.events-section__description {
+  text-align: left;
+}
+
+.events-section__card .feature-list {
+  display: inline-flex;
+  text-align: left;
+}
+
+.events-section__bg {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: 260px;
+}
+
+.events-section__bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -183,22 +280,22 @@
 
 
 /* ─────────────────────────────────────────
-   Join Us Section
+   Join Us
    ───────────────────────────────────────── */
-.join-us-section {
+.join-us {
   position: relative;
-  height: 70vh;
+  height: 50vh;
+  margin-bottom: var(--space-section);
   background-image: url(/images/iron-johns-booth-seating.jpg);
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  margin-bottom: 3rem;
 }
 
-.content-container {
+.join-us__overlay {
   display: flex;
   position: relative;
   height: 100%;
@@ -206,179 +303,25 @@
   justify-content: center;
 }
 
-.join-us-card {
+.join-us__card {
   position: absolute;
   background: rgba(24, 23, 23, 0.74);
-  padding: 3rem 4rem;
+  padding: 3rem 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   max-width: 480px;
-  width: 90%;
+  width: 85%;
   transform: translateY(20px);
   opacity: 0;
   transition: transform 1s ease, opacity 1s ease;
 }
 
-.join-us-section.visible {
+.join-us.visible {
   opacity: 1;
 }
 
-.join-us-section.visible .join-us-card {
+.join-us.visible .join-us__card {
   transform: translateY(0);
   opacity: 1;
-}
-
-
-/* ─────────────────────────────────────────
-   Mobile — max-width: 768px
-   ───────────────────────────────────────── */
-@media (max-width: 768px) {
-
-  .main-title {
-    width: 100%;
-    padding: 1.5rem 1.25rem;
-  }
-
-  /* Menu section */
-  .menu-description {
-    flex-direction: column;
-    align-items: stretch;
-    height: auto;
-    width: calc(100% - 2.5rem);
-    margin: 0 auto 3rem;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  .menu-card {
-    width: 100%;
-    min-height: 0;
-    margin-left: 0;
-    text-align: center;
-    padding: 2.5rem 1.5rem;
-  }
-
-  .menu-images {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    height: 260px;
-  }
-
-  .menu-sections-wrapper {
-    gap: 1rem;
-    justify-content: center;
-  }
-
-  .details-sections {
-    justify-content: center;
-  }
-
-  /* Maps section */
-  .maps-parent {
-    flex-direction: column;
-    height: auto;
-    width: calc(100% - 2.5rem);
-    margin: 0 auto 3rem;
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  .operations-card {
-    width: 100%;
-    min-height: 0;
-    margin-left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .map-container {
-    position: relative;
-    width: 100%;
-    height: 350px;
-  }
-
-  .map-container iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-
-  /* Photo collage */
-  .photo-collage {
-    height: auto;
-    margin-bottom: 2rem;
-  }
-
-  .collage-wrapper {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .column-wrap {
-    display: flex;
-    flex-direction: row;
-    flex: none;
-    width: 100%;
-    height: 225px;
-  }
-
-  .column-wrap img {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .row-wrap {
-    flex: none;
-    width: 100%;
-    height: 260px;
-  }
-
-  /* Group events */
-  .group-events-wrapper {
-    height: auto;
-    width: calc(100% - 2.5rem);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  .group-events-description {
-    width: 100%;
-    height: auto;
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .group-events-description .feature-list {
-    display: inline-flex;
-    text-align: left;
-  }
-
-  .photo {
-    position: relative;
-    inset: auto;
-    width: 100%;
-  }
-
-  .photo img {
-    max-height: 260px;
-    height: auto;
-  }
-
-  /* Join Us */
-  .join-us-section {
-    background-attachment: scroll;
-    height: 50vh;
-  }
-
-  .join-us-card {
-    padding: 3rem 2rem;
-    width: 85%;
-  }
 }

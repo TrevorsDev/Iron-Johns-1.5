@@ -9,53 +9,47 @@
   <link rel="stylesheet" href="components/nav.css">
   <link rel="stylesheet" href="components/footer.css">
   <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="./pages/menu.css">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet">
-
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 
   <title>Iron Johns!</title>
 </head>
 
 <body>
 
-  <!-- Navigation section -->
   <header>
     <nav id="nav-placeholder"></nav>
     <noscript>Your navigation bar cannot be displayed without JavaScript.</noscript>
   </header>
 
-  <!-- (HERO SECTION) -->
-  <!-- Includes nav, intro title, and rotating background pics -->
+  <!-- Hero -->
   <section class="page-hero">
     <img class="page-hero__image" src="./images/IJBroadwayLoc.jpg" alt="Iron John's Brewing tap room" loading="eager">
     <div class="page-hero__overlay"></div>
     <h1 class="page-hero__title">Craft Beer<br>Pizza &amp; Burgers</h1>
   </section>
 
-
   <main>
-    <!--Welcome section-->
-    <!--This section includes img related to the welcome header, text and interactive menus-->
-    <section class="welcome-head">
-      <div class="main-title">
+
+    <!-- Page Intro -->
+    <section class="page-intro">
+      <div class="page-intro__title">
         <h2 class="section-heading">Iron Johns on Broadway</h2>
       </div>
     </section>
 
-    <!--The classes here should be benificial and target what you want to do in a modular way. They should also be very semantic-->
-    <section class="menu-description overlay-container">
-      <div class="menu-images overlay-background">
-        <img src="images/IJBroadway-Lounge-Seating.jpg" alt="18th Ave Tap Room">
+    <!-- Menu Section -->
+    <section class="menu-section overlay-container">
+      <div class="menu-section__bg overlay-background">
+        <img src="images/IJBroadway-Lounge-Seating.jpg" alt="Iron John's lounge seating">
       </div>
-      <div class="menu-card content-card overlay-foreground">
+      <div class="menu-section__card content-card overlay-foreground">
         <h3 class="card-heading">Explore our menus</h3>
         <p>Iron John's is where wood-fired pizza and delicious chargrilled burgers meet locally crafted beer. Our menu
           is built around bold flavors — from freshly rolled baked dough topped with cinnamon sugar or freshly shaved
@@ -65,10 +59,10 @@
           happy hour or settling in for the evening, there's always something worth coming back for.</p>
         <div class="btn-group">
           <a class="button button--primary" href="./pages/menu.html#fullMenu">Full Menu</a>
-          <a class="button button--secondary" href="./pages/menu.html#beer">Beer & Cocktails</a>
+          <a class="button button--secondary" href="./pages/menu.html#beer">Beer &amp; Cocktails</a>
         </div>
-        <div class="menu-sections-wrapper">
-          <ul class="details-sections">
+        <div class="menu-section__nav">
+          <ul class="menu-section__links">
             <li><a href="./pages/menu.html#shareables">Appetizers</a></li>
             <li><a href="./pages/menu.html#pizza">Pizza</a></li>
             <li><a href="./pages/menu.html#burger">Burgers</a></li>
@@ -77,40 +71,48 @@
           </ul>
         </div>
       </div>
-
     </section>
-    <!--End of welcome section (HERO SECTION)-->
 
-    <!-- Map, Location, Hours, etc. Section -->
-    <section class="maps-parent overlay-container">
-      <div class="map-container overlay-background">
-        <!-- Map -->
+    <!-- Beer Banner -->
+    <div class="beer-banner" aria-hidden="true">
+      <div class="beer-banner__track">
+        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager · Hazy IPA · Barrel Aged · Session Ale · </span>
+        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager · Hazy IPA · Barrel Aged · Session Ale · </span>
       </div>
+      <div class="beer-banner__track beer-banner__track--reverse">
+        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager · Hazy IPA · Barrel Aged · Session Ale · </span>
+        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager · Hazy IPA · Barrel Aged · Session Ale · </span>
+      </div>
+    </div>
 
-      <div class="operations-card content-card overlay-foreground">
-        <h3 class="card-heading">Locations</h3>
-        <div class="addressAndPhone-wrap">
-          <div class="address-and-phone always-column">
-            <div class="address always-row">
+    <!-- Locations Section -->
+    <section class="locations-section overlay-container">
+      <div class="locations-section__map overlay-background">
+        <!-- Map dynamically loaded -->
+      </div>
+      <div class="locations-section__card content-card overlay-foreground">
+        <div class="locations-section__list">
+          <h3 class="card-heading">Locations</h3>
+          <div class="locations-section__location always-column">
+            <div class="locations-section__address always-row">
               <i class="fas fa-house"></i>
               <a href="https://www.google.com/maps/dir/?api=1&destination=Iron+John%E2%80%99s+Brewing+Company+(Broadway)&destination_place_id=0x73343dff4097435d"
-                target="_blank">5350 E Broadway Blvd #128,<br>Tucson, AZ 85711
-              </a>
+                target="_blank">5350 E Broadway Blvd #128,<br>Tucson, AZ 85711</a>
             </div>
             <p class="always-row">
               <i class="fas fa-phone"></i>
-              <a class="phone" href="tel:15205149797">(520) 514-9797</a>
+              <a href="tel:15205149797">(520) 514-9797</a>
             </p>
           </div>
-          <hr class="location-divider">
-          <div class="address-and-phone always-column">
-            <div class="address always-row">
+          <hr class="locations-section__divider">
+          <div class="locations-section__location always-column">
+            <div class="locations-section__address always-row">
               <i class="fas fa-house"></i>
               <span>555 E 18th St,<br>Tucson, AZ 85701</span>
             </div>
             <p class="always-row">
               <i class="fas fa-phone"></i>
-              <a class="phone" href="tel:15202322080">(520) 232-2080</a>
+              <a href="tel:15202322080">(520) 232-2080</a>
             </p>
           </div>
         </div>
@@ -118,60 +120,61 @@
           <a href="./pages/order.html" class="button button--primary">Order Online</a>
           <a href="#" class="button button--secondary">Reservations</a>
         </div>
-        <div class="hours">
+        <div class="locations-section__hours">
           <h3 class="card-heading">Dining Hours</h3>
-          <p>Monday - Thursday: 11:00 AM - 9:00 PM </p>
-          <p>Friday - Saturday: 11:00 AM - 10:00 PM</p>
-          <p>Sunday: 12 PM - 8 PM</p>
+          <div class="locations-section__schedule">
+            <p>Monday - Thursday: 11:00 AM - 9:00 PM</p>
+            <p>Friday - Saturday: 11:00 AM - 10:00 PM</p>
+            <p>Sunday: 12 PM - 8 PM</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Photo Collage -->
     <section class="photo-collage">
-      <div class="collage-wrapper">
-        <div class="column-wrap">
+      <div class="photo-collage__grid">
+        <div class="photo-collage__pair">
           <img src="./images/16oz-tap-beer.jpg" alt="16oz craft beer on tap at Iron John's">
           <img src="./images/burgerCollage.jpg" alt="Iron John's signature burger">
         </div>
-        <div class="row-wrap">
+        <div class="photo-collage__feature">
           <img src="./images/full-brewery-interior.webp" alt="Iron John's Broadway tap room interior">
         </div>
-        <div class="column-wrap">
+        <div class="photo-collage__pair">
           <img src="./images/ginSpritzCollage.jpg" alt="Gin spritz cocktail">
           <img src="images/Pizza-of-the-Month.jpg" alt="Pizza coming out of the oven">
         </div>
       </div>
     </section>
 
-    <!-- LARGE PARTY SECTION-->
-
-    <section class="large-party-section">
-      <div class="group-events-wrapper overlay-container">
-        <div class="group-events-description overlay-foreground">
-          <h3 class="card-heading">Group Parties and Events</h3>
+    <!-- Events Section -->
+    <section class="events-section overlay-container">
+      <div class="events-section__card content-card overlay-foreground">
+        <h3 class="card-heading">Group Parties and Events</h3>
+        <div class="events-section__description">
           <p>From birthday dinners to corporate happy hours, Iron John's has the space and the spread to make your next
             event memorable. Our Broadway and 18th Street locations accommodate groups of all sizes — with a full bar,
             dedicated event space, and a kitchen ready to feed a crowd. Reach out to reserve your spot.</p>
-          <ul class="feature-list always-column">
-            <li>Private event space at both locations</li>
-            <li>Full bar with rotating craft beer on tap</li>
-            <li>Group-friendly menu — pizza, burgers, and shareables</li>
-            <li>Accommodates up to 80 people</li>
-            <li>Custom menu options available</li>
-          </ul>
-          <a href="./pages/contact.html" class="button button--primary">Book Your Event</a>
         </div>
-        <div class="photo overlay-background">
-          <img class="" src="images/Mom-with-Her-Daugher.jpg" alt="flight of large draght beers on bar"
-            loading="eager">
-        </div>
+        <ul class="feature-list">
+          <li>Private event space at both locations</li>
+          <li>Full bar with rotating craft beer on tap</li>
+          <li>Group-friendly menu — pizza, burgers, and shareables</li>
+          <li>Accommodates up to 80 people</li>
+          <li>Custom menu options available</li>
+        </ul>
+        <a href="./pages/contact.html" class="button button--primary">Book Your Event</a>
+      </div>
+      <div class="events-section__bg overlay-background">
+        <img src="images/Mom-with-Her-Daugher.jpg" alt="Group enjoying Iron John's">
       </div>
     </section>
 
-    <!-- The background to this section will be fixed behind all other content and as the window scrolls, the picture will come into view and end with that picture in sight with a "join now" card transparent above it. Just below will be a footer section-->
-    <section class="join-us-section">
-      <div class="content-container">
-        <div class="join-us-card">
+    <!-- Join Us -->
+    <section class="join-us">
+      <div class="join-us__overlay">
+        <div class="join-us__card">
           <h3 class="card-heading">Good Beer. Great Food.</h3>
           <p>Two Tucson locations. One community. Come as you are.</p>
           <div class="btn-group">
@@ -181,10 +184,10 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer id="footer-placeholder"></footer>
-
 
   <script src="./scripts/loadNav.js"></script>
   <script src="./scripts/loadFooter.js"></script>
@@ -194,6 +197,3 @@
 </body>
 
 </html>
-
-
-<!-- Dynamically embedded google maps into a new section of the homepage. Aka client-side integration. Requiring backend tech such as server.js and front end tech such as loadApi.js to communicate with the back end in order to fetch the Google maps API key. Restructured files, separated public files that will be used by the browser and server side files which store valuable information such as API keys. Changed file pathways for images and scripts in html -->
