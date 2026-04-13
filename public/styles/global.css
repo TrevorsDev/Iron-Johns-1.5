@@ -504,3 +504,16 @@ li {
   height: 1px;
   overflow: hidden;
 }
+
+/* Make <picture> layout-transparent — img participates directly in parent flex/grid */
+picture {
+  display: contents;
+}
+
+/* Inline SVG icons — replaces Font Awesome for single-use icons */
+.loc-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
