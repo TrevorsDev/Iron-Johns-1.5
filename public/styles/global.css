@@ -9,25 +9,27 @@
    ───────────────────────────────────────── */
 :root {
   /* Brand Colors */
-  --color-bg: #1C1C1C;
-  --color-surface: #221610;
-  --color-accent: #C9891E;
-  --color-accent-hover: #E8A82A;
-  --color-accent-secondary: #6B2D3E;
-  --color-text: #F0EBE3;
-  --color-text-muted: #A89C8E;
-  --color-border: #3D3228;
+  --color-bg: #141414;
+  --color-surface: #1E1E1E;
+  --color-accent: #E8B800;
+  --color-accent-hover: #F5C800;
+  --color-accent-secondary: #C9930A;
+  --color-text: #F2EDE0;
+  --color-text-muted: #8A8E92;
+  --color-border: #2A2A2A;
 
   /* Light section */
   --color-bg-light: #F2E8D5;
   --color-text-on-light: #1A0F08;
 
   /* Spacing */
-  --space-section: 2.5rem;
+  --space-section: 5rem;   /* between major page sections */
+  --space-inner: 2.5rem;   /* card padding, section width insets */
+  --space-sm: 1.5rem;      /* tight internal gaps — btn margins, horizontal card padding */
 
   /* Typography */
-  --font-display: "Playfair Display", serif;
-  --font-body: "Crimson Text", serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "DM Sans", sans-serif;
 
   /* Font Sizing */
   --small-font-size: .8rem;
@@ -80,8 +82,9 @@ h2,
 h3 {
   font-family: var(--font-display);
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 /* Primary page heading — always distinctly larger than h2 */
@@ -237,7 +240,7 @@ li {
 /* Surface-colored content card — shared structural base */
 .content-card {
   background-color: var(--color-surface);
-  padding: 2.5rem;
+  padding: var(--space-inner);
   width: 100%;
 }
 
@@ -269,7 +272,7 @@ li {
     flex-direction: column;
     align-items: stretch;
     height: auto;
-    width: calc(100% - 2.5rem);
+    width: calc(100% - var(--space-inner));
     margin-left: auto;
     margin-right: auto;
     border-radius: 6px;
@@ -295,7 +298,7 @@ li {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  border: 2px solid transparent;
+  border: .8px solid transparent;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   text-decoration: none;
@@ -333,7 +336,7 @@ li {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  margin: 1.5rem 0 1.5rem 0;
+  margin: var(--space-sm) 0;
   width: 100%;
 }
 
@@ -406,6 +409,28 @@ li {
   }
 }
 
+/* Wraps eyebrow + title on pages that use both — handles z-index so both clear the overlay */
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 80%;
+}
+
+/* Eyebrow — context line above the hero title */
+.page-hero__eyebrow {
+  font-family: var(--font-body);
+  font-size: clamp(0.65rem, 1.4vw, 0.8rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(242, 237, 224, 0.6);
+  text-align: center;
+}
+
 /* Page title displayed over the hero photo */
 .page-hero__title {
   position: relative;
@@ -418,6 +443,35 @@ li {
   border-color: var(--color-text);
   padding: 0.5rem 0;
   width: 80%;
+}
+
+/* When title is inside .page-hero__content, parent owns the width — title fills it */
+.page-hero__content .page-hero__title {
+  width: 100%;
+}
+
+/* Scroll indicator — animated chevron at the bottom of the hero */
+.page-hero__scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.page-hero__scroll-chevron {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-right: 1.5px solid rgba(242, 237, 224, 0.45);
+  border-bottom: 1.5px solid rgba(242, 237, 224, 0.45);
+  transform: rotate(45deg);
+  animation: scroll-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: rotate(45deg) translateY(0);    opacity: 0.45; }
+  50%       { transform: rotate(45deg) translateY(7px);  opacity: 0.85; }
 }
 
 

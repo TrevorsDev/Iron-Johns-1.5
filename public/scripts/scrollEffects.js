@@ -38,7 +38,7 @@ function initBeerBanner() {
     lastY = window.scrollY;
 
     // Keep pos in range [0, halfWidth) so the loop is seamless
-    pos = ((pos + delta * 0.5) % halfWidth + halfWidth) % halfWidth;
+    pos = ((pos + delta * 0.2) % halfWidth + halfWidth) % halfWidth;
 
     track1.style.transform = `translateX(-${pos}px)`;           // scrolls left on scroll-down
     track2.style.transform = `translateX(${pos - halfWidth}px)`; // scrolls right on scroll-down

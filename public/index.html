@@ -13,12 +13,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <title>Iron Johns!</title>
+  <title>Iron John's Brewing Company | Craft Beer &amp; Pizza | Tucson, AZ</title>
+  <meta name="description" content="Iron John's Brewing Company — craft beer brewed in-house, wood-fired pizza, and smash burgers at two Tucson locations on Broadway and 18th Street.">
 </head>
 
 <body>
@@ -32,23 +33,22 @@
   <section class="page-hero">
     <img class="page-hero__image" src="./images/IJBroadwayLoc.jpg" alt="Iron John's Brewing tap room" loading="eager">
     <div class="page-hero__overlay"></div>
-    <h1 class="page-hero__title">Craft Beer<br>Pizza &amp; Burgers</h1>
+    <div class="page-hero__content">
+      <p class="page-hero__eyebrow">Brewed in Tucson. Built by Hand.</p>
+      <h1 class="page-hero__title">Iron Johns on Broadway</h1>
+    </div>
+    <div class="page-hero__scroll" aria-hidden="true">
+      <span class="page-hero__scroll-chevron"></span>
+    </div>
   </section>
 
   <main>
 
-    <!-- Page Intro -->
-    <section class="page-intro">
-      <div class="page-intro__title">
-        <h2 class="section-heading">Iron Johns on Broadway</h2>
-      </div>
-    </section>
+    <!-- Decorative rule — visual anchor below hero -->
+    <div class="page-rule" aria-hidden="true"></div>
 
     <!-- Menu Section -->
     <section class="menu-section overlay-container">
-      <div class="menu-section__bg overlay-background">
-        <img src="images/IJBroadway-Lounge-Seating.jpg" alt="Iron John's lounge seating">
-      </div>
       <div class="menu-section__card content-card overlay-foreground">
         <h3 class="card-heading">Explore our menus</h3>
         <p>Iron John's is where wood-fired pizza and delicious chargrilled burgers meet locally crafted beer. Our menu
@@ -57,20 +57,23 @@
           head brewer, Elise Laure. Our lounge space was designed and built with passion by the hands of the owners, who
           wished to create a lively, industrial space unlike anything else in Tucson. Whether you're stopping in for
           happy hour or settling in for the evening, there's always something worth coming back for.</p>
-        <div class="btn-group">
-          <a class="button button--primary" href="./pages/menu.html#fullMenu">Full Menu</a>
-          <a class="button button--secondary" href="./pages/menu.html#beer">Beer &amp; Cocktails</a>
+          <div class="btn-group">
+            <a class="button button--primary" href="./pages/menu.html#fullMenu">Full Menu</a>
+            <a class="button button--secondary" href="./pages/menu.html#beer">Beer &amp; Cocktails</a>
+          </div>
+          <div class="menu-section__nav">
+            <ul class="menu-section__links">
+              <li><a href="./pages/menu.html#shareables">Appetizers</a></li>
+              <li><a href="./pages/menu.html#pizza">Pizza</a></li>
+              <li><a href="./pages/menu.html#burger">Burgers</a></li>
+              <li><a href="./pages/menu.html#salads">Salads</a></li>
+              <li><a href="#">Happy Hour</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="menu-section__nav">
-          <ul class="menu-section__links">
-            <li><a href="./pages/menu.html#shareables">Appetizers</a></li>
-            <li><a href="./pages/menu.html#pizza">Pizza</a></li>
-            <li><a href="./pages/menu.html#burger">Burgers</a></li>
-            <li><a href="./pages/menu.html#salads">Salads</a></li>
-            <li><a href="#">Happy Hour</a></li>
-          </ul>
+        <div class="menu-section__bg overlay-background">
+          <img src="images/IJBroadway-Lounge-Seating.jpg" alt="Iron John's lounge seating">
         </div>
-      </div>
     </section>
 
     <!-- Beer Banner -->
@@ -130,6 +133,9 @@
         </div>
       </div>
     </section>
+
+        <!-- Decorative rule — visual anchor at the end of the landing page, before the footer -->
+    <div class="page-rule" aria-hidden="true"></div>
 
     <!-- Photo Collage -->
     <section class="photo-collage">
