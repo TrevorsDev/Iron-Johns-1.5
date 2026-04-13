@@ -192,14 +192,15 @@ label {
     /* border: red solid 1px; */
   }
   
-  .social-icons i {
+  .social-icons svg {
     color: var(--color-accent);
-    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
     transition: color 0.3s ease;
   }
-  
-  .social-icons i:hover,
-  .social-icons i:focus {
+
+  .social-icons a:hover svg,
+  .social-icons a:focus svg {
     color: var(--color-text);
   }
 
