@@ -41,6 +41,10 @@ header {
   flex-shrink: 0;
 }
 
+.navbar__logo picture {
+  height: 100%;
+}
+
 .navbar__logo img {
   height: 100%;
   width: auto;

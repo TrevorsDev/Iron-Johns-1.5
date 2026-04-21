@@ -23,7 +23,8 @@
   --color-text-on-light: #1A0F08;
 
   /* Spacing */
-  --space-section: 5rem;   /* between major page sections */
+  --space-layout: 8rem;    /* page-level section margins */
+  --space-section: 5rem;   /* component-level spacing — banners, wrappers */
   --space-inner: 2.5rem;   /* card padding, section width insets */
   --space-sm: 1.5rem;      /* tight internal gaps — btn margins, horizontal card padding */
 
@@ -72,9 +73,9 @@ main {
   width: 100%;
 }
 
-main > section {
-  padding-top: var(--space-section);
-  padding-bottom: var(--space-section);
+.page-section {
+  margin-top: var(--space-layout);
+  margin-bottom: var(--space-layout);
 }
 
 h1,
@@ -505,9 +506,15 @@ li {
   overflow: hidden;
 }
 
-/* Make <picture> layout-transparent — img participates directly in parent flex/grid */
+/* <picture> is a block wrapper — size it like any container, then let img fill it */
 picture {
-  display: contents;
+  display: block;
+}
+
+/* When picture is an absolutely-positioned overlay background, fill the container */
+.overlay-background picture {
+  width: 100%;
+  height: 100%;
 }
 
 /* Inline SVG icons — replaces Font Awesome for single-use icons */

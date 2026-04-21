@@ -115,6 +115,10 @@ label {
     height: 6em;
   }
 
+  .logo-container picture {
+    height: 100%;
+  }
+
   .logo-container img{
     width: auto;
     height: 100%;

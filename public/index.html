@@ -15,13 +15,13 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet">
 
 
   <title>Iron John's Brewing Company | Craft Beer &amp; Pizza | Tucson, AZ</title>
-  <meta name="description" content="Iron John's Brewing Company — craft beer brewed in-house, wood-fired pizza, and smash burgers at two Tucson locations on Broadway and 18th Street.">
+  <meta name="description"
+    content="Iron John's Brewing Company — craft beer brewed in-house, wood-fired pizza, and smash burgers at two Tucson locations on Broadway and 18th Street.">
 </head>
 
 <body>
@@ -35,7 +35,8 @@
   <section class="page-hero">
     <picture>
       <source srcset="./images/IJBroadwayLoc.webp" type="image/webp">
-      <img class="page-hero__image" src="./images/IJBroadwayLoc.jpg" alt="Iron John's Brewing tap room" loading="eager" fetchpriority="high" width="1920" height="1440">
+      <img class="page-hero__image" src="./images/IJBroadwayLoc.jpg" alt="Iron John's Brewing tap room" loading="eager"
+        fetchpriority="high" width="1920" height="1440">
     </picture>
     <div class="page-hero__overlay"></div>
     <div class="page-hero__content">
@@ -53,7 +54,7 @@
     <div class="page-rule" aria-hidden="true"></div>
 
     <!-- Menu Section -->
-    <section class="menu-section overlay-container">
+    <section class="menu-section overlay-container page-section">
       <div class="menu-section__card content-card overlay-foreground">
         <h3 class="card-heading">Explore our menus</h3>
         <p>Iron John's is where wood-fired pizza and delicious chargrilled burgers meet locally crafted beer. Our menu
@@ -61,30 +62,31 @@
           parmesan and garlic, to hand-stretched pies, smash burgers, and rotating craft brews created by our very own
           head brewer, Elise Laure. Our lounge space was designed and built with passion by the hands of the owners, who
           wished to create a lively, industrial space unlike anything else in Tucson.</p>
-          <div class="btn-group">
-            <a class="button button--primary" href="./pages/menu.html#fullMenu">Full Menu</a>
-            <a class="button button--secondary" href="./pages/menu.html#beer">Beer &amp; Cocktails</a>
-          </div>
-          <div class="menu-section__nav">
-            <ul class="menu-section__links">
-              <li><a href="./pages/menu.html#shareables">Appetizers</a></li>
-              <li><a href="./pages/menu.html#pizza">Pizza</a></li>
-              <li><a href="./pages/menu.html#burger">Burgers</a></li>
-              <li><a href="./pages/menu.html#salads">Salads</a></li>
-              <li><a href="#">Happy Hour</a></li>
-            </ul>
-          </div>
+        <div class="btn-group">
+          <a class="button button--primary" href="./pages/menu.html#fullMenu">Full Menu</a>
+          <a class="button button--secondary" href="./pages/menu.html#beer">Beer &amp; Cocktails</a>
         </div>
-        <div class="menu-section__bg overlay-background">
-          <picture>
-            <source srcset="images/IJBroadway-Lounge-Seating.webp" type="image/webp">
-            <img src="images/IJBroadway-Lounge-Seating.jpg" alt="Iron John's lounge seating" loading="lazy" width="1200" height="1496">
-          </picture>
+        <div class="menu-section__nav">
+          <ul class="menu-section__links">
+            <li><a href="./pages/menu.html#shareables">Appetizers</a></li>
+            <li><a href="./pages/menu.html#pizza">Pizza</a></li>
+            <li><a href="./pages/menu.html#burger">Burgers</a></li>
+            <li><a href="./pages/menu.html#salads">Salads</a></li>
+            <li><a href="#">Happy Hour</a></li>
+          </ul>
         </div>
+      </div>
+      <div class="menu-section__bg overlay-background">
+        <picture>
+          <source srcset="images/IJBroadway-Lounge-Seating.webp" type="image/webp">
+          <img src="images/IJBroadway-Lounge-Seating.jpg" alt="Iron John's lounge seating" loading="lazy" width="1200"
+            height="1496">
+        </picture>
+      </div>
     </section>
 
     <!-- Locations Section -->
-    <section class="locations-section overlay-container">
+    <section class="locations-section overlay-container page-section">
       <div class="locations-section__map overlay-background">
         <!-- Map dynamically loaded -->
       </div>
@@ -93,23 +95,39 @@
           <h3 class="card-heading">Locations</h3>
           <div class="locations-section__location always-column">
             <div class="locations-section__address always-row">
-              <svg class="loc-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.75L12 3l9 6.75V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.75z"/><path d="M9 21V12h6v9"/></svg>
+              <svg class="loc-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9.75L12 3l9 6.75V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.75z" />
+                <path d="M9 21V12h6v9" />
+              </svg>
               <a href="https://www.google.com/maps/dir/?api=1&destination=Iron+John%E2%80%99s+Brewing+Company+(Broadway)&destination_place_id=0x73343dff4097435d"
                 target="_blank">5350 E Broadway Blvd #128,<br>Tucson, AZ 85711</a>
             </div>
             <p class="always-row">
-              <svg class="loc-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg class="loc-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
               <a href="tel:15205149797">(520) 514-9797</a>
             </p>
           </div>
           <hr class="locations-section__divider">
           <div class="locations-section__location always-column">
             <div class="locations-section__address always-row">
-              <svg class="loc-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.75L12 3l9 6.75V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.75z"/><path d="M9 21V12h6v9"/></svg>
+              <svg class="loc-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9.75L12 3l9 6.75V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.75z" />
+                <path d="M9 21V12h6v9" />
+              </svg>
               <span>555 E 18th St,<br>Tucson, AZ 85701</span>
             </div>
             <p class="always-row">
-              <svg class="loc-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg class="loc-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
               <a href="tel:15202322080">(520) 232-2080</a>
             </p>
           </div>
@@ -129,47 +147,53 @@
       </div>
     </section>
 
-        <!-- Decorative rule — visual anchor at the end of the landing page, before the footer -->
-    <div class="page-rule" aria-hidden="true"></div>
-
     <!-- Photo Collage -->
-    <section class="photo-collage">
+    <section class="photo-collage page-section">
       <div class="photo-collage__grid">
         <div class="photo-collage__pair">
           <picture>
             <source srcset="./images/16oz-tap-beer.webp" type="image/webp">
-            <img src="./images/16oz-tap-beer.jpg" alt="16oz craft beer on tap at Iron John's" loading="lazy" width="1000" height="1000">
+            <img src="./images/16oz-tap-beer.jpg" alt="16oz craft beer on tap at Iron John's" loading="lazy"
+              width="1000" height="1000">
           </picture>
           <picture>
             <source srcset="./images/burgerCollage.webp" type="image/webp">
-            <img src="./images/burgerCollage.jpg" alt="Iron John's signature burger" loading="lazy" width="1000" height="1250">
+            <img src="./images/burgerCollage.jpg" alt="Iron John's signature burger" loading="lazy" width="1000"
+              height="1250">
           </picture>
         </div>
         <div class="photo-collage__feature">
-          <img src="./images/full-brewery-interior.webp" alt="Iron John's Broadway tap room interior" loading="lazy" width="1600" height="966">
+          <img src="./images/full-brewery-interior.webp" alt="Iron John's Broadway tap room interior" loading="lazy"
+            width="1600" height="966">
         </div>
         <div class="photo-collage__pair">
           <picture>
             <source srcset="./images/ginSpritzCollage.webp" type="image/webp">
-            <img src="./images/ginSpritzCollage.jpg" alt="Gin spritz cocktail" loading="lazy" width="1000" height="1000">
+            <img src="./images/ginSpritzCollage.jpg" alt="Gin spritz cocktail" loading="lazy" width="1000"
+              height="1000">
           </picture>
           <picture>
             <source srcset="images/Pizza-of-the-Month.webp" type="image/webp">
-            <img src="images/Pizza-of-the-Month.jpg" alt="Pizza coming out of the oven" loading="lazy" width="1000" height="1250">
+            <img src="images/Pizza-of-the-Month.jpg" alt="Pizza coming out of the oven" loading="lazy" width="1000"
+              height="1250">
           </picture>
         </div>
       </div>
     </section>
 
     <!-- Beer Banner -->
-    <div class="beer-banner" aria-hidden="true">
+    <div class="beer-banner page-section" aria-hidden="true">
       <div class="beer-banner__track">
-        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager · Hazy IPA · Barrel Aged · Session Ale · </span>
-        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager · Hazy IPA · Barrel Aged · Session Ale · </span>
+        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager ·
+          Hazy IPA · Barrel Aged · Session Ale · </span>
+        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager ·
+          Hazy IPA · Barrel Aged · Session Ale · </span>
       </div>
       <div class="beer-banner__track beer-banner__track--reverse">
-        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager · Hazy IPA · Barrel Aged · Session Ale · </span>
-        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager · Hazy IPA · Barrel Aged · Session Ale · </span>
+        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager ·
+          Hazy IPA · Barrel Aged · Session Ale · </span>
+        <span>IPA · Sour Ale · Red Ale · Wheat Beer · Stout · Pale Ale · Porter · Saison · Amber Ale · Pilsner · Lager ·
+          Hazy IPA · Barrel Aged · Session Ale · </span>
       </div>
     </div>
 
@@ -179,7 +203,8 @@
         <div class="events-section__card overlay-foreground">
           <h3 class="card-heading">Group Parties and Events</h3>
           <div class="events-section__description">
-            <p>From birthday dinners to corporate happy hours, Iron John's has the space and the spread to make your next
+            <p>From birthday dinners to corporate happy hours, Iron John's has the space and the spread to make your
+              next
               event memorable. Our Broadway and 18th Street locations accommodate groups of all sizes — with a full bar,
               dedicated event space, and a kitchen ready to feed a crowd. Reach out to reserve your spot.</p>
           </div>
@@ -195,14 +220,15 @@
         <div class="events-section__bg overlay-background">
           <picture>
             <source srcset="images/Mom-with-Her-Daugher.webp" type="image/webp">
-            <img src="images/Mom-with-Her-Daugher.jpg" alt="Group enjoying Iron John's" loading="lazy" width="1200" height="1496">
+            <img src="images/Mom-with-Her-Daugher.jpg" alt="Group enjoying Iron John's" loading="lazy" width="1200"
+              height="1496">
           </picture>
         </div>
       </section>
     </div>
 
     <!-- Join Us -->
-    <section class="join-us">
+    <section class="join-us page-section">
       <div class="join-us__overlay">
         <div class="join-us__card">
           <h3 class="card-heading">Good Beer. Great Food.</h3>
@@ -214,6 +240,10 @@
         </div>
       </div>
     </section>
+
+
+    <!-- Decorative rule — visual anchor at the end of the landing page, before the footer -->
+    <div class="page-rule" aria-hidden="true"></div>
 
   </main>
 
