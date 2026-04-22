@@ -223,6 +223,102 @@
       </section>
     </div>
 
+    <!-- ============================================================
+         Reviews Section
+         Structure:
+           .reviews-section          — outer section, page-level spacing
+             .reviews-section__header  — centered heading
+             .reviews-section__viewport — clips the track (overflow: hidden)
+               .reviews-section__track  — flex row of cards; JS slides this left/right
+                 .review-card (×6)      — individual review cards
+             .reviews-section__dots   — dot navigation buttons, updated by JS
+         ============================================================ -->
+    <section class="reviews-section page-section">
+
+      <div class="reviews-section__header">
+        <h2 class="section-heading">What People Are Saying</h2>
+        <!-- Aggregate rating — update the number to match the real Google rating -->
+        <div class="reviews-section__aggregate">
+          <span class="reviews-section__agg-stars" aria-hidden="true">★★★★★</span>
+          <span class="reviews-section__agg-rating">4.8</span>
+          <span class="reviews-section__agg-label">Based on Google Reviews</span>
+        </div>
+      </div>
+
+      <!-- Viewport clips the track so only one card is visible at a time -->
+      <div class="reviews-section__viewport">
+
+        <!-- Track: JS moves this element left/right to reveal each card -->
+        <div class="reviews-section__track" id="reviewsTrack">
+
+          <!-- Each article is one review card.
+               Left meta  = who is this person (visitor context)
+               Right meta = where the review came from (always Google Review) -->
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="review-card__text">Recommended by another brewery to come here — I am very thankful that I did. This place serves as a historic record for breweries in Tucson and has a great selection of in-house brews. Take the time to find them and enjoy.</blockquote>
+            <footer class="review-card__meta">
+              <span class="review-card__label">Solo Visitor</span>
+            </footer>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="review-card__text">Staff was very friendly! Definitely a place you should check out while in town. They have a wide range of beers both on tap and in bottles!</blockquote>
+            <footer class="review-card__meta">
+              <span class="review-card__label">With Friends</span>
+            </footer>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="review-card__text">I'm from San Francisco and I have never had a great burger like I had at Iron John's. I can't explain it — you MUST try it for yourself! 🤗😊🥰</blockquote>
+            <footer class="review-card__meta">
+              <span class="review-card__label">Visitor from San Francisco</span>
+            </footer>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="review-card__text">I was in the mood for a "good" burger — instead I got a GREAT one. The El Diablo had the perfect amount of heat, the Rodeo burger was great, and the wings were big, meaty, and piping hot. Great beer selection and great service.</blockquote>
+            <footer class="review-card__meta">
+              <span class="review-card__label">First-Time Guest</span>
+            </footer>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="review-card__text">The burgers are excellent, salads are delicious, the atmosphere is friendly, the staff is attentive. We work close by and eat there often.</blockquote>
+            <footer class="review-card__meta">
+              <span class="review-card__label">Regular Customer</span>
+            </footer>
+          </article>
+
+          <article class="review-card">
+            <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="review-card__text">Great casual dining at affordable prices! Food was so good — best fried pickles and fries ever! Portion sizes were generous and the service was on point. We'll definitely be back before we leave town.</blockquote>
+            <footer class="review-card__meta">
+              <span class="review-card__label">Visiting Tucson</span>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Dot buttons — one per card. JS toggles .reviews-section__dot--active
+           to highlight which dot matches the current card. -->
+      <div class="reviews-section__dots" id="reviewsDots" aria-label="Review navigation">
+        <button class="reviews-section__dot reviews-section__dot--active" aria-label="Review 1 of 6"></button>
+        <button class="reviews-section__dot" aria-label="Review 2 of 6"></button>
+        <button class="reviews-section__dot" aria-label="Review 3 of 6"></button>
+        <button class="reviews-section__dot" aria-label="Review 4 of 6"></button>
+        <button class="reviews-section__dot" aria-label="Review 5 of 6"></button>
+        <button class="reviews-section__dot" aria-label="Review 6 of 6"></button>
+      </div>
+
+    </section>
+
     <!-- Join Us -->
     <section class="join-us page-section">
       <div class="join-us__overlay">
@@ -249,6 +345,7 @@
   <script src="./scripts/loadFooter.js" defer></script>
   <script type="module" src="./scripts/loadApi.js"></script>
   <script src="./scripts/scrollEffects.js" defer></script>
+  <script src="./scripts/reviews.js" defer></script>
 </body>
 
 </html>

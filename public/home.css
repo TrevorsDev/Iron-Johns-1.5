@@ -331,6 +331,162 @@
 
 
 /* ─────────────────────────────────────────
+   Reviews Section
+   Carousel: one card visible at a time.
+   JS handles movement; CSS handles appearance.
+   ───────────────────────────────────────── */
+
+/* Centers the section heading and aggregate rating above the carousel */
+.reviews-section__header {
+  text-align: center;
+  margin-bottom: var(--space-inner);
+}
+
+/* Aggregate rating row — sits directly below the section heading */
+.reviews-section__aggregate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.reviews-section__agg-stars {
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+/* The number — large and gold, the focal point of the row */
+.reviews-section__agg-rating {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.reviews-section__agg-label {
+  font-size: var(--small-font-size);
+  color: var(--color-text-muted);
+}
+
+/* Clips the track so only the current card is visible.
+   overflow: hidden hides all the cards to the left and right. */
+.reviews-section__viewport {
+  width: calc(100% - var(--space-inner));
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* The track is a flex row — all cards sit side by side in a single line.
+   JS changes the transform to slide the whole row left or right.
+   width: 100% gives the track a definite size so each card's width: 100%
+   resolves correctly against it (= one card fills the viewport exactly). */
+.reviews-section__track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.45s ease; /* smooth slide animation */
+  will-change: transform;           /* hints to the browser to GPU-accelerate this */
+}
+
+/* Each card is exactly as wide as the viewport so only one shows at a time.
+   flex-shrink: 0 prevents cards from squishing to fit — they stay full width.
+   The left border is the standard blockquote/testimonial design pattern — reads
+   immediately as a quote without relying on a character that renders poorly at large sizes. */
+.review-card {
+  flex-shrink: 0;
+  width: 100%;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 6px;
+  padding: var(--space-inner) var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 280px;
+}
+
+/* Gold stars */
+.review-card__stars {
+  color: var(--color-accent);
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+}
+
+/* Review body text — italic is conventional for quoted content.
+   ::before and ::after inject inline quote marks that wrap the text.
+   No display:block so they flow inline — opening quote before first word,
+   closing quote after last word. Curly quotes render correctly at this size. */
+.review-card__text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  font-style: italic;
+  flex: 1;
+}
+
+.review-card__text::before {
+  content: '\201C';
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+  font-style: normal;
+  margin-right: 0.1em;
+}
+
+.review-card__text::after {
+  content: ' \201D';
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+  font-style: normal;
+  margin-left: 0.1em;
+}
+
+
+/* Footer row: visitor context label only */
+.review-card__meta {
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Left: who is this person — accent color, small caps feel */
+.review-card__label {
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Dot row — centered below the carousel */
+.reviews-section__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: var(--space-sm);
+}
+
+/* Each dot is a small circle button */
+.reviews-section__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Active dot: filled gold and slightly enlarged */
+.reviews-section__dot--active {
+  background-color: var(--color-accent);
+  transform: scale(1.4);
+}
+
+
+/* ─────────────────────────────────────────
    Join Us
    ───────────────────────────────────────── */
 .join-us {
