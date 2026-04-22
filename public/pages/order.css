@@ -97,6 +97,7 @@
   height: auto;
   max-height: 800px;
   text-align: center;
+  overflow: visible;
 }
 
 .close-button {

@@ -84,7 +84,7 @@
     <!-- Locations Section -->
     <section class="locations-section overlay-container page-section">
       <div class="locations-section__map overlay-background">
-        <!-- Map dynamically loaded -->
+        <div id="map" style="width:100%;height:100%;"></div>
       </div>
       <div class="locations-section__card content-card overlay-foreground">
         <div class="locations-section__list">
@@ -346,6 +346,8 @@
   <script type="module" src="./scripts/loadApi.js"></script>
   <script src="./scripts/scrollEffects.js" defer></script>
   <script src="./scripts/reviews.js" defer></script>
+  <script src="./scripts/map.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD601SO4KaXx-N0iyUGfYljm6871mFnLLg&callback=initMap&loading=async" defer></script>
 </body>
 
 </html>
