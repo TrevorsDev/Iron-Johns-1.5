@@ -2,7 +2,7 @@
 
 **Live site:** [ironjohnstaphouse.netlify.app](https://ironjohnstaphouse.netlify.app)
 
-A ground-up redesign of the Iron John's Brewing Company website — a Tucson craft brewery with two locations. Built as a portfolio project to deliver a modern, responsive frontend that reflects the brand and supports the business.
+A ground-up redesign of the Iron John's Brewing Company website — a Tucson craft brewery with two locations. The original site failed to represent the brand. My intention was to build this from scratch to deliver a modern, responsive, performance-optimized frontend that reflects the brand and supports business and customer needs. Iron John's Brewing closed in 2025; the project has continued as a portfolio piece. 
 
 ---
 
@@ -11,7 +11,7 @@ A ground-up redesign of the Iron John's Brewing Company website — a Tucson cra
 - **HTML5 / CSS3 / Vanilla JavaScript** — no frameworks
 - **Netlify** — static site hosting with CI/CD via GitHub
 - **Netlify Serverless Functions** — secure API key delivery for Google Maps
-- **Google Maps Embed API** — dynamic map with HTTP referrer restrictions
+- **Maps JavaScript API** — custom dark map styling with dual location pins
 - **Font Awesome** — iconography
 - **Google Fonts** — Playfair Display, Crimson Text
 
@@ -19,64 +19,25 @@ A ground-up redesign of the Iron John's Brewing Company website — a Tucson cra
 
 ## Features
 
-- Responsive layout across mobile, tablet, and desktop
-- Custom CSS architecture with a global design token system (color, typography, spacing)
-- Reusable component patterns: overlay cards, button system, feature lists, nav and footer loaded via JavaScript
-- Secure Google Maps integration — API key never exposed to the client, served through a serverless function
-- Photo collage section with CSS Grid
+### Architecture
+- Component injection system
+- Dynamic menu system with hash-based routing
+- Custom CSS design token system (BEM)
+
+### Maps & Location
+- Dual-location homepage map (Google Maps JavaScript API, custom dark styling)
+- Order page modal — map location and restaurant details on demand
+
+### Performance
+- WebP images with <picture> element fallbacks throughout
+- LCP hero image preloaded; fetchpriority="high" on first paint image
+
+### UX & Interactivity
+- Reviews carousel — auto-advance, touch swipe, dot navigation, hover pause
 - Smooth scroll effects and hero parallax
-- Multi-page structure: Home, Menu, Order, Contact
+- Responsive layout across mobile, tablet, and desktop
+- Photo collage section with CSS Grid
 
----
-
-## Running Locally
-
-Requires [Netlify CLI](https://docs.netlify.com/cli/get-started/) to run serverless functions locally.
-
-```bash
-npm install -g netlify-cli
-netlify dev
-```
-
-The site runs at `http://localhost:8888`. Plain file servers (e.g. Live Server) won't serve the Netlify functions needed for Google Maps.
-
-**Environment variable required:**
-
-```
-GOOGLE_MAPS_API_KEY=your_key_here
-```
-
-Add this to a `.env` file at the project root (already gitignored).
-
----
-
-## Project Structure
-
-```
-public/
-  index.html
-  home.css
-  styles/
-    global.css        # Design tokens, typography, buttons, layout utilities
-  components/
-    nav.css / footer.css
-  pages/
-    menu.html / menu.css
-    order.html
-    contact.html
-  scripts/
-    loadNav.js / loadFooter.js
-    loadApi.js        # Fetches Maps API key from serverless function
-    scrollEffects.js
-  images/
-netlify/
-  functions/
-    key.js            # Serverless function — serves API key server-side
-netlify.toml
-```
-
----
-
-## Contact
-
-Built by Trevor Johnson — [GitHub](https://github.com/TrevorsDev)
+### Infrastructure
+- GitHub → Netlify CI/CD pipeline
+- Netlify Serverless Function securing Maps API key
