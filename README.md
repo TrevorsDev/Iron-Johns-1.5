@@ -79,4 +79,4 @@ netlify.toml
 
 ## Contact
 
-Built by Donna Ramer — [GitHub](https://github.com/TrevorsDev)
+Built by Trevor Johnson — [GitHub](https://github.com/TrevorsDev)
